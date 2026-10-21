@@ -1,0 +1,59 @@
+name: ${COMPOSE_PROJECT_NAME:-zqy-demo}
+services:
+  mysql:
+    image: mysql:8.0.43
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-zqy_root_demo}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-zhuqiyun}
+      MYSQL_USER: ${MYSQL_USER:-zqy}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-zqy_local_demo}
+      TZ: Asia/Shanghai
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_0900_ai_ci"]
+    ports:
+      - "127.0.0.1:${DB_PORT:-13306}:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    labels:
+      io.zhuqiyun.local-owner: ${LOCAL_OWNER_ID:-manual-compose}
+    healthcheck:
+      test: ["CMD-SHELL", 'MYSQL_PWD="$${MYSQL_PASSWORD}" mysql --protocol=TCP -h127.0.0.1 -u"$${MYSQL_USER}" --database="$${MYSQL_DATABASE}" --silent --skip-column-names -e "SELECT 1"']
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+    restart: unless-stopped
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      SERVER_PORT: "18080"
+      DB_URL: jdbc:mysql://mysql:3306/${MYSQL_DATABASE:-zhuqiyun}?useSSL=false&allowPublicKeyRetrieval=true&connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true&preserveInstants=true&characterEncoding=utf8&permitMysqlScheme=true
+      DB_USER: ${MYSQL_USER:-zqy}
+      DB_PASSWORD: ${MYSQL_PASSWORD:-zqy_local_demo}
+      APP_SEED: ${APP_SEED:-true}
+      DEMO_PASSWORD: ${DEMO_PASSWORD:-Zhuqi2026!}
+      ATTACHMENT_DIR: /app/data/attachments
+      JAVA_TOOL_OPTIONS: ${JAVA_TOOL_OPTIONS:--XX:MaxRAMPercentage=75.0}
+      TZ: Asia/Shanghai
+    ports:
+      - "${HTTP_BIND_ADDRESS:-127.0.0.1}:${API_PORT:-18080}:18080"
+    volumes:
+      - attachment-data:/app/data/attachments
+    depends_on:
+      mysql:
+        condition: service_healthy
+    restart: unless-stopped
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "${HTTP_BIND_ADDRESS:-127.0.0.1}:${UI_PORT:-8080}:80"
+    depends_on:
+      backend:
+        condition: service_started
+    restart: unless-stopped
+volumes:
+  mysql-data:
+  attachment-data:

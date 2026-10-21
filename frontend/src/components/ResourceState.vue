@@ -1,0 +1,2 @@
+<script setup lang="ts">defineProps<{error?:string;loading?:boolean;empty?:boolean}>();defineEmits<{retry:[]}>()</script>
+<template><div v-loading="loading" class="resource-state"><el-result v-if="error" icon="warning" title="数据加载失败" :sub-title="error"><template #extra><el-button type="primary" @click="$emit('retry')">重新加载</el-button></template></el-result><el-empty v-else-if="empty && !loading" description="暂无业务记录" /><slot v-else /></div></template>

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-21T01:30:25+08:00",
+  "generator": "scripts/license_inventory.py",
+  "inputSha256": {
+    "backend/pom.xml": "5b1ae5299ed211a7371f54df7fa464a9b649e7e58ea306bdc3f23467487cda4f",
+    "frontend/package.json": "03c48295795193a1479f418bee39e2bb60898cbedd06a9d91140c440eebc2373",
+    "frontend/package-lock.json": "798a31ca6ac51f78ebe429c1acac6ad101bff6969e6c4a1c8df085d479e9fa1f",
+    "vendor/ruoyi/pom.xml": "dea9593bff3b9f459f50e7f7a96883bda7783493c1b071e6445bdd6960a0c018",
+    "vendor/ruoyi/yudao-dependencies/pom.xml": "f119b5741b0cc65487da01a618f44584424c719a96f42edb6cbcb1cb426a0214",
+    "vendor/ruoyi/yudao-framework/yudao-common/pom.xml": "b8f175acfbfae4ec7e8fc951c643ef283b190c4552b99e3d0ef78670b3f633c6",
+    "backend/Dockerfile": "c99d631ed97e0f2bd4b837bcf8b55258986fafbd9ad926ee7c3e030827ba70da",
+    "frontend/Dockerfile": "0170aa94a4969af823577444f396aabebccd85e3ebf546d5860f87aea8111d62",
+    "compose.yml": "71bc2d6a3c3c3bb5f50c873f191444bbdca47ee94e8ba118a39f9bbc323d2e9d"
+  },
+  "scope": "Declared multi-stage bases and external database, local metadata where available; OS packages and native bundled libraries NOT exhaustively scanned",
+  "images": [
+    {
+      "tag": "maven:3.9.9-eclipse-temurin-21",
+      "declaredIn": "backend/Dockerfile",
+      "stage": "build",
+      "localMetadata": null,
+      "status": "declared tag only; image not pulled or scanned",
+      "legalFiles": [],
+      "coverage": "Top-level license context only; no claim to complete image dependency/license SBOM"
+    },
+    {
+      "tag": "eclipse-temurin:21-jre-jammy",
+      "declaredIn": "backend/Dockerfile",
+      "stage": "runtime",
+      "localMetadata": null,
+      "status": "declared tag only; image not pulled or scanned",
+      "legalFiles": [],
+      "coverage": "Top-level license context only; no claim to complete image dependency/license SBOM"
+    },
+    {
+      "tag": "node:22-alpine",
+      "declaredIn": "frontend/Dockerfile",
+      "stage": "build",
+      "localMetadata": null,
+      "status": "declared tag only; image not pulled or scanned",
+      "legalFiles": [],
+      "coverage": "Top-level license context only; no claim to complete image dependency/license SBOM"
+    },
+    {
+      "tag": "nginx:1.28-alpine",
+      "declaredIn": "frontend/Dockerfile",
+      "stage": "runtime",
+      "localMetadata": null,
+      "status": "declared tag only; image not pulled or scanned",
+      "legalFiles": [],
+      "coverage": "Top-level license context only; no claim to complete image dependency/license SBOM"
+    },
+    {
+      "tag": "mysql:8.0.43",
+      "declaredIn": "compose.yml",
+      "stage": "runtime-external-server",
+      "localMetadata": "\"sha256:3e646bcda0d9448ffa3d2024eef04e1bca95528ec19b9e8b76749da9d97d4a10\" [\"mysql@sha256:3e646bcda0d9448ffa3d2024eef04e1bca95528ec19b9e8b76749da9d97d4a10\"] \"linux\" \"arm64\"",
+      "status": "local image metadata read; OS packages not inventoried",
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/b018a3f5bce31da047cff91c0941aa1af7aa7456b328509ed8a07e7b91f6e4b0.txt",
+          "sha256": "b018a3f5bce31da047cff91c0941aa1af7aa7456b328509ed8a07e7b91f6e4b0",
+          "origin": "https://raw.githubusercontent.com/mysql/mysql-server/mysql-8.0.43/LICENSE"
+        }
+      ],
+      "coverage": "Top-level license context only; no claim to complete image dependency/license SBOM"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+.git
+**/.git
+.env
+.env.*
+**/.env
+**/.env.*
+**/.npmrc
+**/settings.xml
+.run
+**/.run
+**/node_modules
+**/target
+**/.flattened-pom.xml
+**/dist
+**/*.log
+**/.DS_Store

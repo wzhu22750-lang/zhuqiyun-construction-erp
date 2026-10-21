@@ -1,0 +1,3890 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-21T01:30:25+08:00",
+  "generator": "scripts/license_inventory.py",
+  "inputSha256": {
+    "backend/pom.xml": "5b1ae5299ed211a7371f54df7fa464a9b649e7e58ea306bdc3f23467487cda4f",
+    "frontend/package.json": "03c48295795193a1479f418bee39e2bb60898cbedd06a9d91140c440eebc2373",
+    "frontend/package-lock.json": "798a31ca6ac51f78ebe429c1acac6ad101bff6969e6c4a1c8df085d479e9fa1f",
+    "vendor/ruoyi/pom.xml": "dea9593bff3b9f459f50e7f7a96883bda7783493c1b071e6445bdd6960a0c018",
+    "vendor/ruoyi/yudao-dependencies/pom.xml": "f119b5741b0cc65487da01a618f44584424c719a96f42edb6cbcb1cb426a0214",
+    "vendor/ruoyi/yudao-framework/yudao-common/pom.xml": "b8f175acfbfae4ec7e8fc951c643ef283b190c4552b99e3d0ef78670b3f633c6",
+    "backend/Dockerfile": "c99d631ed97e0f2bd4b837bcf8b55258986fafbd9ad926ee7c3e030827ba70da",
+    "frontend/Dockerfile": "0170aa94a4969af823577444f396aabebccd85e3ebf546d5860f87aea8111d62",
+    "compose.yml": "71bc2d6a3c3c3bb5f50c873f191444bbdca47ee94e8ba118a39f9bbc323d2e9d"
+  },
+  "scope": "Maven includeScope=runtime plus identified Boot repackager extra; NOT test dependencies or all build plugins",
+  "counts": {
+    "resolvedRuntime": 77,
+    "packagedOnly": 1,
+    "packagedMatched": 69
+  },
+  "packageInspection": {
+    "path": "backend/target/construction-erp-0.1.0.jar",
+    "sha256": "0d5c47773b08a422d51dc71783fa7bcd26389c27c3a03674f6363c72e7009747",
+    "nestedJarCount": 69,
+    "nestedJars": {
+      "yudao-common-2026.09-SNAPSHOT.jar": "278a330053fea2db9bcadc6656116bfebfd34b84f10e2e43913b4dbacab6c32b",
+      "opentelemetry-api-1.49.0.jar": "a813c9a92b82a4ffa3a62e88216a9e9ef9a407fcd41614fe596b2895167ed638",
+      "opentelemetry-context-1.49.0.jar": "17de3c85b341240b3b216c43adbd244c9fbd39c9e5448306d56460f80599a76b",
+      "mapstruct-1.7.0.Beta2.jar": "c03c68912f6a606cf9e8e964c562b3199c13297f345c06dcb049e428f82287b3",
+      "mapstruct-jdk8-1.7.0.Beta2.jar": "c1c30b749e4aa1d0134cd4c5b215ee3222690d2e75fc2b447a6d02846c20827f",
+      "hutool-all-5.8.47.jar": "14b100a79f482a75cc1c4d37a06f9bdaa9b561f683d2108f02a2f7dbea5b9a60",
+      "transmittable-thread-local-2.14.5.jar": "b7873215661fc84d870b1639544bcd32b5933c3ab450664cd8363e0e1b1b7ad1",
+      "fastjson-2.0.65.jar": "085f276d7406dad6faf7d4f767492189b5f99925c48c6ba51b8c440452c6244c",
+      "fastjson2-extension-2.0.65.jar": "9a5c4bd4f42085ead8c26d202025690788905afade1d05b09b5aca2521235979",
+      "fastjson2-2.0.65.jar": "e12cd0e49047e052533d897d4b45d1074a21229f2a1939404234398d4c10c06d",
+      "easy-trans-anno-3.1.8.jar": "38ed97cca309ce344277ff932bac29b81a89020618896870ac22b8b9e2b6cb64",
+      "jackson-annotations-2.21.jar": "53ca085f4a150f703f49e1aabd935bd03b43e1ea3d55d135438292af22cef56b",
+      "slf4j-api-2.0.18.jar": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55",
+      "spring-boot-3.5.15.jar": "1d3ea175f61f492d95cbca457d6cc9cf1b696b550422c1b424d50dfa58f7da15",
+      "logback-classic-1.5.34.jar": "b65e05076a5c1aadb659b4fe4bc5fee31cb26cd70390292eb03e4a7a24cff10f",
+      "logback-core-1.5.34.jar": "42eda264c0c650c2bec59e66151a88b708a8663dc1b49d788202d53e78b8caae",
+      "log4j-to-slf4j-2.24.3.jar": "c7f2b0c612a4eb05b1587d1c880eb4cf5f4f53850676a8ede8da2b8fabb4f73f",
+      "log4j-api-2.24.3.jar": "5b4a0a0cd0e751ded431c162442bdbdd53328d1f8bb2bae5fc1bbeee0f66d80f",
+      "jul-to-slf4j-2.0.18.jar": "cbb7d1aaaa9e871eb1a06594abd911bf97027152976edf1edc315be75239204e",
+      "jakarta.annotation-api-2.1.1.jar": "5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe",
+      "snakeyaml-2.4.jar": "ef779af5d29a9dde8cc70ce0341f5c6f7735e23edff9685ceaa9d35359b7bb7f",
+      "jackson-databind-2.21.4.jar": "3888e9e69ab66fbacaacc9aea0e9ffbf15368288e4aca468b024dba11c09fbf9",
+      "jackson-core-2.21.4.jar": "4b40a06396f239f8de2da57419adde6e94e5edc18a2171d471ea05eeed4e5c2d",
+      "jackson-datatype-jdk8-2.21.4.jar": "2dde4a8f1aad3306c040f56ff40da81c6d58dcef3434c00849c9bce09f56a074",
+      "jackson-datatype-jsr310-2.21.4.jar": "d1ac4b98b70304e56448423589fde5e775b100889643ad1ead62cc7811633684",
+      "jackson-module-parameter-names-2.21.4.jar": "9510f91a4be2c700753ad244596b67424cb32c23659db1dc534219226e5df3a3",
+      "tomcat-embed-core-10.1.55.jar": "82473f841824095e03f2c938c18707e44e388e34fb1735b2b338bb4f22fd54f0",
+      "tomcat-embed-websocket-10.1.55.jar": "81800431395fe2ef317fc14075ed49faaa64679a3458ee8791159111a1aa1b37",
+      "spring-web-6.2.19.jar": "ca88e364ecebee61163e2260e8a20584138eca74e28a050d6a2ef6302bad2f2d",
+      "spring-beans-6.2.19.jar": "846dc8f30a639a36eb551ee99a30469be4d11bd285ca9daf164d98321571b404",
+      "micrometer-observation-1.15.12.jar": "54483e68ed44af1bb0c36d1df2235d36f233e459d52f5a3be3e69813827a6300",
+      "micrometer-commons-1.15.12.jar": "4b779cf7acb0534bb1f8e964f25200037ecb3944368f859a630fa637d6d5d7c0",
+      "spring-webmvc-6.2.19.jar": "134f42320cedd31f54f683d2ca9936a4e015c011fb1882a31fa7213e2d8c7e94",
+      "spring-context-6.2.19.jar": "ead4b645f94a7f665f00093eaafde634e97b34524294de653b51e43e0b3fc4a4",
+      "spring-expression-6.2.19.jar": "d710a44417d890353895b341a722d7d08199e2b7da52f0a11c0e92571e1d6e19",
+      "spring-aop-6.2.19.jar": "a11b93539d80b02caf76171db2da96df39abebbfef49a2fadd6dda0779f2e20b",
+      "spring-security-config-6.5.11.jar": "218685930013a2d1c126a896490ac3c44cf6fe90cf3d0286f2266bb877f916f7",
+      "spring-security-core-6.5.11.jar": "26ac26527cc015c5c71f3832add705a2410129a8f8de847054f2bc3b1d2e4465",
+      "spring-security-crypto-6.5.11.jar": "dcdd2f3b2d5d2bb1531986b5cc1737b464a76d8b5831f93fc8da9cdd67e6797f",
+      "spring-security-web-6.5.11.jar": "50df9fc76162d33cf8b5410cf7a7a969abd42a5ecddb284aab4f453cb5512306",
+      "tomcat-embed-el-10.1.55.jar": "a527fe51c6f9428c5116f78fe28588e55357b4492309b51fb0453372da16fa5f",
+      "hibernate-validator-8.0.3.Final.jar": "2ad24670fd08e21d3f43d3105d5326bd5ef6b01e819c5cd103823866b954517e",
+      "jakarta.validation-api-3.0.2.jar": "291c25e6910cc6a7ebd96d4c6baebf6d7c37676c5482c2d96146e901b62c1fc9",
+      "jboss-logging-3.6.3.Final.jar": "7c12ee575508f81e22b1db9334b969d0ec54ef0fd1dcba24eeab1a44235fc366",
+      "classmate-1.7.3.jar": "75fbda45456f123fb6e2028a6189442d8d0730b357adce4c0a6d7e789f70669b",
+      "HikariCP-6.3.3.jar": "709f378c05756280939ce50fc1b1f1a53bb8e1899dc1b249f21f12703640b48b",
+      "spring-jdbc-6.2.19.jar": "c81fd8aca952aac243d9327af12596c2058012c9d3784f1313477a6d2cc56306",
+      "spring-tx-6.2.19.jar": "34a1b6f5d87ef4cca6849e1bc70a0f965eec6476737b3cae73ff2561a266ef73",
+      "mybatis-plus-spring-boot3-starter-3.5.17.jar": "20db937818dc0e96d00e39b6c87556e29c80ecfe7794b1667df9e2b06c30241b",
+      "mybatis-plus-3.5.17.jar": "705c760bbc52387fb566c8db6b58f5e904c6c12ce9a2dc3e3d572b284cb92f8d",
+      "mybatis-plus-core-3.5.17.jar": "f1796f941c1035f0382c135e3274528913f52d8651c6d26c52bfa1a7e522b332",
+      "mybatis-plus-annotation-3.5.17.jar": "372bcc91fe6b9071f7b85f95262957835b6975813179cac97392817771a8b56e",
+      "mybatis-plus-spring-3.5.17.jar": "285a96eac3bc9006e2e0d9c847bd09e9857e0a40542a3fa82e36dc0ddfc34f3a",
+      "mybatis-plus-extension-3.5.17.jar": "18dd448c8849e78849f344a4c34f70d48e66852c450db6b0a6894d2f7c701b0e",
+      "mybatis-3.5.19.jar": "93eea616ae355751bd5fbabb57f0732713fbe79f3196f33c51a0aeeb4255862a",
+      "mybatis-spring-3.0.5.jar": "5a9bcbc3e6d7586a1a301177b9a355a4c46080c0c6a568b8c434fae027fa3e3b",
+      "mybatis-plus-spring-boot-autoconfigure-3.5.17.jar": "86990fbd8cca5c2a7132ad33bf145b7820108958826323c044f88e2f51c21973",
+      "mybatis-plus-spring-boot-native-image-3.5.17.jar": "530a1b83e4d4d7600d07fcdafa898f3e2770bbd2cf95aa49fce039f2945ab8d1",
+      "spring-boot-autoconfigure-3.5.15.jar": "180af16bbaa61ae70b3d8c533fe36264b1305d4a6916965ed86d0f4e47b73b3b",
+      "flyway-mysql-11.7.2.jar": "16b6b74800dfcbae21b7d7539c108ad573ead462840e357fc9ffd9fb7129bdb3",
+      "flyway-core-11.7.2.jar": "ff01fab3bcfd79e9345df191ecf82cbe1f9f65a757266158bd691564b1c1282c",
+      "jackson-dataformat-toml-2.21.4.jar": "c22e9f650a45d5697116e9beb85cb218792f03d19cf79134e692fe1a65f50cc6",
+      "mariadb-java-client-3.5.8.jar": "6127dc7858047b3d4482899139640b0e2ab2b8abdeb708cfb8c011117771cddf",
+      "lombok-1.18.46.jar": "01f7b1a015e33e2b62d5f5f37053306357ab1415fd181fcba7794f5d198c1126",
+      "hutool-core-5.8.47.jar": "7cc076ad4ed9846dc129edcd2a5e4e01b61a9d715bf0d3b9a7fa707d4f637266",
+      "swagger-annotations-jakarta-2.2.41.jar": "714df4b94e8956a86de9a95fae85d5d9ebcdfd0bf9d84e3634bc16b60e30a94e",
+      "spring-core-6.2.19.jar": "52146689e71a911c92bac26677d73c692512a739893a57710cc233591756bff6",
+      "spring-jcl-6.2.19.jar": "9994478bcea1423b8892d4eb0db942c94da0090167c3c684050c1eaef04491d0",
+      "spring-boot-jarmode-tools-3.5.15.jar": "0ef100c6915f599606de3d46ae898e7d46594a47db311071a488ee50b2f58a55"
+    }
+  },
+  "components": [
+    {
+      "component": "ch.qos.logback:logback-classic",
+      "groupId": "ch.qos.logback",
+      "artifactId": "logback-classic",
+      "type": "jar",
+      "classifier": null,
+      "version": "1.5.34",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "b65e05076a5c1aadb659b4fe4bc5fee31cb26cd70390292eb03e4a7a24cff10f",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.5.34/logback-classic-1.5.34.jar",
+      "licenses": [
+        {
+          "name": "EPL-2.0",
+          "url": "https://www.eclipse.org/legal/epl-v20.html",
+          "comments": "Eclipse Public License 2.0"
+        },
+        {
+          "name": "LGPL-2.1-only",
+          "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html",
+          "comments": "GNU Lesser General Public License v2.1 only"
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "ch.qos.logback:logback-classic:1.5.34",
+          "url": "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.5.34/logback-classic-1.5.34.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "66303dea733ea9f2e70d1b7687f36f954ac03bac6ee047396f760fa4e059f611"
+        },
+        {
+          "coordinate": "ch.qos.logback:logback-parent:1.5.34",
+          "url": "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-parent/1.5.34/logback-parent-1.5.34.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "db4effc33ccbc645873e47aa66a837be29c963ff7e6571728c73d72fbcc3def7"
+        }
+      ],
+      "projectUrl": "",
+      "scmUrl": "",
+      "licenseExpression": "EPL-2.0 OR LGPL-2.1-only",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/f1eedf4f2cb9e901d6ae549a06d0c20dcde0136d37e38b50adaf51d4673f66d2.txt",
+          "sha256": "f1eedf4f2cb9e901d6ae549a06d0c20dcde0136d37e38b50adaf51d4673f66d2",
+          "origin": "https://raw.githubusercontent.com/qos-ch/logback/v_1.5.34/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/0becf16567beb77fa252b7664631dd177c8f9a1889e48995b45379c7130e5303.txt",
+          "sha256": "0becf16567beb77fa252b7664631dd177c8f9a1889e48995b45379c7130e5303",
+          "origin": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/c8cfa082f122323774057c2808eb7e796703bde9459fa04ff6f2c9cc25f74eff.txt",
+          "sha256": "c8cfa082f122323774057c2808eb7e796703bde9459fa04ff6f2c9cc25f74eff",
+          "origin": "https://raw.githubusercontent.com/mariadb-corporation/mariadb-connector-j/3.5.8/LICENSE"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.5.34/logback-classic-1.5.34-sources.jar",
+        "sha256": "c2e39cb4d6d9b8c2343c6da2469e21e1d6aef2dde16c2227762c084d549ad0a0",
+        "bytes": 251129,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "ch.qos.logback:logback-core",
+      "groupId": "ch.qos.logback",
+      "artifactId": "logback-core",
+      "type": "jar",
+      "classifier": null,
+      "version": "1.5.34",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "42eda264c0c650c2bec59e66151a88b708a8663dc1b49d788202d53e78b8caae",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.5.34/logback-core-1.5.34.jar",
+      "licenses": [
+        {
+          "name": "EPL-2.0",
+          "url": "https://www.eclipse.org/legal/epl-v20.html",
+          "comments": "Eclipse Public License 2.0"
+        },
+        {
+          "name": "LGPL-2.1-only",
+          "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html",
+          "comments": "GNU Lesser General Public License v2.1 only"
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "ch.qos.logback:logback-core:1.5.34",
+          "url": "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.5.34/logback-core-1.5.34.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "5230a2f36dcfe19d310351c7c372edf57cdfde78527fa39ac45f6e7aa8602f95"
+        },
+        {
+          "coordinate": "ch.qos.logback:logback-parent:1.5.34",
+          "url": "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-parent/1.5.34/logback-parent-1.5.34.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "db4effc33ccbc645873e47aa66a837be29c963ff7e6571728c73d72fbcc3def7"
+        }
+      ],
+      "projectUrl": "",
+      "scmUrl": "",
+      "licenseExpression": "EPL-2.0 OR LGPL-2.1-only",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/f1eedf4f2cb9e901d6ae549a06d0c20dcde0136d37e38b50adaf51d4673f66d2.txt",
+          "sha256": "f1eedf4f2cb9e901d6ae549a06d0c20dcde0136d37e38b50adaf51d4673f66d2",
+          "origin": "https://raw.githubusercontent.com/qos-ch/logback/v_1.5.34/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/0becf16567beb77fa252b7664631dd177c8f9a1889e48995b45379c7130e5303.txt",
+          "sha256": "0becf16567beb77fa252b7664631dd177c8f9a1889e48995b45379c7130e5303",
+          "origin": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/c8cfa082f122323774057c2808eb7e796703bde9459fa04ff6f2c9cc25f74eff.txt",
+          "sha256": "c8cfa082f122323774057c2808eb7e796703bde9459fa04ff6f2c9cc25f74eff",
+          "origin": "https://raw.githubusercontent.com/mariadb-corporation/mariadb-connector-j/3.5.8/LICENSE"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.5.34/logback-core-1.5.34-sources.jar",
+        "sha256": "6a9f217ef206caf2880810c505e057fd2bb90a6024013906815e9513c6e488c5",
+        "bytes": 533231,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "cn.hutool:hutool-all",
+      "groupId": "cn.hutool",
+      "artifactId": "hutool-all",
+      "type": "jar",
+      "classifier": null,
+      "version": "5.8.47",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "14b100a79f482a75cc1c4d37a06f9bdaa9b561f683d2108f02a2f7dbea5b9a60",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/cn/hutool/hutool-all/5.8.47/hutool-all-5.8.47.jar",
+      "licenses": [
+        {
+          "name": "Mulan Permissive Software License，Version 2",
+          "url": "https://license.coscl.org.cn/MulanPSL2",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "cn.hutool:hutool-all:5.8.47",
+          "url": "https://repo.maven.apache.org/maven2/cn/hutool/hutool-all/5.8.47/hutool-all-5.8.47.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "68466e1c50d32fb92d967482339bb7c72233377d4c6bae5c22e46db87c3c44a0"
+        },
+        {
+          "coordinate": "cn.hutool:hutool-parent:5.8.47",
+          "url": "https://repo.maven.apache.org/maven2/cn/hutool/hutool-parent/5.8.47/hutool-parent-5.8.47.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "9464c89061cc14e52b58d1846bd42b6c1511394cb55b56a03eeb538b7718848f"
+        }
+      ],
+      "projectUrl": "https://github.com/looly/hutool",
+      "scmUrl": "",
+      "licenseExpression": "MulanPSL-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/d7136cebc1c0c2a50e02013928fc283b8d69cb805a994e21e6a8cc3983f45131.txt",
+          "sha256": "d7136cebc1c0c2a50e02013928fc283b8d69cb805a994e21e6a8cc3983f45131",
+          "origin": "https://raw.githubusercontent.com/dromara/hutool/5.8.47/LICENSE"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/cn/hutool/hutool-all/5.8.47/hutool-all-5.8.47-sources.jar",
+        "sha256": "051c8d6733773815d1fbcd06e7b99bd729493e3c74c4304b444391e3f23a036f",
+        "bytes": 2193993,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "cn.hutool:hutool-core",
+      "groupId": "cn.hutool",
+      "artifactId": "hutool-core",
+      "type": "jar",
+      "classifier": null,
+      "version": "5.8.47",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "7cc076ad4ed9846dc129edcd2a5e4e01b61a9d715bf0d3b9a7fa707d4f637266",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/cn/hutool/hutool-core/5.8.47/hutool-core-5.8.47.jar",
+      "licenses": [
+        {
+          "name": "Mulan Permissive Software License，Version 2",
+          "url": "https://license.coscl.org.cn/MulanPSL2",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "cn.hutool:hutool-core:5.8.47",
+          "url": "https://repo.maven.apache.org/maven2/cn/hutool/hutool-core/5.8.47/hutool-core-5.8.47.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "7cdc7d6a056f4433a4b586793ee1c30f10f5f32a72f283c07268b48175ef9080"
+        },
+        {
+          "coordinate": "cn.hutool:hutool-parent:5.8.47",
+          "url": "https://repo.maven.apache.org/maven2/cn/hutool/hutool-parent/5.8.47/hutool-parent-5.8.47.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "9464c89061cc14e52b58d1846bd42b6c1511394cb55b56a03eeb538b7718848f"
+        }
+      ],
+      "projectUrl": "",
+      "scmUrl": "",
+      "licenseExpression": "MulanPSL-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/d7136cebc1c0c2a50e02013928fc283b8d69cb805a994e21e6a8cc3983f45131.txt",
+          "sha256": "d7136cebc1c0c2a50e02013928fc283b8d69cb805a994e21e6a8cc3983f45131",
+          "origin": "https://raw.githubusercontent.com/dromara/hutool/5.8.47/LICENSE"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/cn/hutool/hutool-core/5.8.47/hutool-core-5.8.47-sources.jar",
+        "sha256": "706a366c934650bd0e75c821c61c13141ba35d1a6e17a0e27190053e5400dc4f",
+        "bytes": 1174472,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "cn.iocoder.boot:yudao-common",
+      "groupId": "cn.iocoder.boot",
+      "artifactId": "yudao-common",
+      "type": "jar",
+      "classifier": null,
+      "version": "2026.09-SNAPSHOT",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "278a330053fea2db9bcadc6656116bfebfd34b84f10e2e43913b4dbacab6c32b",
+      "artifactUrl": "vendor/ruoyi/",
+      "licenses": [],
+      "pomChain": [
+        {
+          "coordinate": "cn.iocoder.boot:yudao-common:2026.09-SNAPSHOT",
+          "url": null,
+          "evidence": "local installed POM",
+          "sha256": "e2b65b14bb3269aec8cd176870dec19596d8e442b46b61b49163e8262ef1ad0e"
+        }
+      ],
+      "projectUrl": "https://github.com/YunaiV/ruoyi-vue-pro",
+      "scmUrl": "",
+      "licenseExpression": "MIT",
+      "licenseEvidence": "vendor/ruoyi/LICENSE; fixed upstream 7c397bbfae3e768b26e3ee962c5aa7064e8d7c96",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/772daf1f82a50025a74e4066050490d875feba62a49cf0ecefa1b4cc824e9a07.txt",
+          "sha256": "772daf1f82a50025a74e4066050490d875feba62a49cf0ecefa1b4cc824e9a07",
+          "origin": "vendor/ruoyi/LICENSE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.alibaba.fastjson2:fastjson2",
+      "groupId": "com.alibaba.fastjson2",
+      "artifactId": "fastjson2",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.0.65",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "e12cd0e49047e052533d897d4b45d1074a21229f2a1939404234398d4c10c06d",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.65/fastjson2-2.0.65.jar",
+      "licenses": [
+        {
+          "name": "Apache 2",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": "A business-friendly OSS license"
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.alibaba.fastjson2:fastjson2:2.0.65",
+          "url": "https://repo.maven.apache.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.65/fastjson2-2.0.65.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "45d9eb07301bea44757db004813f73cdf3fc99e013e45428f9858cd856d9d23e"
+        }
+      ],
+      "projectUrl": "https://github.com/alibaba/fastjson2",
+      "scmUrl": "https://github.com/alibaba/fastjson2",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.65/fastjson2-2.0.65-sources.jar",
+        "sha256": "6ed35736453ada00a4514aaf691ffb4fa59b8729d7e3c9bad1fe730beab8050a",
+        "bytes": 1064118,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.alibaba.fastjson2:fastjson2-extension",
+      "groupId": "com.alibaba.fastjson2",
+      "artifactId": "fastjson2-extension",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.0.65",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "9a5c4bd4f42085ead8c26d202025690788905afade1d05b09b5aca2521235979",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/alibaba/fastjson2/fastjson2-extension/2.0.65/fastjson2-extension-2.0.65.jar",
+      "licenses": [
+        {
+          "name": "Apache 2",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": "A business-friendly OSS license"
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.alibaba.fastjson2:fastjson2-extension:2.0.65",
+          "url": "https://repo.maven.apache.org/maven2/com/alibaba/fastjson2/fastjson2-extension/2.0.65/fastjson2-extension-2.0.65.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "38cc6091defd340272530fcf46844a4326f60edf762f77ba84feac2e174abcc6"
+        }
+      ],
+      "projectUrl": "https://github.com/alibaba/fastjson2",
+      "scmUrl": "https://github.com/alibaba/fastjson2",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/alibaba/fastjson2/fastjson2-extension/2.0.65/fastjson2-extension-2.0.65-sources.jar",
+        "sha256": "2aa16fe2dea7d8ec1625c9eadb242f39a1fc3b96404fcc40c1b157ad40b81686",
+        "bytes": 26833,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.alibaba:fastjson",
+      "groupId": "com.alibaba",
+      "artifactId": "fastjson",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.0.65",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "085f276d7406dad6faf7d4f767492189b5f99925c48c6ba51b8c440452c6244c",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/alibaba/fastjson/2.0.65/fastjson-2.0.65.jar",
+      "licenses": [
+        {
+          "name": "Apache 2",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": "A business-friendly OSS license"
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.alibaba:fastjson:2.0.65",
+          "url": "https://repo.maven.apache.org/maven2/com/alibaba/fastjson/2.0.65/fastjson-2.0.65.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "18a9c2c2ff1e6f77c1b2ab41225f96f81c53ecee60e6e8c0e83b7275a14c7939"
+        }
+      ],
+      "projectUrl": "https://github.com/alibaba/fastjson2",
+      "scmUrl": "https://github.com/alibaba/fastjson2",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/alibaba/fastjson/2.0.65/fastjson-2.0.65-sources.jar",
+        "sha256": "aca8aaa69e7e13446d062e031aa03f9633c92e6a386234deed7f7a1b64d32f87",
+        "bytes": 105900,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.alibaba:transmittable-thread-local",
+      "groupId": "com.alibaba",
+      "artifactId": "transmittable-thread-local",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.14.5",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "b7873215661fc84d870b1639544bcd32b5933c3ab450664cd8363e0e1b1b7ad1",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/alibaba/transmittable-thread-local/2.14.5/transmittable-thread-local-2.14.5.jar",
+      "licenses": [
+        {
+          "name": "Apache 2",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": "A business-friendly OSS license"
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.alibaba:transmittable-thread-local:2.14.5",
+          "url": "https://repo.maven.apache.org/maven2/com/alibaba/transmittable-thread-local/2.14.5/transmittable-thread-local-2.14.5.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "c0d910c3aed8d051956d3eedf7877ec95163a302ff5d279eba5da4c4f33e0913"
+        }
+      ],
+      "projectUrl": "https://github.com/alibaba/transmittable-thread-local",
+      "scmUrl": "https://github.com/alibaba/transmittable-thread-local",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/alibaba/transmittable-thread-local/2.14.5/transmittable-thread-local-2.14.5-sources.jar",
+        "sha256": "b3ba60854e7740399c4aa3ea7d45b6b6b28c4d8e9cfcf2727d8602ec8e5361cd",
+        "bytes": 645283,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.baomidou:mybatis-plus",
+      "groupId": "com.baomidou",
+      "artifactId": "mybatis-plus",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.17",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "705c760bbc52387fb566c8db6b58f5e904c6c12ce9a2dc3e3d572b284cb92f8d",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus/3.5.17/mybatis-plus-3.5.17.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.baomidou:mybatis-plus:3.5.17",
+          "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus/3.5.17/mybatis-plus-3.5.17.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "131f279547fb23c8d2f5774978a8d1dd492716c26b155294145e1b72aca85c67"
+        }
+      ],
+      "projectUrl": "https://github.com/baomidou/mybatis-plus",
+      "scmUrl": "https://github.com/baomidou/mybatis-plus",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus/3.5.17/mybatis-plus-3.5.17-sources.jar",
+        "sha256": "705c760bbc52387fb566c8db6b58f5e904c6c12ce9a2dc3e3d572b284cb92f8d",
+        "bytes": 261,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.baomidou:mybatis-plus-annotation",
+      "groupId": "com.baomidou",
+      "artifactId": "mybatis-plus-annotation",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.17",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "372bcc91fe6b9071f7b85f95262957835b6975813179cac97392817771a8b56e",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-annotation/3.5.17/mybatis-plus-annotation-3.5.17.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.baomidou:mybatis-plus-annotation:3.5.17",
+          "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-annotation/3.5.17/mybatis-plus-annotation-3.5.17.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "7faf79db6955a82cdbec27b31b4ea258c68482369bdc9bc76d6f6c5cd1d7e570"
+        }
+      ],
+      "projectUrl": "https://github.com/baomidou/mybatis-plus",
+      "scmUrl": "https://github.com/baomidou/mybatis-plus",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-annotation/3.5.17/mybatis-plus-annotation-3.5.17-sources.jar",
+        "sha256": "0579bf1175a64f976eeebbcb08dc720c3d7741bd5b6747ca9b3def243f32543c",
+        "bytes": 19786,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.baomidou:mybatis-plus-core",
+      "groupId": "com.baomidou",
+      "artifactId": "mybatis-plus-core",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.17",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "f1796f941c1035f0382c135e3274528913f52d8651c6d26c52bfa1a7e522b332",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-core/3.5.17/mybatis-plus-core-3.5.17.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.baomidou:mybatis-plus-core:3.5.17",
+          "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-core/3.5.17/mybatis-plus-core-3.5.17.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "94a7f935d9bf9cb0c1c9cd27dc48687dd6e1f6b30fb0e8cfc39c4b2b78f125c3"
+        }
+      ],
+      "projectUrl": "https://github.com/baomidou/mybatis-plus",
+      "scmUrl": "https://github.com/baomidou/mybatis-plus",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-core/3.5.17/mybatis-plus-core-3.5.17-sources.jar",
+        "sha256": "73b3bc62a892fd08fee44ea80efb1a5312199600ced6bb4207d6a37aefcc7515",
+        "bytes": 286405,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.baomidou:mybatis-plus-extension",
+      "groupId": "com.baomidou",
+      "artifactId": "mybatis-plus-extension",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.17",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "18dd448c8849e78849f344a4c34f70d48e66852c450db6b0a6894d2f7c701b0e",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-extension/3.5.17/mybatis-plus-extension-3.5.17.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.baomidou:mybatis-plus-extension:3.5.17",
+          "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-extension/3.5.17/mybatis-plus-extension-3.5.17.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "84a858bbc40ae7f5793d8374f4ce2276693e4c91bb937bde9fa0ff8425f8b356"
+        }
+      ],
+      "projectUrl": "https://github.com/baomidou/mybatis-plus",
+      "scmUrl": "https://github.com/baomidou/mybatis-plus",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-extension/3.5.17/mybatis-plus-extension-3.5.17-sources.jar",
+        "sha256": "e8a26a7cbb19afa5a6ef938aaa38687465c8317e7b218e3a00ce958d42d3c2fe",
+        "bytes": 135843,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.baomidou:mybatis-plus-spring",
+      "groupId": "com.baomidou",
+      "artifactId": "mybatis-plus-spring",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.17",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "285a96eac3bc9006e2e0d9c847bd09e9857e0a40542a3fa82e36dc0ddfc34f3a",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-spring/3.5.17/mybatis-plus-spring-3.5.17.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.baomidou:mybatis-plus-spring:3.5.17",
+          "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-spring/3.5.17/mybatis-plus-spring-3.5.17.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "ce71ec09796f151b34049e811433227bb10f90ee847e55f0a7fbe8cf06637da5"
+        }
+      ],
+      "projectUrl": "https://github.com/baomidou/mybatis-plus",
+      "scmUrl": "https://github.com/baomidou/mybatis-plus",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-spring/3.5.17/mybatis-plus-spring-3.5.17-sources.jar",
+        "sha256": "0bb1de2304a464915baf30498696dcd7d0fcfd5de529fd2b674698c0f41044bd",
+        "bytes": 22104,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.baomidou:mybatis-plus-spring-boot-autoconfigure",
+      "groupId": "com.baomidou",
+      "artifactId": "mybatis-plus-spring-boot-autoconfigure",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.17",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "86990fbd8cca5c2a7132ad33bf145b7820108958826323c044f88e2f51c21973",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-spring-boot-autoconfigure/3.5.17/mybatis-plus-spring-boot-autoconfigure-3.5.17.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.baomidou:mybatis-plus-spring-boot-autoconfigure:3.5.17",
+          "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-spring-boot-autoconfigure/3.5.17/mybatis-plus-spring-boot-autoconfigure-3.5.17.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "a88d9aeef07fe0b47f97faea6efeaf34332fcbc0b69245b07daf4a34032a6920"
+        }
+      ],
+      "projectUrl": "https://github.com/baomidou/mybatis-plus",
+      "scmUrl": "https://github.com/baomidou/mybatis-plus",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-spring-boot-autoconfigure/3.5.17/mybatis-plus-spring-boot-autoconfigure-3.5.17-sources.jar",
+        "sha256": "af655b265547179074889115408c3ca2bb0ef9747bc8715db58f533dbde2646f",
+        "bytes": 19183,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.baomidou:mybatis-plus-spring-boot-native-image",
+      "groupId": "com.baomidou",
+      "artifactId": "mybatis-plus-spring-boot-native-image",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.17",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "530a1b83e4d4d7600d07fcdafa898f3e2770bbd2cf95aa49fce039f2945ab8d1",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-spring-boot-native-image/3.5.17/mybatis-plus-spring-boot-native-image-3.5.17.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.baomidou:mybatis-plus-spring-boot-native-image:3.5.17",
+          "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-spring-boot-native-image/3.5.17/mybatis-plus-spring-boot-native-image-3.5.17.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "e64691400da73ef9aa44d0efe2eab85f172f38ddc7255ea6a34c9320c78f1710"
+        }
+      ],
+      "projectUrl": "https://github.com/baomidou/mybatis-plus",
+      "scmUrl": "https://github.com/baomidou/mybatis-plus",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-spring-boot-native-image/3.5.17/mybatis-plus-spring-boot-native-image-3.5.17-sources.jar",
+        "sha256": "12094f5bfe0aa659d718dd0a3fa747f78f6d60da855ff4d416d6d5fbf9741bb4",
+        "bytes": 17562,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.baomidou:mybatis-plus-spring-boot3-starter",
+      "groupId": "com.baomidou",
+      "artifactId": "mybatis-plus-spring-boot3-starter",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.17",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "20db937818dc0e96d00e39b6c87556e29c80ecfe7794b1667df9e2b06c30241b",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-spring-boot3-starter/3.5.17/mybatis-plus-spring-boot3-starter-3.5.17.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.baomidou:mybatis-plus-spring-boot3-starter:3.5.17",
+          "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-spring-boot3-starter/3.5.17/mybatis-plus-spring-boot3-starter-3.5.17.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "e3c140db0b9d6882abedd0a231988ea9055b548d48f21cf5bfd363d1a6a116e3"
+        }
+      ],
+      "projectUrl": "https://github.com/baomidou/mybatis-plus",
+      "scmUrl": "https://github.com/baomidou/mybatis-plus",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/baomidou/mybatis-plus-spring-boot3-starter/3.5.17/mybatis-plus-spring-boot3-starter-3.5.17-sources.jar",
+        "sha256": "c89f3fbe8b437277fe370a10b60844f0b3c9f4e2147b2f2e5c109ec11eda5b71",
+        "bytes": 7220,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.fasterxml.jackson.core:jackson-annotations",
+      "groupId": "com.fasterxml.jackson.core",
+      "artifactId": "jackson-annotations",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.21",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "53ca085f4a150f703f49e1aabd935bd03b43e1ea3d55d135438292af22cef56b",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-annotations:2.21",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "71cac5392151e2a528cc9a09179f0a334179f05c52f8e596cf58ddf12bb27f2b"
+        }
+      ],
+      "projectUrl": "https://github.com/FasterXML/jackson",
+      "scmUrl": "https://github.com/FasterXML/jackson-annotations",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201.txt",
+          "sha256": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.fasterxml.jackson.core:jackson-core",
+      "groupId": "com.fasterxml.jackson.core",
+      "artifactId": "jackson-core",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.21.4",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "4b40a06396f239f8de2da57419adde6e94e5edc18a2171d471ea05eeed4e5c2d",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.4/jackson-core-2.21.4.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core:2.21.4",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.4/jackson-core-2.21.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "e74ac8ef4ae9d5e504ab7fbda5f61a39645b7a3e662246d5d090a9c0b22e7fdf"
+        }
+      ],
+      "projectUrl": "https://github.com/FasterXML/jackson-core",
+      "scmUrl": "https://github.com/FasterXML/jackson-core",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.4/jackson-core-2.21.4.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/e6aef1c0f4cf5b0f802c16b31fce309b3c3737450b93c40d6291bf6540aae3d1.txt",
+          "sha256": "e6aef1c0f4cf5b0f802c16b31fce309b3c3737450b93c40d6291bf6540aae3d1",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.4/jackson-core-2.21.4.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.fasterxml.jackson.core:jackson-databind",
+      "groupId": "com.fasterxml.jackson.core",
+      "artifactId": "jackson-databind",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.21.4",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "3888e9e69ab66fbacaacc9aea0e9ffbf15368288e4aca468b024dba11c09fbf9",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.4/jackson-databind-2.21.4.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind:2.21.4",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.4/jackson-databind-2.21.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "58c9c87c3d46ec8fb57d855fc675185e01147f3a9a415a92a2e464a5c02b9cec"
+        }
+      ],
+      "projectUrl": "https://github.com/FasterXML/jackson",
+      "scmUrl": "https://github.com/FasterXML/jackson-databind",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.4/jackson-databind-2.21.4.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201.txt",
+          "sha256": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.4/jackson-databind-2.21.4.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.fasterxml.jackson.dataformat:jackson-dataformat-toml",
+      "groupId": "com.fasterxml.jackson.dataformat",
+      "artifactId": "jackson-dataformat-toml",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.21.4",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "c22e9f650a45d5697116e9beb85cb218792f03d19cf79134e692fe1a65f50cc6",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.21.4/jackson-dataformat-toml-2.21.4.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:2.21.4",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.21.4/jackson-dataformat-toml-2.21.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "1fc46ffeaa5d269cc6d874082e6349fa8d5a9c411665b38f88eb494e49280922"
+        }
+      ],
+      "projectUrl": "https://github.com/FasterXML/jackson-dataformats-text",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/eef8e359fd7799a1740765099fa4d114dcd296bb96dcfa7d45d5b81b2504bed2.txt",
+          "sha256": "eef8e359fd7799a1740765099fa4d114dcd296bb96dcfa7d45d5b81b2504bed2",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.21.4/jackson-dataformat-toml-2.21.4.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/5828ffe74ea0ee4bf896654026f05fed1ead1d22acd577cc1eec9be0bc0de1ed.txt",
+          "sha256": "5828ffe74ea0ee4bf896654026f05fed1ead1d22acd577cc1eec9be0bc0de1ed",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.21.4/jackson-dataformat-toml-2.21.4.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.fasterxml.jackson.datatype:jackson-datatype-jdk8",
+      "groupId": "com.fasterxml.jackson.datatype",
+      "artifactId": "jackson-datatype-jdk8",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.21.4",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "2dde4a8f1aad3306c040f56ff40da81c6d58dcef3434c00849c9bce09f56a074",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.21.4/jackson-datatype-jdk8-2.21.4.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.21.4",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.21.4/jackson-datatype-jdk8-2.21.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "f3c4367e2e17b97d49260edb730b00cc5567b066f7218c9d7545f450530d0ab6"
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.module:jackson-modules-java8:2.21.4",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-modules-java8/2.21.4/jackson-modules-java8-2.21.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "9ff11d3c7da6d773f60d3add741e5f4ef2b8b67560d7f729a5885a99609753fb"
+        },
+        {
+          "coordinate": "com.fasterxml.jackson:jackson-base:2.21.4",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.21.4/jackson-base-2.21.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "91e9c95e0ced7356bfa6e28297f2c1e2acdae67306713fa945aa5245c0d0fef5"
+        }
+      ],
+      "projectUrl": "",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/bc3d1a9b9fe02f5b9186447ca2896a63015e5e626eccfdda6a04bd7d71be3ce0.txt",
+          "sha256": "bc3d1a9b9fe02f5b9186447ca2896a63015e5e626eccfdda6a04bd7d71be3ce0",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.21.4/jackson-datatype-jdk8-2.21.4.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/7347397a0665f6898b32894a1869a514251abef7da7620902b0e57c5026cf1ed.txt",
+          "sha256": "7347397a0665f6898b32894a1869a514251abef7da7620902b0e57c5026cf1ed",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.21.4/jackson-datatype-jdk8-2.21.4.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+      "groupId": "com.fasterxml.jackson.datatype",
+      "artifactId": "jackson-datatype-jsr310",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.21.4",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "d1ac4b98b70304e56448423589fde5e775b100889643ad1ead62cc7811633684",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.4/jackson-datatype-jsr310-2.21.4.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.21.4",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.4/jackson-datatype-jsr310-2.21.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "2ac48defe3501a077a1d9dc5515ddc39a6791ca0f5bb43983ba814524881c28c"
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.module:jackson-modules-java8:2.21.4",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-modules-java8/2.21.4/jackson-modules-java8-2.21.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "9ff11d3c7da6d773f60d3add741e5f4ef2b8b67560d7f729a5885a99609753fb"
+        },
+        {
+          "coordinate": "com.fasterxml.jackson:jackson-base:2.21.4",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.21.4/jackson-base-2.21.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "91e9c95e0ced7356bfa6e28297f2c1e2acdae67306713fa945aa5245c0d0fef5"
+        }
+      ],
+      "projectUrl": "",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/66ea9c8987b1674aababbcc24f61c83ab4fb7baf3af1d701caf0a3aaea97fa92.txt",
+          "sha256": "66ea9c8987b1674aababbcc24f61c83ab4fb7baf3af1d701caf0a3aaea97fa92",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.4/jackson-datatype-jsr310-2.21.4.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/7347397a0665f6898b32894a1869a514251abef7da7620902b0e57c5026cf1ed.txt",
+          "sha256": "7347397a0665f6898b32894a1869a514251abef7da7620902b0e57c5026cf1ed",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.4/jackson-datatype-jsr310-2.21.4.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.fasterxml.jackson.module:jackson-module-parameter-names",
+      "groupId": "com.fasterxml.jackson.module",
+      "artifactId": "jackson-module-parameter-names",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.21.4",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "9510f91a4be2c700753ad244596b67424cb32c23659db1dc534219226e5df3a3",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.21.4/jackson-module-parameter-names-2.21.4.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.fasterxml.jackson.module:jackson-module-parameter-names:2.21.4",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.21.4/jackson-module-parameter-names-2.21.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "ce815aaa51cb1b1387764b13c68d35faa46b64bf53fce321fc91fd4bc602c0c8"
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.module:jackson-modules-java8:2.21.4",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-modules-java8/2.21.4/jackson-modules-java8-2.21.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "9ff11d3c7da6d773f60d3add741e5f4ef2b8b67560d7f729a5885a99609753fb"
+        },
+        {
+          "coordinate": "com.fasterxml.jackson:jackson-base:2.21.4",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.21.4/jackson-base-2.21.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "91e9c95e0ced7356bfa6e28297f2c1e2acdae67306713fa945aa5245c0d0fef5"
+        }
+      ],
+      "projectUrl": "",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/a09ba3adcfdcac2d7e31b89e8e7799cec96d7303dc82c0bb3d38d8a352d41d19.txt",
+          "sha256": "a09ba3adcfdcac2d7e31b89e8e7799cec96d7303dc82c0bb3d38d8a352d41d19",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.21.4/jackson-module-parameter-names-2.21.4.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/7347397a0665f6898b32894a1869a514251abef7da7620902b0e57c5026cf1ed.txt",
+          "sha256": "7347397a0665f6898b32894a1869a514251abef7da7620902b0e57c5026cf1ed",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.21.4/jackson-module-parameter-names-2.21.4.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.fasterxml:classmate",
+      "groupId": "com.fasterxml",
+      "artifactId": "classmate",
+      "type": "jar",
+      "classifier": null,
+      "version": "1.7.3",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "75fbda45456f123fb6e2028a6189442d8d0730b357adce4c0a6d7e789f70669b",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.fasterxml:classmate:1.7.3",
+          "url": "https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.3/classmate-1.7.3.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "ba4b3c0bbc05e9069fca3469750d0e222a56c487be715af2edb43218faefdb70"
+        }
+      ],
+      "projectUrl": "https://github.com/FasterXML/java-classmate",
+      "scmUrl": "https://github.com/FasterXML/java-classmate",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7d8d549eb31995fe67822c860acc7ac3dd958a03a5a71aef4069033e7df72d94.txt",
+          "sha256": "7d8d549eb31995fe67822c860acc7ac3dd958a03a5a71aef4069033e7df72d94",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/1a8c67aaade274bc7bf06a7044571ab280d59fe3686941b6499b2176a072ea6d.txt",
+          "sha256": "1a8c67aaade274bc7bf06a7044571ab280d59fe3686941b6499b2176a072ea6d",
+          "origin": "https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "com.zaxxer:HikariCP",
+      "groupId": "com.zaxxer",
+      "artifactId": "HikariCP",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.3.3",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "709f378c05756280939ce50fc1b1f1a53bb8e1899dc1b249f21f12703640b48b",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/zaxxer/HikariCP/6.3.3/HikariCP-6.3.3.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "com.zaxxer:HikariCP:6.3.3",
+          "url": "https://repo.maven.apache.org/maven2/com/zaxxer/HikariCP/6.3.3/HikariCP-6.3.3.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "244efe009ef5300bad308de418cb29083de278c10bae816c59daaa281981fce5"
+        }
+      ],
+      "projectUrl": "https://github.com/brettwooldridge/HikariCP",
+      "scmUrl": "https://github.com/brettwooldridge/HikariCP",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/com/zaxxer/HikariCP/6.3.3/HikariCP-6.3.3-sources.jar",
+        "sha256": "65a247c9ddb809885696ad2dbb1e77e923debc82c94972ca4c48f40a83c0e0a5",
+        "bytes": 102075,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "io.micrometer:micrometer-commons",
+      "groupId": "io.micrometer",
+      "artifactId": "micrometer-commons",
+      "type": "jar",
+      "classifier": null,
+      "version": "1.15.12",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "4b779cf7acb0534bb1f8e964f25200037ecb3944368f859a630fa637d6d5d7c0",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.15.12/micrometer-commons-1.15.12.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "io.micrometer:micrometer-commons:1.15.12",
+          "url": "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.15.12/micrometer-commons-1.15.12.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "cd1c64187bdf9b851d1900de45918978416df79abab66859be51cd6f7c89e651"
+        }
+      ],
+      "projectUrl": "https://github.com/micrometer-metrics/micrometer",
+      "scmUrl": "git@github.com:micrometer-metrics/micrometer.git",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/62fb8a3a9621dc2388174caaabe9c2317b694bb9a1d46c98bcf5655b68f51be3.txt",
+          "sha256": "62fb8a3a9621dc2388174caaabe9c2317b694bb9a1d46c98bcf5655b68f51be3",
+          "origin": "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.15.12/micrometer-commons-1.15.12.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/df207ca1a2ea3794caf112d7c1f024c87b4ddfe91d3f243977ad1d3cd085d538.txt",
+          "sha256": "df207ca1a2ea3794caf112d7c1f024c87b4ddfe91d3f243977ad1d3cd085d538",
+          "origin": "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.15.12/micrometer-commons-1.15.12.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "io.micrometer:micrometer-observation",
+      "groupId": "io.micrometer",
+      "artifactId": "micrometer-observation",
+      "type": "jar",
+      "classifier": null,
+      "version": "1.15.12",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "54483e68ed44af1bb0c36d1df2235d36f233e459d52f5a3be3e69813827a6300",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.15.12/micrometer-observation-1.15.12.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "io.micrometer:micrometer-observation:1.15.12",
+          "url": "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.15.12/micrometer-observation-1.15.12.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "7bc391b32ca147fd5df32f425f4ea91f153ee04afe808c4676c039f4b1340f48"
+        }
+      ],
+      "projectUrl": "https://github.com/micrometer-metrics/micrometer",
+      "scmUrl": "git@github.com:micrometer-metrics/micrometer.git",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/62fb8a3a9621dc2388174caaabe9c2317b694bb9a1d46c98bcf5655b68f51be3.txt",
+          "sha256": "62fb8a3a9621dc2388174caaabe9c2317b694bb9a1d46c98bcf5655b68f51be3",
+          "origin": "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.15.12/micrometer-observation-1.15.12.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/df207ca1a2ea3794caf112d7c1f024c87b4ddfe91d3f243977ad1d3cd085d538.txt",
+          "sha256": "df207ca1a2ea3794caf112d7c1f024c87b4ddfe91d3f243977ad1d3cd085d538",
+          "origin": "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.15.12/micrometer-observation-1.15.12.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "io.opentelemetry:opentelemetry-api",
+      "groupId": "io.opentelemetry",
+      "artifactId": "opentelemetry-api",
+      "type": "jar",
+      "classifier": null,
+      "version": "1.49.0",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "a813c9a92b82a4ffa3a62e88216a9e9ef9a407fcd41614fe596b2895167ed638",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-api/1.49.0/opentelemetry-api-1.49.0.jar",
+      "licenses": [
+        {
+          "name": "The Apache License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "io.opentelemetry:opentelemetry-api:1.49.0",
+          "url": "https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-api/1.49.0/opentelemetry-api-1.49.0.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "e5cff031378993faf140905623e3e385bdda82de064add37bf3131c748574462"
+        }
+      ],
+      "projectUrl": "https://github.com/open-telemetry/opentelemetry-java",
+      "scmUrl": "git@github.com:open-telemetry/opentelemetry-java.git",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-api/1.49.0/opentelemetry-api-1.49.0-sources.jar",
+        "sha256": "45ce4df9b8157e57e07dbd68784d3877474bd2fc2291954ef32b5666845d5c7f",
+        "bytes": 121476,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "io.opentelemetry:opentelemetry-context",
+      "groupId": "io.opentelemetry",
+      "artifactId": "opentelemetry-context",
+      "type": "jar",
+      "classifier": null,
+      "version": "1.49.0",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "17de3c85b341240b3b216c43adbd244c9fbd39c9e5448306d56460f80599a76b",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-context/1.49.0/opentelemetry-context-1.49.0.jar",
+      "licenses": [
+        {
+          "name": "The Apache License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "io.opentelemetry:opentelemetry-context:1.49.0",
+          "url": "https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-context/1.49.0/opentelemetry-context-1.49.0.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "ebd158d5705d4deea64535b053798d55b5bb5457bd454c60f4ecdaf194fa1438"
+        }
+      ],
+      "projectUrl": "https://github.com/open-telemetry/opentelemetry-java",
+      "scmUrl": "git@github.com:open-telemetry/opentelemetry-java.git",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-context/1.49.0/opentelemetry-context-1.49.0-sources.jar",
+        "sha256": "d51f02535781654be13ca245bc09d1ddddf54c19788be8b3f8d833701c292a8b",
+        "bytes": 39238,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "io.swagger.core.v3:swagger-annotations-jakarta",
+      "groupId": "io.swagger.core.v3",
+      "artifactId": "swagger-annotations-jakarta",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.2.41",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "714df4b94e8956a86de9a95fae85d5d9ebcdfd0bf9d84e3634bc16b60e30a94e",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations-jakarta/2.2.41/swagger-annotations-jakarta-2.2.41.jar",
+      "licenses": [
+        {
+          "name": "Apache License 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "io.swagger.core.v3:swagger-annotations-jakarta:2.2.41",
+          "url": "https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations-jakarta/2.2.41/swagger-annotations-jakarta-2.2.41.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "e683004289b6b9d45f0553553ee0b04d08bac63d3b814c687b2c281542f8fe6b"
+        },
+        {
+          "coordinate": "io.swagger.core.v3:swagger-project-jakarta:2.2.41",
+          "url": "https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-project-jakarta/2.2.41/swagger-project-jakarta-2.2.41.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "0304e95046b40c03db01edcb96604cef066ace61e639ea789e4bb78a1ec29436"
+        }
+      ],
+      "projectUrl": "",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/aa4dc81ef2c6b4c2fd8cb7a7a4245c34396acd5a5dfa1ba6c8c0cf9ee88423fb.txt",
+          "sha256": "aa4dc81ef2c6b4c2fd8cb7a7a4245c34396acd5a5dfa1ba6c8c0cf9ee88423fb",
+          "origin": "https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations-jakarta/2.2.41/swagger-annotations-jakarta-2.2.41.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/f1fc76fa8bfb48a9a794376e1be0609d8d723b530e98b1970c7369b19587caef.txt",
+          "sha256": "f1fc76fa8bfb48a9a794376e1be0609d8d723b530e98b1970c7369b19587caef",
+          "origin": "https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations-jakarta/2.2.41/swagger-annotations-jakarta-2.2.41.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "jakarta.annotation:jakarta.annotation-api",
+      "groupId": "jakarta.annotation",
+      "artifactId": "jakarta.annotation-api",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.1.1",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar",
+      "licenses": [
+        {
+          "name": "EPL 2.0",
+          "url": "http://www.eclipse.org/legal/epl-2.0",
+          "comments": ""
+        },
+        {
+          "name": "GPL2 w/ CPE",
+          "url": "https://www.gnu.org/software/classpath/license.html",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "jakarta.annotation:jakarta.annotation-api:2.1.1",
+          "url": "https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "af650eca1de1b98741006acd82507e4408cffedd2fee33a0ea463d61508db7ec"
+        }
+      ],
+      "projectUrl": "https://projects.eclipse.org/projects/ee4j.ca",
+      "scmUrl": "https://github.com/eclipse-ee4j/common-annotations-api",
+      "licenseExpression": "EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/6e1f002892b81cbe0647019b150c8a056efc1add565671a4f8af629b6cd2cc7b.txt",
+          "sha256": "6e1f002892b81cbe0647019b150c8a056efc1add565671a4f8af629b6cd2cc7b",
+          "origin": "https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar!/META-INF/LICENSE.md"
+        },
+        {
+          "path": "docs/licenses/dependencies/3852834ebb4c2e04ecc18c9d099a05eab72cbd6edf35fb191390be6306019b4c.txt",
+          "sha256": "3852834ebb4c2e04ecc18c9d099a05eab72cbd6edf35fb191390be6306019b4c",
+          "origin": "https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar!/META-INF/NOTICE.md"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "jakarta.validation:jakarta.validation-api",
+      "groupId": "jakarta.validation",
+      "artifactId": "jakarta.validation-api",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.0.2",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "291c25e6910cc6a7ebd96d4c6baebf6d7c37676c5482c2d96146e901b62c1fc9",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar",
+      "licenses": [
+        {
+          "name": "Apache License 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "jakarta.validation:jakarta.validation-api:3.0.2",
+          "url": "https://repo.maven.apache.org/maven2/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "0a7b9c6327968afe0d82f7cf4facbda7e157968c5808d69bcb8019863b298dc4"
+        }
+      ],
+      "projectUrl": "https://beanvalidation.org",
+      "scmUrl": "https://github.com/eclipse-ee4j/beanvalidation-api",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2-sources.jar",
+        "sha256": "77df917738f0f91718dfc5456d1f2b5aaa6326f3bf3bdf5606cf64f6c0512689",
+        "bytes": 97946,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.apache.logging.log4j:log4j-api",
+      "groupId": "org.apache.logging.log4j",
+      "artifactId": "log4j-api",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.24.3",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "5b4a0a0cd0e751ded431c162442bdbdd53328d1f8bb2bae5fc1bbeee0f66d80f",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.apache.logging.log4j:log4j-api:2.24.3",
+          "url": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "bc05de33533a1259adbacbfcc826cd66376a2d9c4ee53fb836009f44a45b8239"
+        }
+      ],
+      "projectUrl": "",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/6d95ce9a738c31425a584ee91eb6d9b6fbe18e351fb206b9f79104bcf7d7bf15.txt",
+          "sha256": "6d95ce9a738c31425a584ee91eb6d9b6fbe18e351fb206b9f79104bcf7d7bf15",
+          "origin": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.apache.logging.log4j:log4j-to-slf4j",
+      "groupId": "org.apache.logging.log4j",
+      "artifactId": "log4j-to-slf4j",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.24.3",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "c7f2b0c612a4eb05b1587d1c880eb4cf5f4f53850676a8ede8da2b8fabb4f73f",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.apache.logging.log4j:log4j-to-slf4j:2.24.3",
+          "url": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "635e52e3474e7f4dc30d2ccbcb68a163888395e3c252961275d04e3db5f6e230"
+        }
+      ],
+      "projectUrl": "",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/a57ab7958eb6d37c460b0f64080c67ab184c4ffc97abdf06187168019c62b047.txt",
+          "sha256": "a57ab7958eb6d37c460b0f64080c67ab184c4ffc97abdf06187168019c62b047",
+          "origin": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.apache.tomcat.embed:tomcat-embed-core",
+      "groupId": "org.apache.tomcat.embed",
+      "artifactId": "tomcat-embed-core",
+      "type": "jar",
+      "classifier": null,
+      "version": "10.1.55",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "82473f841824095e03f2c938c18707e44e388e34fb1735b2b338bb4f22fd54f0",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.55/tomcat-embed-core-10.1.55.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.apache.tomcat.embed:tomcat-embed-core:10.1.55",
+          "url": "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.55/tomcat-embed-core-10.1.55.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "231081c2f8f02478cb1eacae9f5db0e78948cd7fff9444fcfa0f5a5307e3bd29"
+        }
+      ],
+      "projectUrl": "https://tomcat.apache.org/",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/b15780b4c93aef25618df419dcde6cc9646f497c29fc615c1b67b6fa3bb26a65.txt",
+          "sha256": "b15780b4c93aef25618df419dcde6cc9646f497c29fc615c1b67b6fa3bb26a65",
+          "origin": "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.55/tomcat-embed-core-10.1.55.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/234d3234bb332895157270092fa2a11e80aa0b3d70d59e13de0eed4c2adb1790.txt",
+          "sha256": "234d3234bb332895157270092fa2a11e80aa0b3d70d59e13de0eed4c2adb1790",
+          "origin": "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.55/tomcat-embed-core-10.1.55.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.apache.tomcat.embed:tomcat-embed-el",
+      "groupId": "org.apache.tomcat.embed",
+      "artifactId": "tomcat-embed-el",
+      "type": "jar",
+      "classifier": null,
+      "version": "10.1.55",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "a527fe51c6f9428c5116f78fe28588e55357b4492309b51fb0453372da16fa5f",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.55/tomcat-embed-el-10.1.55.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.apache.tomcat.embed:tomcat-embed-el:10.1.55",
+          "url": "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.55/tomcat-embed-el-10.1.55.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "b1da977b652d7b4f5138e820426c2e2cdf0e69c8307e3a3de0b47a7b2c52c473"
+        }
+      ],
+      "projectUrl": "https://tomcat.apache.org/",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.55/tomcat-embed-el-10.1.55.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/0317acaa42a5e48bec061cf009cb5c8b4b8ff845f3c6ba548f67c5c22c29fc96.txt",
+          "sha256": "0317acaa42a5e48bec061cf009cb5c8b4b8ff845f3c6ba548f67c5c22c29fc96",
+          "origin": "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.55/tomcat-embed-el-10.1.55.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.apache.tomcat.embed:tomcat-embed-websocket",
+      "groupId": "org.apache.tomcat.embed",
+      "artifactId": "tomcat-embed-websocket",
+      "type": "jar",
+      "classifier": null,
+      "version": "10.1.55",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "81800431395fe2ef317fc14075ed49faaa64679a3458ee8791159111a1aa1b37",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.55/tomcat-embed-websocket-10.1.55.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.apache.tomcat.embed:tomcat-embed-websocket:10.1.55",
+          "url": "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.55/tomcat-embed-websocket-10.1.55.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "b8d23e4fee98927b4c18c441f4868adb1884a555e56c038f7920a6f4665e73bc"
+        }
+      ],
+      "projectUrl": "https://tomcat.apache.org/",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.55/tomcat-embed-websocket-10.1.55.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/0317acaa42a5e48bec061cf009cb5c8b4b8ff845f3c6ba548f67c5c22c29fc96.txt",
+          "sha256": "0317acaa42a5e48bec061cf009cb5c8b4b8ff845f3c6ba548f67c5c22c29fc96",
+          "origin": "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.55/tomcat-embed-websocket-10.1.55.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.dromara:easy-trans-anno",
+      "groupId": "org.dromara",
+      "artifactId": "easy-trans-anno",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.1.8",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "38ed97cca309ce344277ff932bac29b81a89020618896870ac22b8b9e2b6cb64",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/dromara/easy-trans-anno/3.1.8/easy-trans-anno-3.1.8.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.dromara:easy-trans-anno:3.1.8",
+          "url": "https://repo.maven.apache.org/maven2/org/dromara/easy-trans-anno/3.1.8/easy-trans-anno-3.1.8.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "e9a540d7c21fe14574bb11e10fe308b4ceddd42c6ddbdab88c0dc0c2c1514f56"
+        }
+      ],
+      "projectUrl": "",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/org/dromara/easy-trans-anno/3.1.8/easy-trans-anno-3.1.8-sources.jar",
+        "sha256": "2ac53625974c85a7b4515220fabef98dcaa1a81f9862f20ac665a3c4042ac3f5",
+        "bytes": 13489,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.flywaydb:flyway-core",
+      "groupId": "org.flywaydb",
+      "artifactId": "flyway-core",
+      "type": "jar",
+      "classifier": null,
+      "version": "11.7.2",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "ff01fab3bcfd79e9345df191ecf82cbe1f9f65a757266158bd691564b1c1282c",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/flywaydb/flyway-core/11.7.2/flyway-core-11.7.2.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://flywaydb.org/licenses/flyway-oss",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.flywaydb:flyway-core:11.7.2",
+          "url": "https://repo.maven.apache.org/maven2/org/flywaydb/flyway-core/11.7.2/flyway-core-11.7.2.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "86831f5b36ef4fdc39f4cffca7f9a5de23c64d0b4f7f1ef8b1715b333433000d"
+        },
+        {
+          "coordinate": "org.flywaydb:flyway-parent:11.7.2",
+          "url": "https://repo.maven.apache.org/maven2/org/flywaydb/flyway-parent/11.7.2/flyway-parent-11.7.2.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "3f1d1603d1ea1d876fbcd6570d054eb7f421bd2f61efdf8c459d859126d6b758"
+        }
+      ],
+      "projectUrl": "",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/73332bc915a16b4ca4bb913d4a55b66e865c6ef0d5feb289063248556fab48b8.txt",
+          "sha256": "73332bc915a16b4ca4bb913d4a55b66e865c6ef0d5feb289063248556fab48b8",
+          "origin": "https://repo.maven.apache.org/maven2/org/flywaydb/flyway-core/11.7.2/flyway-core-11.7.2.jar!/META-INF/LICENSE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.flywaydb:flyway-mysql",
+      "groupId": "org.flywaydb",
+      "artifactId": "flyway-mysql",
+      "type": "jar",
+      "classifier": null,
+      "version": "11.7.2",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "16b6b74800dfcbae21b7d7539c108ad573ead462840e357fc9ffd9fb7129bdb3",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/flywaydb/flyway-mysql/11.7.2/flyway-mysql-11.7.2.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://flywaydb.org/licenses/flyway-oss",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.flywaydb:flyway-mysql:11.7.2",
+          "url": "https://repo.maven.apache.org/maven2/org/flywaydb/flyway-mysql/11.7.2/flyway-mysql-11.7.2.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "8d688724c77d1e436921ebc462fb1cd3653a230c0b7cfb7d21242eb6477614d4"
+        },
+        {
+          "coordinate": "org.flywaydb:flyway-parent:11.7.2",
+          "url": "https://repo.maven.apache.org/maven2/org/flywaydb/flyway-parent/11.7.2/flyway-parent-11.7.2.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "3f1d1603d1ea1d876fbcd6570d054eb7f421bd2f61efdf8c459d859126d6b758"
+        }
+      ],
+      "projectUrl": "",
+      "scmUrl": "",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/org/flywaydb/flyway-mysql/11.7.2/flyway-mysql-11.7.2-sources.jar",
+        "sha256": "7353704fd66125a466584a797dbbb3ac5d6e1100736457aab008f9cadfd311c7",
+        "bytes": 23424,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.hibernate.validator:hibernate-validator",
+      "groupId": "org.hibernate.validator",
+      "artifactId": "hibernate-validator",
+      "type": "jar",
+      "classifier": null,
+      "version": "8.0.3.Final",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "2ad24670fd08e21d3f43d3105d5326bd5ef6b01e819c5cd103823866b954517e",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/8.0.3.Final/hibernate-validator-8.0.3.Final.jar",
+      "licenses": [
+        {
+          "name": "Apache License 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.hibernate.validator:hibernate-validator:8.0.3.Final",
+          "url": "https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/8.0.3.Final/hibernate-validator-8.0.3.Final.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "b8f6fd01f3c861d63a55a9cb726cb1776917aa37c58fedf7aca2ed692f4f739d"
+        }
+      ],
+      "projectUrl": "https://hibernate.org/validator",
+      "scmUrl": "https://github.com/hibernate/hibernate-validator",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/8.0.3.Final/hibernate-validator-8.0.3.Final-sources.jar",
+        "sha256": "5505b435dfc8887ebe2d272831bd77a7e984061e477182932fef897cdc3e197d",
+        "bytes": 950225,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.jboss.logging:jboss-logging",
+      "groupId": "org.jboss.logging",
+      "artifactId": "jboss-logging",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.6.3.Final",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "7c12ee575508f81e22b1db9334b969d0ec54ef0fd1dcba24eeab1a44235fc366",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.6.3.Final/jboss-logging-3.6.3.Final.jar",
+      "licenses": [
+        {
+          "name": "Apache License 2.0",
+          "url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.jboss.logging:jboss-logging:3.6.3.Final",
+          "url": "https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.6.3.Final/jboss-logging-3.6.3.Final.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "e673490683b352b79e85c22df13b396e4b39e5f25cfef9c1b9e835ed123c0ca4"
+        }
+      ],
+      "projectUrl": "https://www.jboss.org",
+      "scmUrl": "https://github.com/jboss-logging/jboss-logging/tree/main/",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.6.3.Final/jboss-logging-3.6.3.Final-sources.jar",
+        "sha256": "e8a2b9aaac82b0082aa040e6bdf6cd7f225cdbc75d2bd1a79fa7b17007ec1b15",
+        "bytes": 47059,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.mapstruct:mapstruct",
+      "groupId": "org.mapstruct",
+      "artifactId": "mapstruct",
+      "type": "jar",
+      "classifier": null,
+      "version": "1.7.0.Beta2",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "c03c68912f6a606cf9e8e964c562b3199c13297f345c06dcb049e428f82287b3",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct/1.7.0.Beta2/mapstruct-1.7.0.Beta2.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.mapstruct:mapstruct:1.7.0.Beta2",
+          "url": "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct/1.7.0.Beta2/mapstruct-1.7.0.Beta2.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "6d11a4f896a61727198b3525c4a67de50727282e643896ce286e878d200a6829"
+        }
+      ],
+      "projectUrl": "https://mapstruct.org/mapstruct/",
+      "scmUrl": "https://github.com/mapstruct/mapstruct/mapstruct/",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/29cb77b4d7beecc89e3137293fc39d975b8ef2ae8987f2f03e20bfb47b63f9ad.txt",
+          "sha256": "29cb77b4d7beecc89e3137293fc39d975b8ef2ae8987f2f03e20bfb47b63f9ad",
+          "origin": "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct/1.7.0.Beta2/mapstruct-1.7.0.Beta2.jar!/META-INF/LICENSE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.mapstruct:mapstruct-jdk8",
+      "groupId": "org.mapstruct",
+      "artifactId": "mapstruct-jdk8",
+      "type": "jar",
+      "classifier": null,
+      "version": "1.7.0.Beta2",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "c1c30b749e4aa1d0134cd4c5b215ee3222690d2e75fc2b447a6d02846c20827f",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-jdk8/1.7.0.Beta2/mapstruct-jdk8-1.7.0.Beta2.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.mapstruct:mapstruct-jdk8:1.7.0.Beta2",
+          "url": "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-jdk8/1.7.0.Beta2/mapstruct-jdk8-1.7.0.Beta2.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "e1926cdc9dc42158142aad64f5db234b8a92092a4276df194b129da08833f73a"
+        }
+      ],
+      "projectUrl": "https://mapstruct.org/mapstruct-jdk8/",
+      "scmUrl": "https://github.com/mapstruct/mapstruct/mapstruct-jdk8/",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-jdk8/1.7.0.Beta2/mapstruct-jdk8-1.7.0.Beta2-sources.jar",
+        "status": "not downloaded",
+        "errorType": "CalledProcessError"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.mapstruct:mapstruct-processor",
+      "groupId": "org.mapstruct",
+      "artifactId": "mapstruct-processor",
+      "type": "jar",
+      "classifier": null,
+      "version": "1.7.0.Beta2",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "a1a5f8fc4ed96cb2b6efdb1fff031553959680a585f70d246844c110d27229ad",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-processor/1.7.0.Beta2/mapstruct-processor-1.7.0.Beta2.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.mapstruct:mapstruct-processor:1.7.0.Beta2",
+          "url": "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-processor/1.7.0.Beta2/mapstruct-processor-1.7.0.Beta2.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "7561fd72dbe170b6a278ee35a1e819287d1c25d2cb244bfe277065baf2d167a8"
+        }
+      ],
+      "projectUrl": "https://mapstruct.org/mapstruct-processor/",
+      "scmUrl": "https://github.com/mapstruct/mapstruct/mapstruct-processor/",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": false,
+      "packagedSha256MatchesResolved": null,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5.txt",
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+          "origin": "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-processor/1.7.0.Beta2/mapstruct-processor-1.7.0.Beta2.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/29cb77b4d7beecc89e3137293fc39d975b8ef2ae8987f2f03e20bfb47b63f9ad.txt",
+          "sha256": "29cb77b4d7beecc89e3137293fc39d975b8ef2ae8987f2f03e20bfb47b63f9ad",
+          "origin": "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-processor/1.7.0.Beta2/mapstruct-processor-1.7.0.Beta2.jar!/META-INF/LICENSE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.mariadb.jdbc:mariadb-java-client",
+      "groupId": "org.mariadb.jdbc",
+      "artifactId": "mariadb-java-client",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.8",
+      "scope": "runtime",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "6127dc7858047b3d4482899139640b0e2ab2b8abdeb708cfb8c011117771cddf",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/mariadb/jdbc/mariadb-java-client/3.5.8/mariadb-java-client-3.5.8.jar",
+      "licenses": [
+        {
+          "name": "LGPL-2.1-or-later",
+          "url": "",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.mariadb.jdbc:mariadb-java-client:3.5.8",
+          "url": "https://repo.maven.apache.org/maven2/org/mariadb/jdbc/mariadb-java-client/3.5.8/mariadb-java-client-3.5.8.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "b02972ccc6e092aa9c5991578973ae165e22de878caf2fb969d1ab61fd672128"
+        }
+      ],
+      "projectUrl": "https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/",
+      "scmUrl": "https://github.com/mariadb-corporation/mariadb-connector-j",
+      "licenseExpression": "LGPL-2.1-or-later",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/bd1d0e7ddca0d820e273bdfd7fb453e222843ac87b6871d0c2f96b02d41e2eea.txt",
+          "sha256": "bd1d0e7ddca0d820e273bdfd7fb453e222843ac87b6871d0c2f96b02d41e2eea",
+          "origin": "https://repo.maven.apache.org/maven2/org/mariadb/jdbc/mariadb-java-client/3.5.8/mariadb-java-client-3.5.8-sources.jar!/org/mariadb/jdbc/Driver.java#leading-license-comment"
+        },
+        {
+          "path": "docs/licenses/dependencies/c8cfa082f122323774057c2808eb7e796703bde9459fa04ff6f2c9cc25f74eff.txt",
+          "sha256": "c8cfa082f122323774057c2808eb7e796703bde9459fa04ff6f2c9cc25f74eff",
+          "origin": "https://raw.githubusercontent.com/mariadb-corporation/mariadb-connector-j/3.5.8/LICENSE"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/org/mariadb/jdbc/mariadb-java-client/3.5.8/mariadb-java-client-3.5.8-sources.jar",
+        "sha256": "7cff7b968fbf3ef4a6f0dd6138728bf7daa2716996e7ffbc590dc44560bd4bf6",
+        "bytes": 517720,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.mybatis:mybatis",
+      "groupId": "org.mybatis",
+      "artifactId": "mybatis",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.19",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "93eea616ae355751bd5fbabb57f0732713fbe79f3196f33c51a0aeeb4255862a",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/mybatis/mybatis/3.5.19/mybatis-3.5.19.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.mybatis:mybatis:3.5.19",
+          "url": "https://repo.maven.apache.org/maven2/org/mybatis/mybatis/3.5.19/mybatis-3.5.19.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "3e70093e8a67a7584154fd78b8c3846d742d9520b679b337429136dcad4ba271"
+        },
+        {
+          "coordinate": "org.mybatis:mybatis-parent:48",
+          "url": "https://repo.maven.apache.org/maven2/org/mybatis/mybatis-parent/48/mybatis-parent-48.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "36de4474dadcac931e24f8ead7c6bdd39a4232e02205201c1991e215d45371e4"
+        }
+      ],
+      "projectUrl": "https://www.mybatis.org/mybatis-3/",
+      "scmUrl": "https://github.com/mybatis/mybatis-3",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/91b00d08eb9c5cb1bc6370d42b63c4874032caf26b9641bfab636827cff9c5d3.txt",
+          "sha256": "91b00d08eb9c5cb1bc6370d42b63c4874032caf26b9641bfab636827cff9c5d3",
+          "origin": "https://repo.maven.apache.org/maven2/org/mybatis/mybatis/3.5.19/mybatis-3.5.19.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/057c335c9565b5b8df6eb56ce585c99b248eb2c21f4ad29d4a8f71f373afaef8.txt",
+          "sha256": "057c335c9565b5b8df6eb56ce585c99b248eb2c21f4ad29d4a8f71f373afaef8",
+          "origin": "https://repo.maven.apache.org/maven2/org/mybatis/mybatis/3.5.19/mybatis-3.5.19.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.mybatis:mybatis-spring",
+      "groupId": "org.mybatis",
+      "artifactId": "mybatis-spring",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.0.5",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "5a9bcbc3e6d7586a1a301177b9a355a4c46080c0c6a568b8c434fae027fa3e3b",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/mybatis/mybatis-spring/3.0.5/mybatis-spring-3.0.5.jar",
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.mybatis:mybatis-spring:3.0.5",
+          "url": "https://repo.maven.apache.org/maven2/org/mybatis/mybatis-spring/3.0.5/mybatis-spring-3.0.5.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "2304c7f12ed9f16977b296ca9b653436f6702faeba329442605ecbcfe2d2ad48"
+        },
+        {
+          "coordinate": "org.mybatis:mybatis-parent:50",
+          "url": "https://repo.maven.apache.org/maven2/org/mybatis/mybatis-parent/50/mybatis-parent-50.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "fcdb600cd4f85803f7313cdd8d554d849c461814afd4928a4f60240f92e18e23"
+        }
+      ],
+      "projectUrl": "https://www.mybatis.org/spring/",
+      "scmUrl": "https://github.com/mybatis/spring/",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/9818ec66553209eebf329d4bf4bc6c992e1ac340bd3314c25ee478b8ce2a7bac.txt",
+          "sha256": "9818ec66553209eebf329d4bf4bc6c992e1ac340bd3314c25ee478b8ce2a7bac",
+          "origin": "https://repo.maven.apache.org/maven2/org/mybatis/mybatis-spring/3.0.5/mybatis-spring-3.0.5.jar!/META-INF/LICENSE"
+        },
+        {
+          "path": "docs/licenses/dependencies/7cc2d4990856298530585085301930d6f246c45f8e1c6c24d39395e1960d7afd.txt",
+          "sha256": "7cc2d4990856298530585085301930d6f246c45f8e1c6c24d39395e1960d7afd",
+          "origin": "https://repo.maven.apache.org/maven2/org/mybatis/mybatis-spring/3.0.5/mybatis-spring-3.0.5.jar!/META-INF/NOTICE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.projectlombok:lombok",
+      "groupId": "org.projectlombok",
+      "artifactId": "lombok",
+      "type": "jar",
+      "classifier": null,
+      "version": "1.18.46",
+      "scope": "compile",
+      "optional": true,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "01f7b1a015e33e2b62d5f5f37053306357ab1415fd181fcba7794f5d198c1126",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar",
+      "licenses": [
+        {
+          "name": "The MIT License",
+          "url": "https://projectlombok.org/LICENSE",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.projectlombok:lombok:1.18.46",
+          "url": "https://repo.maven.apache.org/maven2/org/projectlombok/lombok/1.18.46/lombok-1.18.46.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "294e987cf26b37ed9de1b97d32039090d27c587d0e04cea2ae47766fa7038995"
+        }
+      ],
+      "projectUrl": "https://projectlombok.org",
+      "scmUrl": "http://github.com/projectlombok/lombok",
+      "licenseExpression": "MIT",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/76479448741d7a7a3a97b6afd9ab9699d95621faafc65a1b8e9149342ea00feb.txt",
+          "sha256": "76479448741d7a7a3a97b6afd9ab9699d95621faafc65a1b8e9149342ea00feb",
+          "origin": "https://repo.maven.apache.org/maven2/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar!/LICENSE"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.slf4j:jul-to-slf4j",
+      "groupId": "org.slf4j",
+      "artifactId": "jul-to-slf4j",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.0.18",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "cbb7d1aaaa9e871eb1a06594abd911bf97027152976edf1edc315be75239204e",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.18/jul-to-slf4j-2.0.18.jar",
+      "licenses": [
+        {
+          "name": "MIT",
+          "url": "https://opensource.org/license/mit",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.slf4j:jul-to-slf4j:2.0.18",
+          "url": "https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.18/jul-to-slf4j-2.0.18.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "eae8e0ffbd8b31fa8f8a610d62d387b4e10295ba74d0e14d66404560b74d8295"
+        },
+        {
+          "coordinate": "org.slf4j:slf4j-parent:2.0.18",
+          "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/2.0.18/slf4j-parent-2.0.18.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "0b3896bedad2c9ed9697edcbea1da0c54cd238a723583a81358a83bfb782e9fa"
+        },
+        {
+          "coordinate": "org.slf4j:slf4j-bom:2.0.18",
+          "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-bom/2.0.18/slf4j-bom-2.0.18.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "9219aab601575126c4e66e1331eb2b0c6c17a330ac4d5a07e3cd11d580a0c12d"
+        }
+      ],
+      "projectUrl": "http://www.slf4j.org",
+      "scmUrl": "",
+      "licenseExpression": "MIT",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc.txt",
+          "sha256": "4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc",
+          "origin": "https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.18/jul-to-slf4j-2.0.18.jar!/META-INF/LICENSE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.slf4j:slf4j-api",
+      "groupId": "org.slf4j",
+      "artifactId": "slf4j-api",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.0.18",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar",
+      "licenses": [
+        {
+          "name": "MIT",
+          "url": "https://opensource.org/license/mit",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.slf4j:slf4j-api:2.0.18",
+          "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "6c2c7f2c02774cc2b7b619fbd2df7873cdad29718926e44754b87f70d1eb43cb"
+        },
+        {
+          "coordinate": "org.slf4j:slf4j-parent:2.0.18",
+          "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/2.0.18/slf4j-parent-2.0.18.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "0b3896bedad2c9ed9697edcbea1da0c54cd238a723583a81358a83bfb782e9fa"
+        },
+        {
+          "coordinate": "org.slf4j:slf4j-bom:2.0.18",
+          "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-bom/2.0.18/slf4j-bom-2.0.18.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "9219aab601575126c4e66e1331eb2b0c6c17a330ac4d5a07e3cd11d580a0c12d"
+        }
+      ],
+      "projectUrl": "http://www.slf4j.org",
+      "scmUrl": "",
+      "licenseExpression": "MIT",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc.txt",
+          "sha256": "4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc",
+          "origin": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar!/META-INF/LICENSE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.boot:spring-boot",
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.15",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "1d3ea175f61f492d95cbca457d6cc9cf1b696b550422c1b424d50dfa58f7da15",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.5.15/spring-boot-3.5.15.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.boot:spring-boot:3.5.15",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.5.15/spring-boot-3.5.15.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "9040aaafea6765582ec52256b53240673d2cec23ca5d4b92a9abed86cce7375a"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-boot",
+      "scmUrl": "https://github.com/spring-projects/spring-boot",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.5.15/spring-boot-3.5.15.jar!/META-INF/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1.txt",
+          "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.5.15/spring-boot-3.5.15.jar!/META-INF/NOTICE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.boot:spring-boot-autoconfigure",
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-autoconfigure",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.15",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "180af16bbaa61ae70b3d8c533fe36264b1305d4a6916965ed86d0f4e47b73b3b",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.5.15/spring-boot-autoconfigure-3.5.15.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.boot:spring-boot-autoconfigure:3.5.15",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.5.15/spring-boot-autoconfigure-3.5.15.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "4085c09d3f134b5a131e757108367b2c085f6d8dfd64996b759f077133ea35c2"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-boot",
+      "scmUrl": "https://github.com/spring-projects/spring-boot",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.5.15/spring-boot-autoconfigure-3.5.15.jar!/META-INF/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1.txt",
+          "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.5.15/spring-boot-autoconfigure-3.5.15.jar!/META-INF/NOTICE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.boot:spring-boot-jarmode-tools",
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-jarmode-tools",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.15",
+      "scope": "packaged-only",
+      "optional": false,
+      "artifactBytesEvidence": "actual BOOT-INF/lib nested JAR",
+      "sha256": "0ef100c6915f599606de3d46ae898e7d46594a47db311071a488ee50b2f58a55",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-jarmode-tools/3.5.15/spring-boot-jarmode-tools-3.5.15.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.boot:spring-boot-jarmode-tools:3.5.15",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-jarmode-tools/3.5.15/spring-boot-jarmode-tools-3.5.15.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "68c573c9757a8f6dae403ca97397dc7989608a11e03d719831f4fd19ef27dc82"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-boot",
+      "scmUrl": "https://github.com/spring-projects/spring-boot",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-jarmode-tools/3.5.15/spring-boot-jarmode-tools-3.5.15.jar!/META-INF/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1.txt",
+          "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-jarmode-tools/3.5.15/spring-boot-jarmode-tools-3.5.15.jar!/META-INF/NOTICE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.boot:spring-boot-starter",
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.15",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "3e524173b6507e6b93bd72e694d90d5b0e2b8b15383a506eb10861a123728781",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.5.15/spring-boot-starter-3.5.15.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.boot:spring-boot-starter:3.5.15",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.5.15/spring-boot-starter-3.5.15.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "1b31f8d6e637e179c635d2fb8f99dc9997f9f1ca5f055d3a5c5f010468b47375"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-boot",
+      "scmUrl": "https://github.com/spring-projects/spring-boot",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": false,
+      "packagedSha256MatchesResolved": null,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.5.15/spring-boot-starter-3.5.15.jar!/META-INF/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1.txt",
+          "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.5.15/spring-boot-starter-3.5.15.jar!/META-INF/NOTICE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.boot:spring-boot-starter-jdbc",
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-jdbc",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.15",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "1d79bee20bac9901b760d5190d8fa84ef6824888b9108805600c65f477f56cb4",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.5.15/spring-boot-starter-jdbc-3.5.15.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.boot:spring-boot-starter-jdbc:3.5.15",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.5.15/spring-boot-starter-jdbc-3.5.15.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "9fa6255abb32d63b229ad96a2a37e543b93a5850d62bb49fb40e491188d695c9"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-boot",
+      "scmUrl": "https://github.com/spring-projects/spring-boot",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": false,
+      "packagedSha256MatchesResolved": null,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.5.15/spring-boot-starter-jdbc-3.5.15.jar!/META-INF/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1.txt",
+          "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.5.15/spring-boot-starter-jdbc-3.5.15.jar!/META-INF/NOTICE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.boot:spring-boot-starter-json",
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-json",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.15",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "786b41d758237ed2c2f0a5b8109d2d965c33192b74ba2c6c4f995ea86d739282",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.5.15/spring-boot-starter-json-3.5.15.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.boot:spring-boot-starter-json:3.5.15",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.5.15/spring-boot-starter-json-3.5.15.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "be439e08296c71a5d3365e7795d850e3652f2b01448343e2defe830691119000"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-boot",
+      "scmUrl": "https://github.com/spring-projects/spring-boot",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": false,
+      "packagedSha256MatchesResolved": null,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.5.15/spring-boot-starter-json-3.5.15.jar!/META-INF/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1.txt",
+          "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.5.15/spring-boot-starter-json-3.5.15.jar!/META-INF/NOTICE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.boot:spring-boot-starter-logging",
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-logging",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.15",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "ab958001faad88016b5cef9a78c6f455e487df288a735d2e458366c78b97ff9c",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.5.15/spring-boot-starter-logging-3.5.15.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.boot:spring-boot-starter-logging:3.5.15",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.5.15/spring-boot-starter-logging-3.5.15.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "3d52c2b29a2960e3876110119df8879e1aed5c763c308eb8b444e55bd21ac1a2"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-boot",
+      "scmUrl": "https://github.com/spring-projects/spring-boot",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": false,
+      "packagedSha256MatchesResolved": null,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.5.15/spring-boot-starter-logging-3.5.15.jar!/META-INF/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1.txt",
+          "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.5.15/spring-boot-starter-logging-3.5.15.jar!/META-INF/NOTICE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.boot:spring-boot-starter-security",
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-security",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.15",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "682ba5ccf29ae6c9242724a84700177e2e3c20aa366c260908b4ca6e106e302f",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.5.15/spring-boot-starter-security-3.5.15.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.boot:spring-boot-starter-security:3.5.15",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.5.15/spring-boot-starter-security-3.5.15.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "97b73dfed40e9d521aa191e17251e321645e6a8994efb04100a5ea739a34ac85"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-boot",
+      "scmUrl": "https://github.com/spring-projects/spring-boot",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": false,
+      "packagedSha256MatchesResolved": null,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.5.15/spring-boot-starter-security-3.5.15.jar!/META-INF/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1.txt",
+          "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.5.15/spring-boot-starter-security-3.5.15.jar!/META-INF/NOTICE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.boot:spring-boot-starter-tomcat",
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-tomcat",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.15",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "49b66d50ec005658752ed3eea372e15ab4c2df407cb29ccd568536af090ef390",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.5.15/spring-boot-starter-tomcat-3.5.15.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.boot:spring-boot-starter-tomcat:3.5.15",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.5.15/spring-boot-starter-tomcat-3.5.15.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "092d92fd3c6f4273951dd64baa4b0478e6617dfcb4df6f036dfc055649b684d6"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-boot",
+      "scmUrl": "https://github.com/spring-projects/spring-boot",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": false,
+      "packagedSha256MatchesResolved": null,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.5.15/spring-boot-starter-tomcat-3.5.15.jar!/META-INF/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1.txt",
+          "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.5.15/spring-boot-starter-tomcat-3.5.15.jar!/META-INF/NOTICE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.boot:spring-boot-starter-validation",
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-validation",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.15",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "4e909cb690bfa087210f875b7a507fd24f821a4d630ccdf320c0b55e45860500",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.5.15/spring-boot-starter-validation-3.5.15.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.boot:spring-boot-starter-validation:3.5.15",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.5.15/spring-boot-starter-validation-3.5.15.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "c6e2385d41336a6b0fedeff8d9905678d131ed2e3be17272014a9bdd95b923c7"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-boot",
+      "scmUrl": "https://github.com/spring-projects/spring-boot",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": false,
+      "packagedSha256MatchesResolved": null,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.5.15/spring-boot-starter-validation-3.5.15.jar!/META-INF/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1.txt",
+          "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.5.15/spring-boot-starter-validation-3.5.15.jar!/META-INF/NOTICE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.boot:spring-boot-starter-web",
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-web",
+      "type": "jar",
+      "classifier": null,
+      "version": "3.5.15",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "242bb6ed018cfbb716315be5195b238add25ead27ee8eb1009c23bbfe2b84dd5",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.5.15/spring-boot-starter-web-3.5.15.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.boot:spring-boot-starter-web:3.5.15",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.5.15/spring-boot-starter-web-3.5.15.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "282b04013535ebd75b19706685088acf065d2ecb90215fdfd328404445d82d1f"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-boot",
+      "scmUrl": "https://github.com/spring-projects/spring-boot",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": false,
+      "packagedSha256MatchesResolved": null,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.5.15/spring-boot-starter-web-3.5.15.jar!/META-INF/LICENSE.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1.txt",
+          "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.5.15/spring-boot-starter-web-3.5.15.jar!/META-INF/NOTICE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.security:spring-security-config",
+      "groupId": "org.springframework.security",
+      "artifactId": "spring-security-config",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.5.11",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "218685930013a2d1c126a896490ac3c44cf6fe90cf3d0286f2266bb877f916f7",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.5.11/spring-security-config-6.5.11.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.security:spring-security-config:6.5.11",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.5.11/spring-security-config-6.5.11.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "da9f710053c8575eddfc036410812eaafdde863a9760f19a98d3b84b56be6c7b"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-security",
+      "scmUrl": "https://github.com/spring-projects/spring-security",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.5.11/spring-security-config-6.5.11.jar!/META-INF/LICENSE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.security:spring-security-core",
+      "groupId": "org.springframework.security",
+      "artifactId": "spring-security-core",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.5.11",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "26ac26527cc015c5c71f3832add705a2410129a8f8de847054f2bc3b1d2e4465",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.5.11/spring-security-core-6.5.11.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.security:spring-security-core:6.5.11",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.5.11/spring-security-core-6.5.11.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "0574e823b5f84ca6c111dd6e0abd9941a3da2193590256f37b39a8095cd52a7a"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-security",
+      "scmUrl": "https://github.com/spring-projects/spring-security",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.5.11/spring-security-core-6.5.11.jar!/META-INF/LICENSE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.security:spring-security-crypto",
+      "groupId": "org.springframework.security",
+      "artifactId": "spring-security-crypto",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.5.11",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "dcdd2f3b2d5d2bb1531986b5cc1737b464a76d8b5831f93fc8da9cdd67e6797f",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.5.11/spring-security-crypto-6.5.11.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.security:spring-security-crypto:6.5.11",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.5.11/spring-security-crypto-6.5.11.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "3769add868d55ecb936138ea5a398b4c036880d17acb80456d4d97ca90d04a28"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-security",
+      "scmUrl": "https://github.com/spring-projects/spring-security",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.5.11/spring-security-crypto-6.5.11.jar!/META-INF/LICENSE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework.security:spring-security-web",
+      "groupId": "org.springframework.security",
+      "artifactId": "spring-security-web",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.5.11",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "50df9fc76162d33cf8b5410cf7a7a969abd42a5ecddb284aab4f453cb5512306",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.5.11/spring-security-web-6.5.11.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework.security:spring-security-web:6.5.11",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.5.11/spring-security-web-6.5.11.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "d0ff3f67692d7e0009efb3eb787bc5000b6dc269e773e3585a3554c1ad524d37"
+        }
+      ],
+      "projectUrl": "https://spring.io/projects/spring-security",
+      "scmUrl": "https://github.com/spring-projects/spring-security",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+          "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.5.11/spring-security-web-6.5.11.jar!/META-INF/LICENSE.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework:spring-aop",
+      "groupId": "org.springframework",
+      "artifactId": "spring-aop",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.2.19",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "a11b93539d80b02caf76171db2da96df39abebbfef49a2fadd6dda0779f2e20b",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.2.19/spring-aop-6.2.19.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework:spring-aop:6.2.19",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.2.19/spring-aop-6.2.19.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "c27a6385a8ba4f01f226bee38d6c97ac6b697e06e59bd6f38a3538218848ac98"
+        }
+      ],
+      "projectUrl": "https://github.com/spring-projects/spring-framework",
+      "scmUrl": "https://github.com/spring-projects/spring-framework",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea.txt",
+          "sha256": "9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.2.19/spring-aop-6.2.19.jar!/META-INF/license.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a.txt",
+          "sha256": "b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.2.19/spring-aop-6.2.19.jar!/META-INF/notice.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework:spring-beans",
+      "groupId": "org.springframework",
+      "artifactId": "spring-beans",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.2.19",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "846dc8f30a639a36eb551ee99a30469be4d11bd285ca9daf164d98321571b404",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.2.19/spring-beans-6.2.19.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework:spring-beans:6.2.19",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.2.19/spring-beans-6.2.19.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "bd2c451646f1e2cb0df22485aff498f5cde979aedb117f9bb54f01100e9bdb43"
+        }
+      ],
+      "projectUrl": "https://github.com/spring-projects/spring-framework",
+      "scmUrl": "https://github.com/spring-projects/spring-framework",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea.txt",
+          "sha256": "9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.2.19/spring-beans-6.2.19.jar!/META-INF/license.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a.txt",
+          "sha256": "b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.2.19/spring-beans-6.2.19.jar!/META-INF/notice.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework:spring-context",
+      "groupId": "org.springframework",
+      "artifactId": "spring-context",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.2.19",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "ead4b645f94a7f665f00093eaafde634e97b34524294de653b51e43e0b3fc4a4",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.2.19/spring-context-6.2.19.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework:spring-context:6.2.19",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.2.19/spring-context-6.2.19.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "9ffe29ed9203202a564114a6b4d86d7b88914ab4c97ed2c162844892e921503b"
+        }
+      ],
+      "projectUrl": "https://github.com/spring-projects/spring-framework",
+      "scmUrl": "https://github.com/spring-projects/spring-framework",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea.txt",
+          "sha256": "9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.2.19/spring-context-6.2.19.jar!/META-INF/license.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a.txt",
+          "sha256": "b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.2.19/spring-context-6.2.19.jar!/META-INF/notice.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework:spring-core",
+      "groupId": "org.springframework",
+      "artifactId": "spring-core",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.2.19",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "52146689e71a911c92bac26677d73c692512a739893a57710cc233591756bff6",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.2.19/spring-core-6.2.19.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework:spring-core:6.2.19",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.2.19/spring-core-6.2.19.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "e7dffe4f61be06ed3b4e811fc587a2e47bc59c4ba55563a2916d94de1dabcbc4"
+        }
+      ],
+      "projectUrl": "https://github.com/spring-projects/spring-framework",
+      "scmUrl": "https://github.com/spring-projects/spring-framework",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea.txt",
+          "sha256": "9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.2.19/spring-core-6.2.19.jar!/META-INF/license.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a.txt",
+          "sha256": "b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.2.19/spring-core-6.2.19.jar!/META-INF/notice.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework:spring-expression",
+      "groupId": "org.springframework",
+      "artifactId": "spring-expression",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.2.19",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "d710a44417d890353895b341a722d7d08199e2b7da52f0a11c0e92571e1d6e19",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.2.19/spring-expression-6.2.19.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework:spring-expression:6.2.19",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.2.19/spring-expression-6.2.19.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "f3f99dfcd0b1229a15faaeda0fba11e3a25f85d01aa11737271a2bce854ef42a"
+        }
+      ],
+      "projectUrl": "https://github.com/spring-projects/spring-framework",
+      "scmUrl": "https://github.com/spring-projects/spring-framework",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea.txt",
+          "sha256": "9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.2.19/spring-expression-6.2.19.jar!/META-INF/license.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a.txt",
+          "sha256": "b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.2.19/spring-expression-6.2.19.jar!/META-INF/notice.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework:spring-jcl",
+      "groupId": "org.springframework",
+      "artifactId": "spring-jcl",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.2.19",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "9994478bcea1423b8892d4eb0db942c94da0090167c3c684050c1eaef04491d0",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.2.19/spring-jcl-6.2.19.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework:spring-jcl:6.2.19",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.2.19/spring-jcl-6.2.19.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "cc00211d807821dae35df9dd361a08f9988db588eef76f07369e524e2032636e"
+        }
+      ],
+      "projectUrl": "https://github.com/spring-projects/spring-framework",
+      "scmUrl": "https://github.com/spring-projects/spring-framework",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea.txt",
+          "sha256": "9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.2.19/spring-jcl-6.2.19.jar!/META-INF/license.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a.txt",
+          "sha256": "b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.2.19/spring-jcl-6.2.19.jar!/META-INF/notice.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework:spring-jdbc",
+      "groupId": "org.springframework",
+      "artifactId": "spring-jdbc",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.2.19",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "c81fd8aca952aac243d9327af12596c2058012c9d3784f1313477a6d2cc56306",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.2.19/spring-jdbc-6.2.19.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework:spring-jdbc:6.2.19",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.2.19/spring-jdbc-6.2.19.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "bb7fb057dbeb2e44bedc78c4abb27594f579c3f430c1c31ea87261dc3f66d8d9"
+        }
+      ],
+      "projectUrl": "https://github.com/spring-projects/spring-framework",
+      "scmUrl": "https://github.com/spring-projects/spring-framework",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea.txt",
+          "sha256": "9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.2.19/spring-jdbc-6.2.19.jar!/META-INF/license.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a.txt",
+          "sha256": "b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.2.19/spring-jdbc-6.2.19.jar!/META-INF/notice.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework:spring-tx",
+      "groupId": "org.springframework",
+      "artifactId": "spring-tx",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.2.19",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "34a1b6f5d87ef4cca6849e1bc70a0f965eec6476737b3cae73ff2561a266ef73",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.2.19/spring-tx-6.2.19.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework:spring-tx:6.2.19",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.2.19/spring-tx-6.2.19.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "17fff13681d40905632d6d0187542ed5744daab09c64f5493002351848294f67"
+        }
+      ],
+      "projectUrl": "https://github.com/spring-projects/spring-framework",
+      "scmUrl": "https://github.com/spring-projects/spring-framework",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea.txt",
+          "sha256": "9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.2.19/spring-tx-6.2.19.jar!/META-INF/license.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a.txt",
+          "sha256": "b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.2.19/spring-tx-6.2.19.jar!/META-INF/notice.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework:spring-web",
+      "groupId": "org.springframework",
+      "artifactId": "spring-web",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.2.19",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "ca88e364ecebee61163e2260e8a20584138eca74e28a050d6a2ef6302bad2f2d",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.2.19/spring-web-6.2.19.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework:spring-web:6.2.19",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.2.19/spring-web-6.2.19.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "db4b8eaa596332f537a2b5d1cc5a31f50b2b7b7b448490acc7893ea0f9525966"
+        }
+      ],
+      "projectUrl": "https://github.com/spring-projects/spring-framework",
+      "scmUrl": "https://github.com/spring-projects/spring-framework",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea.txt",
+          "sha256": "9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.2.19/spring-web-6.2.19.jar!/META-INF/license.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a.txt",
+          "sha256": "b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.2.19/spring-web-6.2.19.jar!/META-INF/notice.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.springframework:spring-webmvc",
+      "groupId": "org.springframework",
+      "artifactId": "spring-webmvc",
+      "type": "jar",
+      "classifier": null,
+      "version": "6.2.19",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "134f42320cedd31f54f683d2ca9936a4e015c011fb1882a31fa7213e2d8c7e94",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.2.19/spring-webmvc-6.2.19.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.springframework:spring-webmvc:6.2.19",
+          "url": "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.2.19/spring-webmvc-6.2.19.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "7ef11f14cf0d365c38b1b866359e506c7c93f993aa512ed6db656129bc992822"
+        }
+      ],
+      "projectUrl": "https://github.com/spring-projects/spring-framework",
+      "scmUrl": "https://github.com/spring-projects/spring-framework",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea.txt",
+          "sha256": "9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.2.19/spring-webmvc-6.2.19.jar!/META-INF/license.txt"
+        },
+        {
+          "path": "docs/licenses/dependencies/b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a.txt",
+          "sha256": "b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a",
+          "origin": "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.2.19/spring-webmvc-6.2.19.jar!/META-INF/notice.txt"
+        }
+      ],
+      "licenseTextStatus": "archived"
+    },
+    {
+      "component": "org.yaml:snakeyaml",
+      "groupId": "org.yaml",
+      "artifactId": "snakeyaml",
+      "type": "jar",
+      "classifier": null,
+      "version": "2.4",
+      "scope": "compile",
+      "optional": false,
+      "artifactBytesEvidence": "resolved local Maven artifact",
+      "sha256": "ef779af5d29a9dde8cc70ce0341f5c6f7735e23edff9685ceaa9d35359b7bb7f",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "comments": ""
+        }
+      ],
+      "pomChain": [
+        {
+          "coordinate": "org.yaml:snakeyaml:2.4",
+          "url": "https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.4/snakeyaml-2.4.pom",
+          "evidence": "published POM cached locally or fetched anonymously",
+          "sha256": "e154a3231cd6cde68aabf274fd18964d49a9c1a5f5e9ed3bf471e9ae7bdf08e6"
+        }
+      ],
+      "projectUrl": "https://bitbucket.org/snakeyaml/snakeyaml",
+      "scmUrl": "https://bitbucket.org/snakeyaml/snakeyaml/src",
+      "licenseExpression": "Apache-2.0",
+      "licenseEvidence": "published POM (parent inheritance retained); normalization is analyst interpretation",
+      "packaged": true,
+      "packagedSha256MatchesResolved": true,
+      "legalFiles": [
+        {
+          "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "sourceArchive": {
+        "url": "https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.4/snakeyaml-2.4-sources.jar",
+        "sha256": "0a3c537e86cbb13a9a31ab138c13cee0b2c2cedc17dba38e0dc1f24a2053d8af",
+        "bytes": 209871,
+        "deliveryStatus": "downloaded to temporary audit cache; not included in deliverable source bundle"
+      },
+      "licenseTextStatus": "archived"
+    }
+  ]
+}

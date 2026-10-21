@@ -1,0 +1,12 @@
+<script setup lang="ts">
+import {ref,reactive} from 'vue'
+import {useRoute,useRouter} from 'vue-router'
+import {useAuth} from '../stores/auth'
+import {firstAllowed} from '../router'
+const auth=useAuth(),router=useRouter(),route=useRoute(),busy=ref(false),error=ref('')
+const form=reactive({username:'',password:''})
+// Usernames are prefilled only; these roles always authenticate against the server.
+const accounts=[['admin','系统管理员'],['boss','企业负责人'],['manager','项目经理'],['buyer','采购专员'],['warehouse','仓库管理员'],['finance','财务专员']]
+async function login(){if(!form.username.trim()||!form.password){error.value='请输入账号和密码';return}busy.value=true;error.value='';try{await auth.login(form.username,form.password);const redirect=String(route.query.redirect||'');await router.replace(redirect.startsWith('/')&&!redirect.startsWith('//')&&redirect!='/login'?redirect:firstAllowed())}catch(e){error.value=e instanceof Error?e.message:'登录失败'}finally{busy.value=false}}
+</script>
+<template><div class="login-page"><section class="login-hero"><div class="login-logo"><span class="brand-symbol">筑</span> 筑企云</div><div class="hero-copy"><div class="eyebrow">CONSTRUCTION ENTERPRISE CLOUD</div><h1>每一个项目<br/>都在掌握之中。</h1><p>从材料采购到成本管控，<br/>让工程协作更高效，让每一笔经营更清晰。</p><div class="hero-tags"><span>项目全周期</span><span>采购到付款</span><span>经营可视化</span></div></div><div class="architecture"><i/><i/><i/><i/><i/></div><div class="hero-bottom">为建筑企业打造的数字化工作空间</div></section><section class="login-form-wrap"><div class="login-form"><p class="eyebrow">WELCOME BACK</p><h2>登录企业工作空间</h2><p class="muted">使用已授权账号，开启今天的工作。</p><el-form label-position="top" @submit.prevent="login"><el-form-item label="账号"><el-input v-model="form.username" size="large" autocomplete="username" placeholder="请输入登录账号"/></el-form-item><el-form-item label="密码"><el-input v-model="form.password" type="password" show-password size="large" autocomplete="current-password" placeholder="请输入登录密码"/></el-form-item><el-alert v-if="error" :title="error" type="error" :closable="false" show-icon class="mb"/><el-button native-type="submit" type="primary" size="large" :loading="busy" class="login-submit">登录工作空间 →</el-button></el-form><div class="demo-selector"><span>演示角色快捷填写</span><div><el-button v-for="[username,label] in accounts" :key="username" size="small" :type="form.username===username?'primary':'default'" plain @click="form.username=username">{{label}}</el-button></div><small>快捷选择仅填写账号；密码由部署管理员提供，登录由服务端校验。</small></div></div><p class="login-copyright">筑企云 · 建筑企业一体化管理平台</p></section></div></template>

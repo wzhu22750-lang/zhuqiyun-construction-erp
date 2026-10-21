@@ -1,0 +1,29 @@
+server:
+  port: ${SERVER_PORT:18080}
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+  datasource:
+    driver-class-name: ${DB_DRIVER:org.mariadb.jdbc.Driver}
+    url: ${DB_URL:jdbc:mysql://localhost:13306/zhuqiyun?useSSL=false&allowPublicKeyRetrieval=true&connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true&preserveInstants=true&characterEncoding=utf8&permitMysqlScheme=true}
+    username: ${DB_USER:zqy}
+    password: ${DB_PASSWORD:zqy_local_demo}
+  flyway:
+    enabled: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  jackson:
+    time-zone: UTC
+    serialization:
+      write-dates-as-timestamps: false
+    generator:
+      write-bigdecimal-as-plain: true
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+app:
+  seed: ${APP_SEED:true}
+  attachment-dir: ${ATTACHMENT_DIR:./.run/attachments}
+  demo-password: ${DEMO_PASSWORD:Zhuqi2026!}

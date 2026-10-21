@@ -1,0 +1,16 @@
+.env
+node_modules/
+target/
+dist/
+.DS_Store
+*.log
+.run/
+__pycache__/
+.playwright-mcp/
+
+# Local credentials and environment overrides; keep public examples.
+.env.*
+!.env.example
+!**/.env.example
+.npmrc
+settings.xml

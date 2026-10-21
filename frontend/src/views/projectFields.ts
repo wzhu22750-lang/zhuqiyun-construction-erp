@@ -1,0 +1,5 @@
+import type {Field} from '../components/EntityDialog.vue'
+import type {Row} from '../api/types'
+export const projectFields=(users:Row[]):Field[]=>[
+ {key:'code',label:'项目编号',required:true},{key:'name',label:'项目名称',required:true},{key:'owner',label:'建设单位',required:true},{key:'contractor',label:'施工单位',required:true},{key:'manager_id',label:'项目经理',kind:'select',required:true,options:users.filter(r=>r.role==='manager').map(r=>({label:r.name,value:r.id}))},{key:'type',label:'项目类型',required:true},{key:'contract_amount',label:'合同金额（元）',kind:'money',required:true},{key:'budget_amount',label:'预算金额（元）',kind:'money',required:true},{key:'start_date',label:'开工日期',kind:'date',required:true},{key:'end_date',label:'计划竣工',kind:'date',required:true},{key:'progress',label:'当前进度（%）',kind:'number',min:0,max:100,required:true},{key:'status',label:'项目状态',kind:'select',required:true,options:[{label:'筹备中',value:'PLANNING'},{label:'进行中',value:'ACTIVE'},{label:'已完成',value:'COMPLETED'},{label:'已暂停',value:'SUSPENDED'}]},{key:'location',label:'项目地址',span:2}
+]

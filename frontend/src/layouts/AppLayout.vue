@@ -1,0 +1,13 @@
+<script setup lang="ts">
+import {ref,computed} from 'vue'
+import {useRoute,useRouter} from 'vue-router'
+import * as icons from '@element-plus/icons-vue'
+import {navigation,firstAllowed} from '../router'
+import {useAuth} from '../stores/auth'
+const auth=useAuth(),route=useRoute(),router=useRouter(),collapsed=ref(false)
+const menus=computed(()=>navigation.filter(n=>auth.can(n.permission)&&auth.hasMenu(n.key)))
+const groups=computed(()=>Array.from(new Set(menus.value.map(n=>n.group))))
+const roles:Record<string,string>={admin:'系统管理员',boss:'企业负责人',manager:'项目经理',buyer:'采购专员',warehouse:'仓库管理员',finance:'财务专员'}
+async function logout(){await auth.logout().catch(()=>{});router.replace('/login')}
+</script>
+<template><div class="app-shell" :class="{'is-collapsed':collapsed}"><aside class="sidebar"><router-link :to="firstAllowed()" class="brand"><span class="brand-symbol">筑</span><span v-if="!collapsed" class="brand-copy">{{auth.company.system_name}}<small>CONSTRUCTION CLOUD</small></span></router-link><div class="workspace-label" v-if="!collapsed"><span class="workspace-dot"/> 企业管理工作空间</div><nav><div v-for="group in groups" :key="group" class="nav-group"><p v-if="!collapsed" class="nav-group-label">{{group}}</p><router-link v-for="item in menus.filter(n=>n.group===group)" :key="item.path" :to="item.path" class="nav-item" :class="{active:route.meta.key===item.key}" :title="collapsed?item.label:undefined"><el-icon><component :is="(icons as any)[item.icon]"/></el-icon><span v-if="!collapsed">{{item.label}}</span></router-link></div></nav><div class="sidebar-footer"><el-icon><icons.Lock/></el-icon><span v-if="!collapsed">企业数据 · 角色授权访问</span></div></aside><div class="main-shell"><header class="topbar"><div class="topbar-left"><el-button text circle aria-label="折叠或展开导航" @click="collapsed=!collapsed"><el-icon :size="20"><icons.Expand v-if="collapsed"/><icons.Fold v-else/></el-icon></el-button><span class="breadcrumb">工作空间 <span>/</span> <strong>{{route.meta.label}}</strong></span></div><div class="topbar-right"><span class="company-name">{{auth.company.name}}</span><el-divider direction="vertical"/><el-dropdown trigger="click" @command="logout"><div class="user-menu"><span class="avatar">{{auth.user?.name?.slice(0,1)}}</span><div><b>{{auth.user?.name}}</b><small>{{roles[auth.user?.role||'']||auth.user?.role}}</small></div><el-icon><icons.ArrowDown/></el-icon></div><template #dropdown><el-dropdown-menu><el-dropdown-item command="logout">退出登录</el-dropdown-item></el-dropdown-menu></template></el-dropdown></div></header><main class="page-content"><router-view :key="route.path"/></main><footer class="app-footer">{{auth.company.system_name}} · 建筑企业一体化管理 <span>项目有序 · 经营有数</span></footer></div></div></template>

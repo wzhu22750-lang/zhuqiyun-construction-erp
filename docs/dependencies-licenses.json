@@ -1,0 +1,1077 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-21T01:30:25+08:00",
+  "generator": "scripts/license_inventory.py",
+  "inputSha256": {
+    "backend/pom.xml": "5b1ae5299ed211a7371f54df7fa464a9b649e7e58ea306bdc3f23467487cda4f",
+    "frontend/package.json": "03c48295795193a1479f418bee39e2bb60898cbedd06a9d91140c440eebc2373",
+    "frontend/package-lock.json": "798a31ca6ac51f78ebe429c1acac6ad101bff6969e6c4a1c8df085d479e9fa1f",
+    "vendor/ruoyi/pom.xml": "dea9593bff3b9f459f50e7f7a96883bda7783493c1b071e6445bdd6960a0c018",
+    "vendor/ruoyi/yudao-dependencies/pom.xml": "f119b5741b0cc65487da01a618f44584424c719a96f42edb6cbcb1cb426a0214",
+    "vendor/ruoyi/yudao-framework/yudao-common/pom.xml": "b8f175acfbfae4ec7e8fc951c643ef283b190c4552b99e3d0ef78670b3f633c6",
+    "backend/Dockerfile": "c99d631ed97e0f2bd4b837bcf8b55258986fafbd9ad926ee7c3e030827ba70da",
+    "frontend/Dockerfile": "0170aa94a4969af823577444f396aabebccd85e3ebf546d5860f87aea8111d62",
+    "compose.yml": "71bc2d6a3c3c3bb5f50c873f191444bbdca47ee94e8ba118a39f9bbc323d2e9d"
+  },
+  "scope": "Exact license/NOTICE bytes extracted from published archives and identified primary license sources; identical bytes deduplicated",
+  "texts": [
+    {
+      "path": "docs/licenses/dependencies/0317acaa42a5e48bec061cf009cb5c8b4b8ff845f3c6ba548f67c5c22c29fc96.txt",
+      "sha256": "0317acaa42a5e48bec061cf009cb5c8b4b8ff845f3c6ba548f67c5c22c29fc96",
+      "bytes": 167,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.55/tomcat-embed-websocket-10.1.55.jar!/META-INF/NOTICE",
+        "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.55/tomcat-embed-el-10.1.55.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/050bbca6960784db52ff387271bf2ecc5cbed7cf8581b415d528a6ecb6585015.txt",
+      "sha256": "050bbca6960784db52ff387271bf2ecc5cbed7cf8581b415d528a6ecb6585015",
+      "bytes": 1083,
+      "origins": [
+        "https://raw.githubusercontent.com/vuejs/vue-devtools/df6ab6bb7791a7a525a97990de73b3ea5e9a1941/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/057c335c9565b5b8df6eb56ce585c99b248eb2c21f4ad29d4a8f71f373afaef8.txt",
+      "sha256": "057c335c9565b5b8df6eb56ce585c99b248eb2c21f4ad29d4a8f71f373afaef8",
+      "bytes": 3390,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/mybatis/mybatis/3.5.19/mybatis-3.5.19.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/0790118bb4d66681db1d63181f72ef68e632d632f6db0373ef87cf328561af27.txt",
+      "sha256": "0790118bb4d66681db1d63181f72ef68e632d632f6db0373ef87cf328561af27",
+      "bytes": 1077,
+      "origins": [
+        "https://registry.npmjs.org/element-plus/-/element-plus-2.14.7.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/0becf16567beb77fa252b7664631dd177c8f9a1889e48995b45379c7130e5303.txt",
+      "sha256": "0becf16567beb77fa252b7664631dd177c8f9a1889e48995b45379c7130e5303",
+      "bytes": 14198,
+      "origins": [
+        "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce.txt",
+      "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "bytes": 1089,
+      "origins": [
+        "https://registry.npmjs.org/@floating-ui/core/-/core-1.8.0.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@floating-ui/dom/-/dom-1.8.0.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.12.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/0f844b1160603552a01662ac2999c14e5fb4df487e65619b9ed4406e43eb3c0b.txt",
+      "sha256": "0f844b1160603552a01662ac2999c14e5fb4df487e65619b9ed4406e43eb3c0b",
+      "bytes": 1101,
+      "origins": [
+        "https://registry.npmjs.org/@vueuse/core/-/core-15.0.0.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vueuse/metadata/-/metadata-15.0.0.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vueuse/shared/-/shared-15.0.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+      "bytes": 1106,
+      "origins": [
+        "https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.29.7.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.29.7.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@babel/types/-/types-7.29.8.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e.txt",
+      "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e",
+      "bytes": 1062,
+      "origins": [
+        "https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801.txt",
+      "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801",
+      "bytes": 1079,
+      "origins": [
+        "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz!/package/license.md"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/1953150d5d4b10c7542cee6f6e0c613b2682545233f069d75cfff1936386ce10.txt",
+      "sha256": "1953150d5d4b10c7542cee6f6e0c613b2682545233f069d75cfff1936386ce10",
+      "bytes": 1078,
+      "origins": [
+        "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/1a3aeb1f1398bd697d57c3c585faadf59d825aca6e3162cd7eeb72ff76eb2466.txt",
+      "sha256": "1a3aeb1f1398bd697d57c3c585faadf59d825aca6e3162cd7eeb72ff76eb2466",
+      "bytes": 1073,
+      "origins": [
+        "https://registry.npmjs.org/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/1a8c67aaade274bc7bf06a7044571ab280d59fe3686941b6499b2176a072ea6d.txt",
+      "sha256": "1a8c67aaade274bc7bf06a7044571ab280d59fe3686941b6499b2176a072ea6d",
+      "bytes": 223,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/1af3c68039c57e539422da82a4faada506ce6d0ea6f90e0b699d02dbcdb7a90c.txt",
+      "sha256": "1af3c68039c57e539422da82a4faada506ce6d0ea6f90e0b699d02dbcdb7a90c",
+      "bytes": 37824,
+      "origins": [
+        "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz!/package/ThirdPartyNoticeText.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175.txt",
+      "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+      "bytes": 1091,
+      "origins": [
+        "https://registry.npmjs.org/@vue/compiler-core/-/compiler-core-3.5.44.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vue/compiler-dom/-/compiler-dom-3.5.44.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.5.44.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vue/compiler-ssr/-/compiler-ssr-3.5.44.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vue/reactivity/-/reactivity-3.5.44.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vue/runtime-core/-/runtime-core-3.5.44.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vue/runtime-dom/-/runtime-dom-3.5.44.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vue/server-renderer/-/server-renderer-3.5.44.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vue/shared/-/shared-3.5.44.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/vue/-/vue-3.5.44.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/1cab22f196264195a4caec8ca5630170fdde76ee8f43346e47021d087332d3b0.txt",
+      "sha256": "1cab22f196264195a4caec8ca5630170fdde76ee8f43346e47021d087332d3b0",
+      "bytes": 1069,
+      "origins": [
+        "https://registry.npmjs.org/mitt/-/mitt-3.0.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/1cbe51b907662f6cb1492b16c359384a595180bf0e4d101603ed525e75c4e484.txt",
+      "sha256": "1cbe51b907662f6cb1492b16c359384a595180bf0e4d101603ed525e75c4e484",
+      "bytes": 1051,
+      "origins": [
+        "https://registry.npmjs.org/magic-string/-/magic-string-0.30.21.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/1ce941682a96c7b898ecd125d0f2e22319758ea6f3adbf498a65d649b0f3f7dd.txt",
+      "sha256": "1ce941682a96c7b898ecd125d0f2e22319758ea6f3adbf498a65d649b0f3f7dd",
+      "bytes": 1101,
+      "origins": [
+        "https://registry.npmjs.org/rfdc/-/rfdc-1.4.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/206c1adcf206dc0031b11232f5b054ec5f1662407ab1ca415247921cab2068ab.txt",
+      "sha256": "206c1adcf206dc0031b11232f5b054ec5f1662407ab1ca415247921cab2068ab",
+      "bytes": 1071,
+      "origins": [
+        "https://registry.npmjs.org/has-symbols/-/has-symbols-1.1.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751.txt",
+      "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+      "bytes": 655,
+      "origins": [
+        "https://registry.npmjs.org/tslib/-/tslib-2.3.0.tgz!/package/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/22c68811e174cbbfb3813d4135918df4f540959c14d872e601d9abe83d3cde8f.txt",
+      "sha256": "22c68811e174cbbfb3813d4135918df4f540959c14d872e601d9abe83d3cde8f",
+      "bytes": 1076,
+      "origins": [
+        "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/234d3234bb332895157270092fa2a11e80aa0b3d70d59e13de0eed4c2adb1790.txt",
+      "sha256": "234d3234bb332895157270092fa2a11e80aa0b3d70d59e13de0eed4c2adb1790",
+      "bytes": 821,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.55/tomcat-embed-core-10.1.55.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/29b68325fe026047d13e187b44c33b2acacf7dc647dec4583702e59f235e13b5.txt",
+      "sha256": "29b68325fe026047d13e187b44c33b2acacf7dc647dec4583702e59f235e13b5",
+      "bytes": 1103,
+      "origins": [
+        "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-6.0.10.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/29cb77b4d7beecc89e3137293fc39d975b8ef2ae8987f2f03e20bfb47b63f9ad.txt",
+      "sha256": "29cb77b4d7beecc89e3137293fc39d975b8ef2ae8987f2f03e20bfb47b63f9ad",
+      "bytes": 1297,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct/1.7.0.Beta2/mapstruct-1.7.0.Beta2.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-processor/1.7.0.Beta2/mapstruct-processor-1.7.0.Beta2.jar!/META-INF/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/2a8a5d6197bb97a018b8a190dd3ed853d750ca87c8e80c17aad41d6c6ff448e1.txt",
+      "sha256": "2a8a5d6197bb97a018b8a190dd3ed853d750ca87c8e80c17aad41d6c6ff448e1",
+      "bytes": 1133,
+      "origins": [
+        "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/2b770a704c15de238c3f622b01b0044ddd60b49ee30608ea6991ebf19db7a7a1.txt",
+      "sha256": "2b770a704c15de238c3f622b01b0044ddd60b49ee30608ea6991ebf19db7a7a1",
+      "bytes": 1073,
+      "origins": [
+        "https://registry.npmjs.org/dunder-proto/-/dunder-proto-1.0.1.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/math-intrinsics/-/math-intrinsics-1.1.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/2e97627cb278aa7556fb9e8817368302301a595b6c7582512b8d74c57b773652.txt",
+      "sha256": "2e97627cb278aa7556fb9e8817368302301a595b6c7582512b8d74c57b773652",
+      "bytes": 1086,
+      "origins": [
+        "https://registry.npmjs.org/@babel/parser/-/parser-7.29.9.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/3555f8c47cbff86d199d5a5033afd5ef9560e0095927296af670a886b8b1988d.txt",
+      "sha256": "3555f8c47cbff86d199d5a5033afd5ef9560e0095927296af670a886b8b1988d",
+      "bytes": 1088,
+      "origins": [
+        "https://registry.npmjs.org/hookable/-/hookable-5.5.3.tgz!/package/LICENSE.md"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/3852834ebb4c2e04ecc18c9d099a05eab72cbd6edf35fb191390be6306019b4c.txt",
+      "sha256": "3852834ebb4c2e04ecc18c9d099a05eab72cbd6edf35fb191390be6306019b4c",
+      "bytes": 1452,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar!/META-INF/NOTICE.md"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/39c5ec504cf6bd5cd782a7c695828e09189df79f5d94840e4f08feb97b9fd416.txt",
+      "sha256": "39c5ec504cf6bd5cd782a7c695828e09189df79f5d94840e4f08feb97b9fd416",
+      "bytes": 1071,
+      "origins": [
+        "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.3.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95.txt",
+      "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95",
+      "bytes": 1139,
+      "origins": [
+        "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5.txt",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-processor/1.7.0.Beta2/mapstruct-processor-1.7.0.Beta2.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/40623170cffa92890b9a2decc5456de6bba6d4f75a7a7b7abc60cc9fdaf78b65.txt",
+      "sha256": "40623170cffa92890b9a2decc5456de6bba6d4f75a7a7b7abc60cc9fdaf78b65",
+      "bytes": 1072,
+      "origins": [
+        "https://registry.npmjs.org/@ctrl/tinycolor/-/tinycolor-4.2.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/46231df5a7733c3f52f11b71f3df61813007745b62b09031acfb45fb42d75082.txt",
+      "sha256": "46231df5a7733c3f52f11b71f3df61813007745b62b09031acfb45fb42d75082",
+      "bytes": 1078,
+      "origins": [
+        "https://registry.npmjs.org/perfect-debounce/-/perfect-debounce-1.0.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/47eb8ca82c798246774946d1be0f9aa08f025fa8325ced0947aeeb4c05fe5547.txt",
+      "sha256": "47eb8ca82c798246774946d1be0f9aa08f025fa8325ced0947aeeb4c05fe5547",
+      "bytes": 1085,
+      "origins": [
+        "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz!/package/License",
+        "https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz!/package/License"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/4cf85d9fa395446ce467f60711fe8154a374bd6c86e3fd44b847bcadec86fe33.txt",
+      "sha256": "4cf85d9fa395446ce467f60711fe8154a374bd6c86e3fd44b847bcadec86fe33",
+      "bytes": 1523,
+      "origins": [
+        "https://registry.npmjs.org/speakingurl/-/speakingurl-14.0.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc.txt",
+      "sha256": "4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc",
+      "bytes": 1178,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.18/jul-to-slf4j-2.0.18.jar!/META-INF/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/5828ffe74ea0ee4bf896654026f05fed1ead1d22acd577cc1eec9be0bc0de1ed.txt",
+      "sha256": "5828ffe74ea0ee4bf896654026f05fed1ead1d22acd577cc1eec9be0bc0de1ed",
+      "bytes": 681,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.21.4/jackson-dataformat-toml-2.21.4.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8.txt",
+      "sha256": "5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8",
+      "bytes": 1095,
+      "origins": [
+        "https://registry.npmjs.org/postcss/-/postcss-8.5.31.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/5d0427088e37071c4b942de990f6365d5c2d195f3e957ce925322d184784e2eb.txt",
+      "sha256": "5d0427088e37071c4b942de990f6365d5c2d195f3e957ce925322d184784e2eb",
+      "bytes": 1083,
+      "origins": [
+        "https://registry.npmjs.org/async-validator/-/async-validator-4.2.5.tgz!/package/LICENSE.md"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/5db4ebb3abd8353774ae148723ccc14087d6dab99473f77a7b799b55defd8dfe.txt",
+      "sha256": "5db4ebb3abd8353774ae148723ccc14087d6dab99473f77a7b799b55defd8dfe",
+      "bytes": 1121,
+      "origins": [
+        "https://registry.npmjs.org/@element-plus/icons-vue/-/icons-vue-2.3.2.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292.txt",
+      "sha256": "5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292",
+      "bytes": 1071,
+      "origins": [
+        "https://registry.npmjs.org/call-bind-apply-helpers/-/call-bind-apply-helpers-1.0.2.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/es-define-property/-/es-define-property-1.0.1.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/es-errors/-/es-errors-1.3.0.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/es-object-atoms/-/es-object-atoms-1.1.2.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/5faab7526d055651be3aab769d58897be6bd91f3d39d137f25f12dba1b31d5dc.txt",
+      "sha256": "5faab7526d055651be3aab769d58897be6bd91f3d39d137f25f12dba1b31d5dc",
+      "bytes": 1072,
+      "origins": [
+        "https://registry.npmjs.org/dayjs/-/dayjs-1.11.23.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201.txt",
+      "sha256": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201",
+      "bytes": 738,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar!/META-INF/NOTICE",
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.4/jackson-databind-2.21.4.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/62fb8a3a9621dc2388174caaabe9c2317b694bb9a1d46c98bcf5655b68f51be3.txt",
+      "sha256": "62fb8a3a9621dc2388174caaabe9c2317b694bb9a1d46c98bcf5655b68f51be3",
+      "bytes": 11359,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.15.12/micrometer-observation-1.15.12.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.15.12/micrometer-commons-1.15.12.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/634293835b43a6dd2094fa39182a3d9a6b9ca43b7fdb9ac354e8037af2a3093a.txt",
+      "sha256": "634293835b43a6dd2094fa39182a3d9a6b9ca43b7fdb9ac354e8037af2a3093a",
+      "bytes": 11990,
+      "origins": [
+        "https://registry.npmjs.org/echarts/-/echarts-6.1.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750.txt",
+      "sha256": "6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750",
+      "bytes": 787,
+      "origins": [
+        "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/658d037c5c078a24c27ab1e0f37050d407ad6628be94886a4e48f3e761f47f7d.txt",
+      "sha256": "658d037c5c078a24c27ab1e0f37050d407ad6628be94886a4e48f3e761f47f7d",
+      "bytes": 1527,
+      "origins": [
+        "https://registry.npmjs.org/normalize-wheel-es/-/normalize-wheel-es-1.2.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/66ea9c8987b1674aababbcc24f61c83ab4fb7baf3af1d701caf0a3aaea97fa92.txt",
+      "sha256": "66ea9c8987b1674aababbcc24f61c83ab4fb7baf3af1d701caf0a3aaea97fa92",
+      "bytes": 331,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.4/jackson-datatype-jsr310-2.21.4.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/67cd5e903c1f908edfa27c25606fa806ce629d9a8ddb7d83019d9fd1f83f7fde.txt",
+      "sha256": "67cd5e903c1f908edfa27c25606fa806ce629d9a8ddb7d83019d9fd1f83f7fde",
+      "bytes": 1094,
+      "origins": [
+        "https://registry.npmjs.org/birpc/-/birpc-2.9.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd.txt",
+      "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd",
+      "bytes": 1526,
+      "origins": [
+        "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.2.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/6d95ce9a738c31425a584ee91eb6d9b6fbe18e351fb206b9f79104bcf7d7bf15.txt",
+      "sha256": "6d95ce9a738c31425a584ee91eb6d9b6fbe18e351fb206b9f79104bcf7d7bf15",
+      "bytes": 171,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/6e1f002892b81cbe0647019b150c8a056efc1add565671a4f8af629b6cd2cc7b.txt",
+      "sha256": "6e1f002892b81cbe0647019b150c8a056efc1add565671a4f8af629b6cd2cc7b",
+      "bytes": 35084,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar!/META-INF/LICENSE.md"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/71f83c4c0621102a56d9853812777b85751bce7e9726f686f5b056c1f8a4b0e6.txt",
+      "sha256": "71f83c4c0621102a56d9853812777b85751bce7e9726f686f5b056c1f8a4b0e6",
+      "bytes": 1167,
+      "origins": [
+        "https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628.txt",
+      "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
+      "bytes": 11359,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.5.15/spring-boot-starter-web-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.5.15/spring-boot-starter-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.5.15/spring-boot-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.5.15/spring-boot-starter-logging-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.5.15/spring-boot-starter-json-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.5.15/spring-boot-starter-tomcat-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.5.15/spring-boot-starter-security-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.5.11/spring-security-config-6.5.11.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.5.11/spring-security-core-6.5.11.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.5.11/spring-security-crypto-6.5.11.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.5.11/spring-security-web-6.5.11.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.5.15/spring-boot-starter-validation-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.5.15/spring-boot-starter-jdbc-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.5.15/spring-boot-autoconfigure-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-jarmode-tools/3.5.15/spring-boot-jarmode-tools-3.5.15.jar!/META-INF/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/73332bc915a16b4ca4bb913d4a55b66e865c6ef0d5feb289063248556fab48b8.txt",
+      "sha256": "73332bc915a16b4ca4bb913d4a55b66e865c6ef0d5feb289063248556fab48b8",
+      "bytes": 575,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/flywaydb/flyway-core/11.7.2/flyway-core-11.7.2.jar!/META-INF/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/7347397a0665f6898b32894a1869a514251abef7da7620902b0e57c5026cf1ed.txt",
+      "sha256": "7347397a0665f6898b32894a1869a514251abef7da7620902b0e57c5026cf1ed",
+      "bytes": 610,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.21.4/jackson-datatype-jdk8-2.21.4.jar!/META-INF/NOTICE",
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.4/jackson-datatype-jsr310-2.21.4.jar!/META-INF/NOTICE",
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.21.4/jackson-module-parameter-names-2.21.4.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/75863f712f8f0603b0dba33edf4b725bab80fc858a51756e5905a3c4c8087169.txt",
+      "sha256": "75863f712f8f0603b0dba33edf4b725bab80fc858a51756e5905a3c4c8087169",
+      "bytes": 1076,
+      "origins": [
+        "https://registry.npmjs.org/alien-signals/-/alien-signals-3.2.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/76479448741d7a7a3a97b6afd9ab9699d95621faafc65a1b8e9149342ea00feb.txt",
+      "sha256": "76479448741d7a7a3a97b6afd9ab9699d95621faafc65a1b8e9149342ea00feb",
+      "bytes": 5378,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar!/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c.txt",
+      "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c",
+      "bytes": 1080,
+      "origins": [
+        "https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.6.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/772daf1f82a50025a74e4066050490d875feba62a49cf0ecefa1b4cc824e9a07.txt",
+      "sha256": "772daf1f82a50025a74e4066050490d875feba62a49cf0ecefa1b4cc824e9a07",
+      "bytes": 1080,
+      "origins": [
+        "vendor/ruoyi/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/773e131a7684726005a7e4688a80b4620033bc08499bc1404dd1a1eb3bca725e.txt",
+      "sha256": "773e131a7684726005a7e4688a80b4620033bc08499bc1404dd1a1eb3bca725e",
+      "bytes": 1052,
+      "origins": [
+        "https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/7bb86273b08315255c72546e7f8080e1c7604a597d318fe60b84908fdad3e923.txt",
+      "sha256": "7bb86273b08315255c72546e7f8080e1c7604a597d318fe60b84908fdad3e923",
+      "bytes": 1124,
+      "origins": [
+        "https://api.github.com/repos/TooTallNate/node-agent-base/git/blobs/256f1f32196c60a970bd2b0bd75f669b135112bf#README.md-License-section",
+        "https://api.github.com/repos/TooTallNate/proxy-agents/git/blobs/328656a9e048a3f45b1e3e3a91c557865cb5a9a5#README.md-License-section"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/7cc2d4990856298530585085301930d6f246c45f8e1c6c24d39395e1960d7afd.txt",
+      "sha256": "7cc2d4990856298530585085301930d6f246c45f8e1c6c24d39395e1960d7afd",
+      "bytes": 1554,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/mybatis/mybatis-spring/3.0.5/mybatis-spring-3.0.5.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/7d8d549eb31995fe67822c860acc7ac3dd958a03a5a71aef4069033e7df72d94.txt",
+      "sha256": "7d8d549eb31995fe67822c860acc7ac3dd958a03a5a71aef4069033e7df72d94",
+      "bytes": 301,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/82761059eaedacb3356803aea8a170d8298609f91b14fc32ee1bfb40d690183c.txt",
+      "sha256": "82761059eaedacb3356803aea8a170d8298609f91b14fc32ee1bfb40d690183c",
+      "bytes": 1084,
+      "origins": [
+        "https://registry.npmjs.org/axios/-/axios-1.20.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/8a6dcbabe7179f9c8489c08a7d874d0f1e093ae7449e03756ccf87cb9d0e296e.txt",
+      "sha256": "8a6dcbabe7179f9c8489c08a7d874d0f1e093ae7449e03756ccf87cb9d0e296e",
+      "bytes": 1126,
+      "origins": [
+        "https://registry.npmjs.org/estree-walker/-/estree-walker-2.0.2.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/91a2845c4db44e7497b514b98634a674c737986ad0db81599307cf733bf850b2.txt",
+      "sha256": "91a2845c4db44e7497b514b98634a674c737986ad0db81599307cf733bf850b2",
+      "bytes": 1100,
+      "origins": [
+        "https://registry.npmjs.org/pinia/-/pinia-3.0.4.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/vue-router/-/vue-router-4.6.4.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/91b00d08eb9c5cb1bc6370d42b63c4874032caf26b9641bfab636827cff9c5d3.txt",
+      "sha256": "91b00d08eb9c5cb1bc6370d42b63c4874032caf26b9641bfab636827cff9c5d3",
+      "bytes": 11562,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/mybatis/mybatis/3.5.19/mybatis-3.5.19.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/91d090a8e06fd0f8b599f7bd5bc9e3d97896548037ef43ee1926c6109b7cd342.txt",
+      "sha256": "91d090a8e06fd0f8b599f7bd5bc9e3d97896548037ef43ee1926c6109b7cd342",
+      "bytes": 1076,
+      "origins": [
+        "https://registry.npmjs.org/copy-anything/-/copy-anything-4.1.5.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/9818ec66553209eebf329d4bf4bc6c992e1ac340bd3314c25ee478b8ce2a7bac.txt",
+      "sha256": "9818ec66553209eebf329d4bf4bc6c992e1ac340bd3314c25ee478b8ce2a7bac",
+      "bytes": 11360,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/mybatis/mybatis-spring/3.0.5/mybatis-spring-3.0.5.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/9a39f2aadab11a3697edd668ff2d8ad885b649737b7ab4d3bf12b34e5ada0c86.txt",
+      "sha256": "9a39f2aadab11a3697edd668ff2d8ad885b649737b7ab4d3bf12b34e5ada0c86",
+      "bytes": 1053,
+      "origins": [
+        "https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea.txt",
+      "sha256": "9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea",
+      "bytes": 15563,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.2.19/spring-web-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.2.19/spring-beans-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.2.19/spring-webmvc-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.2.19/spring-context-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.2.19/spring-expression-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.2.19/spring-aop-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.2.19/spring-jdbc-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.2.19/spring-tx-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.2.19/spring-core-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.2.19/spring-jcl-6.2.19.jar!/META-INF/license.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/a09ba3adcfdcac2d7e31b89e8e7799cec96d7303dc82c0bb3d38d8a352d41d19.txt",
+      "sha256": "a09ba3adcfdcac2d7e31b89e8e7799cec96d7303dc82c0bb3d38d8a352d41d19",
+      "bytes": 337,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.21.4/jackson-module-parameter-names-2.21.4.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/a22b9d5763f574e5db347c30acc0b33eaf4846767c03d2e27d012e864e79a824.txt",
+      "sha256": "a22b9d5763f574e5db347c30acc0b33eaf4846767c03d2e27d012e864e79a824",
+      "bytes": 1071,
+      "origins": [
+        "https://registry.npmjs.org/path-browserify/-/path-browserify-1.0.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02.txt",
+      "sha256": "a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02",
+      "bytes": 1076,
+      "origins": [
+        "https://registry.npmjs.org/@volar/language-core/-/language-core-2.4.28.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@volar/source-map/-/source-map-2.4.28.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@volar/typescript/-/typescript-2.4.28.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vue/language-core/-/language-core-3.3.13.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/vue-tsc/-/vue-tsc-3.3.13.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/a57ab7958eb6d37c460b0f64080c67ab184c4ffc97abdf06187168019c62b047.txt",
+      "sha256": "a57ab7958eb6d37c460b0f64080c67ab184c4ffc97abdf06187168019c62b047",
+      "bytes": 181,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1.txt",
+      "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
+      "bytes": 211,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.5.15/spring-boot-starter-web-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.5.15/spring-boot-starter-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.5.15/spring-boot-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.5.15/spring-boot-starter-logging-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.5.15/spring-boot-starter-json-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.5.15/spring-boot-starter-tomcat-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.5.15/spring-boot-starter-security-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.5.15/spring-boot-starter-validation-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.5.15/spring-boot-starter-jdbc-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.5.15/spring-boot-autoconfigure-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-jarmode-tools/3.5.15/spring-boot-jarmode-tools-3.5.15.jar!/META-INF/NOTICE.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/a681e9d183c72b4af4856935893805eb48c08f0f5a3f260203db7444c20fb98a.txt",
+      "sha256": "a681e9d183c72b4af4856935893805eb48c08f0f5a3f260203db7444c20fb98a",
+      "bytes": 1509,
+      "origins": [
+        "https://registry.npmjs.org/zrender/-/zrender-6.1.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27.txt",
+      "sha256": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27",
+      "bytes": 1090,
+      "origins": [
+        "https://registry.npmjs.org/undici-types/-/undici-types-7.24.6.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/a77a1c089806b39ad339535bdf3677f636c91d96693e8ad7b11fe733f650ea64.txt",
+      "sha256": "a77a1c089806b39ad339535bdf3677f636c91d96693e8ad7b11fe733f650ea64",
+      "bytes": 101176,
+      "origins": [
+        "https://registry.npmjs.org/vite/-/vite-7.3.7.tgz!/package/LICENSE.md"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+      "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47",
+      "bytes": 9197,
+      "origins": [
+        "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz!/package/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/aa4dc81ef2c6b4c2fd8cb7a7a4245c34396acd5a5dfa1ba6c8c0cf9ee88423fb.txt",
+      "sha256": "aa4dc81ef2c6b4c2fd8cb7a7a4245c34396acd5a5dfa1ba6c8c0cf9ee88423fb",
+      "bytes": 11359,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations-jakarta/2.2.41/swagger-annotations-jakarta-2.2.41.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/ac07310d94980d9819cf2c28b3a2f63d11db283f48f02f67208b549f44860ac0.txt",
+      "sha256": "ac07310d94980d9819cf2c28b3a2f63d11db283f48f02f67208b549f44860ac0",
+      "bytes": 1076,
+      "origins": [
+        "https://registry.npmjs.org/vue-component-type-helpers/-/vue-component-type-helpers-3.3.13.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/b018a3f5bce31da047cff91c0941aa1af7aa7456b328509ed8a07e7b91f6e4b0.txt",
+      "sha256": "b018a3f5bce31da047cff91c0941aa1af7aa7456b328509ed8a07e7b91f6e4b0",
+      "bytes": 259903,
+      "origins": [
+        "https://raw.githubusercontent.com/mysql/mysql-server/mysql-8.0.43/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/b15780b4c93aef25618df419dcde6cc9646f497c29fc615c1b67b6fa3bb26a65.txt",
+      "sha256": "b15780b4c93aef25618df419dcde6cc9646f497c29fc615c1b67b6fa3bb26a65",
+      "bytes": 45256,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.55/tomcat-embed-core-10.1.55.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/b1c501095de70182748cb8e8d97ac5577701a4ef3b755ba30d59fd87b24bdb0f.txt",
+      "sha256": "b1c501095de70182748cb8e8d97ac5577701a4ef3b755ba30d59fd87b24bdb0f",
+      "bytes": 1073,
+      "origins": [
+        "https://registry.npmjs.org/memoize-one/-/memoize-one-6.0.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681.txt",
+      "sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+      "bytes": 1069,
+      "origins": [
+        "https://registry.npmjs.org/esbuild/-/esbuild-0.28.2.tgz!/package/LICENSE.md"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a.txt",
+      "sha256": "b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a",
+      "bytes": 477,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.2.19/spring-web-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.2.19/spring-beans-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.2.19/spring-webmvc-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.2.19/spring-context-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.2.19/spring-expression-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.2.19/spring-aop-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.2.19/spring-jdbc-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.2.19/spring-tx-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.2.19/spring-core-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.2.19/spring-jcl-6.2.19.jar!/META-INF/notice.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/bc3d1a9b9fe02f5b9186447ca2896a63015e5e626eccfdda6a04bd7d71be3ce0.txt",
+      "sha256": "bc3d1a9b9fe02f5b9186447ca2896a63015e5e626eccfdda6a04bd7d71be3ce0",
+      "bytes": 330,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.21.4/jackson-datatype-jdk8-2.21.4.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/bd1d0e7ddca0d820e273bdfd7fb453e222843ac87b6871d0c2f96b02d41e2eea.txt",
+      "sha256": "bd1d0e7ddca0d820e273bdfd7fb453e222843ac87b6871d0c2f96b02d41e2eea",
+      "bytes": 140,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/mariadb/jdbc/mariadb-java-client/3.5.8/mariadb-java-client-3.5.8-sources.jar!/org/mariadb/jdbc/Driver.java#leading-license-comment"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/be46ce1e3b0479af9ce82d22b465a6d7d2ff084fca0aaf3d54172da2b5eb5781.txt",
+      "sha256": "be46ce1e3b0479af9ce82d22b465a6d7d2ff084fca0aaf3d54172da2b5eb5781",
+      "bytes": 1071,
+      "origins": [
+        "https://registry.npmjs.org/get-proto/-/get-proto-1.0.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/bf67e2c9b7974543bb18ced3a0b37f53729aaff953b442dd89a3adaf90fd93e8.txt",
+      "sha256": "bf67e2c9b7974543bb18ced3a0b37f53729aaff953b442dd89a3adaf90fd93e8",
+      "bytes": 1082,
+      "origins": [
+        "https://registry.npmjs.org/@sxzz/popperjs-es/-/popperjs-es-2.11.8.tgz!/package/LICENSE.md"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/bf9b0d665be2a689851eea667ca9f42066ea1d903b38349c51e6a44b2577680a.txt",
+      "sha256": "bf9b0d665be2a689851eea667ca9f42066ea1d903b38349c51e6a44b2577680a",
+      "bytes": 1083,
+      "origins": [
+        "https://registry.npmjs.org/hasown/-/hasown-2.0.4.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/bfa8a54bb952ccda79f0f1889721d108f5b605babbb2b8a3705ffb52f4132eb7.txt",
+      "sha256": "bfa8a54bb952ccda79f0f1889721d108f5b605babbb2b8a3705ffb52f4132eb7",
+      "bytes": 1136,
+      "origins": [
+        "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.16.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141,
+      "origins": [
+        "https://registry.npmjs.org/@types/estree/-/estree-1.0.9.tgz!/estree/LICENSE",
+        "https://registry.npmjs.org/@types/lodash/-/lodash-4.17.26.tgz!/lodash/LICENSE",
+        "https://registry.npmjs.org/@types/lodash-es/-/lodash-es-4.17.12.tgz!/lodash-es/LICENSE",
+        "https://registry.npmjs.org/@types/node/-/node-24.19.2.tgz!/node v24.19/LICENSE",
+        "https://registry.npmjs.org/@types/web-bluetooth/-/web-bluetooth-0.0.21.tgz!/web-bluetooth/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/c669138cb1eb01fbb745e8e460b291e4f2869c14a40061390b6095d845ed4c82.txt",
+      "sha256": "c669138cb1eb01fbb745e8e460b291e4f2869c14a40061390b6095d845ed4c82",
+      "bytes": 1070,
+      "origins": [
+        "https://registry.npmjs.org/vscode-uri/-/vscode-uri-3.2.0.tgz!/package/LICENSE.md"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/c8cfa082f122323774057c2808eb7e796703bde9459fa04ff6f2c9cc25f74eff.txt",
+      "sha256": "c8cfa082f122323774057c2808eb7e796703bde9459fa04ff6f2c9cc25f74eff",
+      "bytes": 26529,
+      "origins": [
+        "https://raw.githubusercontent.com/mariadb-corporation/mariadb-connector-j/3.5.8/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164.txt",
+      "sha256": "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164",
+      "bytes": 1260,
+      "origins": [
+        "https://registry.npmjs.org/entities/-/entities-7.0.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/cc1dfd4dafa27271e8212cd3b274eeb3f262e40a6fdab36ddc3f9696f706f58b.txt",
+      "sha256": "cc1dfd4dafa27271e8212cd3b274eeb3f262e40a6fdab36ddc3f9696f706f58b",
+      "bytes": 1172,
+      "origins": [
+        "https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origins": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt",
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.4/jackson-databind-2.21.4.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.4/jackson-core-2.21.4.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.55/tomcat-embed-websocket-10.1.55.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.55/tomcat-embed-el-10.1.55.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/d0ac09e8df2b54625ea1606dfae75d5b6af1cbc5d28a17eca1350be9c367175c.txt",
+      "sha256": "d0ac09e8df2b54625ea1606dfae75d5b6af1cbc5d28a17eca1350be9c367175c",
+      "bytes": 1067,
+      "origins": [
+        "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-7.7.10.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vue/devtools-kit/-/devtools-kit-7.7.10.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/@vue/devtools-shared/-/devtools-shared-7.7.10.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9.txt",
+      "sha256": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9",
+      "bytes": 1091,
+      "origins": [
+        "https://registry.npmjs.org/picomatch/-/picomatch-4.0.7.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/d491d358344f842685c1b1585970999db65fe30ecf7ef3867af8814f4016c016.txt",
+      "sha256": "d491d358344f842685c1b1585970999db65fe30ecf7ef3867af8814f4016c016",
+      "bytes": 168,
+      "origins": [
+        "https://registry.npmjs.org/echarts/-/echarts-6.1.0.tgz!/package/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/d6b3a220bde9bf72fd0f9aecf71cd48c43ddc652abea727fc98a9b21a9534bb9.txt",
+      "sha256": "d6b3a220bde9bf72fd0f9aecf71cd48c43ddc652abea727fc98a9b21a9534bb9",
+      "bytes": 1095,
+      "origins": [
+        "https://registry.npmjs.org/superjson/-/superjson-2.2.6.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/d7136cebc1c0c2a50e02013928fc283b8d69cb805a994e21e6a8cc3983f45131.txt",
+      "sha256": "d7136cebc1c0c2a50e02013928fc283b8d69cb805a994e21e6a8cc3983f45131",
+      "bytes": 9549,
+      "origins": [
+        "https://raw.githubusercontent.com/dromara/hutool/5.8.47/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/d90bf0a089da4cf43d644ed240a0b3825dcdb705e64e38371d56995a4cc9e4c5.txt",
+      "sha256": "d90bf0a089da4cf43d644ed240a0b3825dcdb705e64e38371d56995a4cc9e4c5",
+      "bytes": 1071,
+      "origins": [
+        "https://registry.npmjs.org/gopd/-/gopd-1.2.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987.txt",
+      "sha256": "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987",
+      "bytes": 1095,
+      "origins": [
+        "https://registry.npmjs.org/nanoid/-/nanoid-3.3.20.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/df207ca1a2ea3794caf112d7c1f024c87b4ddfe91d3f243977ad1d3cd085d538.txt",
+      "sha256": "df207ca1a2ea3794caf112d7c1f024c87b4ddfe91d3f243977ad1d3cd085d538",
+      "bytes": 1734,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.15.12/micrometer-observation-1.15.12.jar!/META-INF/NOTICE",
+        "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.15.12/micrometer-commons-1.15.12.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/df52411dcd3c8f5897bbbec8c94e971519e13e75818c263e9a99a86255dd301b.txt",
+      "sha256": "df52411dcd3c8f5897bbbec8c94e971519e13e75818c263e9a99a86255dd301b",
+      "bytes": 1076,
+      "origins": [
+        "https://registry.npmjs.org/muggle-string/-/muggle-string-0.4.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/e1211892da0b0e0585b7aebe8f98c1274fba15bafe47fa1f4ee8a7a502c06304.txt",
+      "sha256": "e1211892da0b0e0585b7aebe8f98c1274fba15bafe47fa1f4ee8a7a502c06304",
+      "bytes": 1475,
+      "origins": [
+        "https://registry.npmjs.org/echarts/-/echarts-6.1.0.tgz!/package/licenses/LICENSE-d3"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/e1919b3b98b8bf6c1b99fcc60a0ed46027c97ac947432e1278446c9606f50161.txt",
+      "sha256": "e1919b3b98b8bf6c1b99fcc60a0ed46027c97ac947432e1278446c9606f50161",
+      "bytes": 1106,
+      "origins": [
+        "https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/e2560e002e13281578c75c850061d9255c33d16d732939e8c2db64c2506642fa.txt",
+      "sha256": "e2560e002e13281578c75c850061d9255c33d16d732939e8c2db64c2506642fa",
+      "bytes": 1067,
+      "origins": [
+        "https://registry.npmjs.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/e5b780d4f38d1d3328e3e53186c4e62d3fa149ea6f2bacd5de5ad0c30ac85343.txt",
+      "sha256": "e5b780d4f38d1d3328e3e53186c4e62d3fa149ea6f2bacd5de5ad0c30ac85343",
+      "bytes": 1118,
+      "origins": [
+        "https://registry.npmjs.org/form-data/-/form-data-4.0.6.tgz!/package/License"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/e6aef1c0f4cf5b0f802c16b31fce309b3c3737450b93c40d6291bf6540aae3d1.txt",
+      "sha256": "e6aef1c0f4cf5b0f802c16b31fce309b3c3737450b93c40d6291bf6540aae3d1",
+      "bytes": 1616,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.4/jackson-core-2.21.4.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/eef8e359fd7799a1740765099fa4d114dcd296bb96dcfa7d45d5b81b2504bed2.txt",
+      "sha256": "eef8e359fd7799a1740765099fa4d114dcd296bb96dcfa7d45d5b81b2504bed2",
+      "bytes": 3218,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.21.4/jackson-dataformat-toml-2.21.4.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/f1eedf4f2cb9e901d6ae549a06d0c20dcde0136d37e38b50adaf51d4673f66d2.txt",
+      "sha256": "f1eedf4f2cb9e901d6ae549a06d0c20dcde0136d37e38b50adaf51d4673f66d2",
+      "bytes": 471,
+      "origins": [
+        "https://raw.githubusercontent.com/qos-ch/logback/v_1.5.34/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/f1fc76fa8bfb48a9a794376e1be0609d8d723b530e98b1970c7369b19587caef.txt",
+      "sha256": "f1fc76fa8bfb48a9a794376e1be0609d8d723b530e98b1970c7369b19587caef",
+      "bytes": 216,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations-jakarta/2.2.41/swagger-annotations-jakarta-2.2.41.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/f55828df4b8752c48e765a806465b76a103e3cb363379c569b15a1df2ba2d79e.txt",
+      "sha256": "f55828df4b8752c48e765a806465b76a103e3cb363379c569b15a1df2ba2d79e",
+      "bytes": 1087,
+      "origins": [
+        "https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-2.1.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc.txt",
+      "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc",
+      "bytes": 1952,
+      "origins": [
+        "https://registry.npmjs.org/lodash/-/lodash-4.18.1.tgz!/package/LICENSE",
+        "https://registry.npmjs.org/lodash-es/-/lodash-es-4.18.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8.txt",
+      "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8",
+      "bytes": 35231,
+      "origins": [
+        "https://registry.npmjs.org/rollup/-/rollup-4.64.12.tgz!/package/LICENSE.md"
+      ]
+    }
+  ]
+}
