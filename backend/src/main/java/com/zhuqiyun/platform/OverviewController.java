@@ -41,18 +41,19 @@ public class OverviewController {
         LocalDate start=LocalDate.of(selectedYear,1,1),end=start.plusYears(1);
         Map<String,Object> metrics=new LinkedHashMap<>(db.one("SELECT COALESCE(SUM(CASE WHEN p.status='ACTIVE' THEN 1 ELSE 0 END),0) active_projects,COALESCE(SUM(CASE WHEN p.start_date>=? AND p.start_date<? THEN p.contract_amount ELSE 0 END),0) contract_amount,COALESCE(SUM(ROUND(p.contract_amount*p.progress/100,2)),0) completed_value,COALESCE(SUM(p.budget_amount),0) budget_amount FROM projects p WHERE "+scope,start,end));
         metrics.put("year",selectedYear);
-        BigDecimal material=amount("SELECT COALESCE(SUM(m.amount),0) amount FROM stock_movements m JOIN projects p ON p.id=m.project_id WHERE m.tenant_id=1 AND m.kind='ISSUE' AND "+scope);
+        BigDecimal material=amount("SELECT COALESCE(SUM(CASE WHEN m.kind='ISSUE' THEN m.amount ELSE -m.amount END),0) amount FROM stock_movements m JOIN projects p ON p.id=m.project_id WHERE m.tenant_id=1 AND m.kind IN ('ISSUE','ISSUE_RETURN') AND "+scope);
         BigDecimal other=amount("SELECT COALESCE(SUM(c.amount),0) amount FROM costs c JOIN projects p ON p.id=c.project_id WHERE c.tenant_id=1 AND "+scope);
         metrics.put("actual_cost",material.add(other));
-        metrics.put("purchase_amount",amount("SELECT COALESCE(SUM(o.total_amount),0) amount FROM purchase_orders o JOIN projects p ON p.id=o.project_id WHERE o.tenant_id=1 AND o.status<>'CANCELLED' AND "+scope));
+        metrics.put("purchase_amount",amount("SELECT COALESCE(SUM(o.total_amount-o.closed_amount-COALESCE((SELECT SUM(r.amount) FROM purchase_returns r WHERE r.order_id=o.id),0)),0) amount FROM purchase_orders o JOIN projects p ON p.id=o.project_id WHERE o.tenant_id=1 AND o.status<>'CANCELLED' AND "+scope));
         metrics.put("pending_requests",db.one("SELECT COUNT(*) n FROM purchase_requests r JOIN projects p ON p.id=r.project_id WHERE r.tenant_id=1 AND r.status IN ('SUBMITTED','PENDING') AND "+scope).get("n"));
-        metrics.put("outstanding_amount",amount("SELECT COALESCE(SUM(a.amount-a.paid_amount),0) amount FROM payables a JOIN projects p ON p.id=a.project_id WHERE a.tenant_id=1 AND "+scope));
+        metrics.put("outstanding_amount",amount("SELECT COALESCE(SUM(GREATEST(a.amount-a.paid_amount,0)),0) amount FROM payables a JOIN projects p ON p.id=a.project_id WHERE a.tenant_id=1 AND "+scope));
         Map<String,Object> data=new LinkedHashMap<>(); data.put("metrics",metrics);
-        data.put("budget_vs_cost",db.list("SELECT p.name,p.budget_amount budget,(COALESCE((SELECT SUM(m.amount) FROM stock_movements m WHERE m.tenant_id=1 AND m.project_id=p.id AND m.kind='ISSUE'),0)+COALESCE((SELECT SUM(c.amount) FROM costs c WHERE c.tenant_id=1 AND c.project_id=p.id),0)) cost FROM projects p WHERE "+scope+" ORDER BY p.id"));
-        data.put("monthly_purchases",db.list("SELECT DATE_FORMAT(o.created_at,'%Y-%m') month,SUM(o.total_amount) amount FROM purchase_orders o JOIN projects p ON p.id=o.project_id WHERE o.tenant_id=1 AND o.status<>'CANCELLED' AND "+scope+" GROUP BY DATE_FORMAT(o.created_at,'%Y-%m') ORDER BY month"));
+        metrics.put("refund_due_amount",amount("SELECT COALESCE(SUM(GREATEST(a.paid_amount-a.amount,0)),0) amount FROM payables a JOIN projects p ON p.id=a.project_id WHERE a.tenant_id=1 AND "+scope));
+        data.put("budget_vs_cost",db.list("SELECT p.name,p.budget_amount budget,(COALESCE((SELECT SUM(CASE WHEN m.kind='ISSUE' THEN m.amount ELSE -m.amount END) FROM stock_movements m WHERE m.tenant_id=1 AND m.project_id=p.id AND m.kind IN ('ISSUE','ISSUE_RETURN')),0)+COALESCE((SELECT SUM(c.amount) FROM costs c WHERE c.tenant_id=1 AND c.project_id=p.id),0)) cost FROM projects p WHERE "+scope+" ORDER BY p.id"));
+        data.put("monthly_purchases",db.list("SELECT DATE_FORMAT(o.created_at,'%Y-%m') month,SUM(o.total_amount-o.closed_amount-COALESCE((SELECT SUM(r.amount) FROM purchase_returns r WHERE r.order_id=o.id),0)) amount FROM purchase_orders o JOIN projects p ON p.id=o.project_id WHERE o.tenant_id=1 AND o.status<>'CANCELLED' AND "+scope+" GROUP BY DATE_FORMAT(o.created_at,'%Y-%m') ORDER BY month"));
         var composition=new ArrayList<Map<String,Object>>(); composition.add(Map.of("name","材料","value",material));
         for(var row:db.list("SELECT c.category name,SUM(c.amount) value FROM costs c JOIN projects p ON p.id=c.project_id WHERE c.tenant_id=1 AND "+scope+" GROUP BY c.category")) {
-            row.put("name",Map.of("LABOR","人工","MACHINE","机械","SUBCONTRACT","分包","OTHER","其他").getOrDefault(row.get("name").toString(),row.get("name").toString())); composition.add(row);
+            row.put("name",Map.of("LABOR","人工","MACHINE","机械","SUBCONTRACT","分包","OTHER","其他","RETURN_VARIANCE","退货计价差额").getOrDefault(row.get("name").toString(),row.get("name").toString())); composition.add(row);
         }
         data.put("cost_composition",composition);
         data.put("project_progress",db.list("SELECT p.name,p.progress FROM projects p WHERE "+scope+" ORDER BY p.id"));

@@ -20,13 +20,13 @@
 - POST /requests/{id}/orders {quote_id,reason} -> order detail. One whole-request award; unique request per order; no overorder. Requires APPROVED. Quotes immutable after award.
 - GET /orders；GET /orders/{id} -> row + items[{id,material_id,quantity,received_quantity,unit_price,amount,material_name,specification,unit}],receipts[],payments[]
 - POST /orders/{id}/receive {warehouse_id,reference,note,items:[{order_item_id,quantity}]} -> receipt (inspect+post receipt in one atomic operation), updates average stock and creates payable for actual accepted amount.
-- POST /orders/{id}/cancel {reason} (only unreceived); states OPEN/PARTIAL/COMPLETED/CANCELLED
+- POST /orders/{id}/cancel {reason} (only unreceived); states OPEN/PARTIAL/COMPLETED/CANCELLED/CLOSED
 - GET /inventory -> rows [{warehouse_id,warehouse_name,material_id,material_name,specification,unit,quantity,average_price,stock_value,safety_stock}]
 - GET /stock-movements -> rows including project_name,material_name,warehouse_name,kind,quantity,unit_cost,amount,reference,operator_name,created_at
 - POST /issues {project_id,warehouse_id,reference,note,items:[{material_id,quantity}]} -> issue with cost, disallows insufficient stock. kind RECEIPT/ISSUE; issue is project material cost; receipt is inventory, not project consumption.
 - GET /costs -> project joined metrics；POST /costs {project_id,category:LABOR/MACHINE/SUBCONTRACT/OTHER,amount,description,incurred_date}
 - GET /contracts；POST /contracts；PUT /contracts/{id}；DELETE /contracts/{id} (unused only) fields code,name,type(MAIN/PURCHASE/SUBCONTRACT),project_id,supplier_id(nullable),order_id(nullable),amount,signed_date,start_date,end_date,status(ACTIVE/COMPLETED/DRAFT),payment_plan(JSON text),attachment_name(optional),attachment_url(optional). Attachments authenticated upload through POST /contracts/{id}/attachment multipart file, GET /contracts/{id}/attachment.
-- GET /payables -> rows order_id,order_code,project_name,supplier_name,amount,paid_amount,outstanding_amount,reserved_amount,available_amount
+- GET /payables -> rows order_id,order_code,project_name,supplier_name,amount,paid_amount,outstanding_amount,reserved_amount,available_amount,refunded_amount,refundable_amount
 - GET /payments (`finance:read`)；POST /payments {payable_id,amount,reference,note} -> payment. Direct bookkeeping requires `finance:record` (default admin only). Unique reference <=100 characters; locks payable, respects reservations and contract cap.
 - GET /payment-applications (`finance:read`) -> joined project_name,supplier_name,order_code,applicant_name,reviewer_name,reviewer_id,reviewed_at,review_comment,payment_id,status.
 - POST /payment-applications {payable_id,amount,note} (`finance:write`) -> PENDING application. PENDING and APPROVED applications both reserve amount; actual received balance and linked contract cap apply.
@@ -38,3 +38,21 @@
 - GET /audit-logs；GET /admin/users；POST /admin/users；PUT /admin/users/{id}; GET /admin/roles；PUT /admin/roles/{id} {permissions:[],menus:[]}; PUT /admin/company {name,system_name,theme_color}; GET /admin/dictionaries；PUT /admin/dictionaries/{id} {label,value,sort_order}
 Roles admin,boss,manager,buyer,warehouse,finance. Each user one role. Manager only assigned projects and linked documents. Others company-scope. All reads scoped by tenant_id=1. Tenant column is expansion seam; no claim of complete SaaS isolation.
 Permissions project:read/write,master:read/write,request:read/write/approve,quote:write,order:read/write/receive,inventory:read/issue,cost:read/write,contract:read/write,finance:read/write/approve/record,dashboard:read,system:manage. Admin wildcard *. Manager request write only self, never own approve; boss approves procurement and payment requests; buyer quotes and orders; warehouse receive/issue; finance applies and executes approved payments. `finance:record` is a separate direct bookkeeping permission and is not granted to the default finance role.
+
+## 采购纠错与履约（V5）
+
+- POST /orders/{id}/close {reason}：`order:write`，只关闭 PARTIAL 订单未到货部分。新增 closed_amount、close_reason、closed_by、closed_at；order_items 新增 closed_quantity、closed_amount。原订单数量与金额、原收货保持不变。
+- POST /orders/{id}/reorder-request {required_date,note}：`request:write`，仅 CLOSED/CANCELLED，每单生成一次 DRAFT，数量取未收部分。新申请 source_order_id/source_order_code，原订单 replacement_request_id；需重新审批。
+- GET /orders/{id} 新增 effective_amount（原金额减关闭、退货）、return_amount、returns[]、refunds[]、payable、events[]；receipt.items[] 包含 id、returned_quantity、returnable_quantity；order.items[] 包含 remaining_quantity、returned_quantity。
+- GET /issues：`inventory:read`，领料头及 items[]，item.id 为原 ISSUE 库存流水编号，含 material_name、specification、unit、原 quantity/amount、returned_quantity、returnable_quantity。
+- GET /issue-returns：`inventory:read`，含原 issue_code、项目、仓库、金额、凭证、原因、人员和时间。
+- POST /issues/{id}/returns {reference,reason,items:[{source_id,quantity}]}：`inventory:issue`，source_id 为该领料单原 ISSUE 流水；按原领料成本分次退回原仓，最后一笔吸收尾差。
+- GET /purchase-returns：`order:read`，含原订单、收货、应付冲减 amount、库存冲减 stock_amount、计价差额 variance_amount、原因及操作人。
+- POST /receipts/{id}/returns {reference,reason,items:[{source_id,quantity}]}：`order:receive`，source_id 为该入库单 receipt_items.id；检查原可退量、现存量及付款申请占用。减少库存和应付，差额自动记为 RETURN_VARIANCE。
+- GET /supplier-refunds：`finance:read`，退款记录含 order_code、supplier_name、project_name、amount、reference、note、operator_name、created_at。
+- POST /supplier-refunds {payable_id,amount,reference,note}：`finance:write`，仅记录退货形成的实际到账退款，不能超过 paid_amount-amount，凭证唯一，支持部分退款；原 payments 和已付申请不改写。
+- 所有新读写执行项目范围校验；新凭证最长 100 字符、原因最长 1000 字符，数量正数且最多 3 位。每个单据最多 100 条，不得重复 source_id。
+- payables.amount 为入库减采购退货；paid_amount 为付款减退款；outstanding_amount 与 refundable_amount 分别取两者差的非负方向。付款/申请仍受库存验收、合同和其他申请占用约束。
+- 项目及看板 order_amount/purchase_amount 为当前净采购订单额；趋势按原订单月份归集当前净额。receipt_amount 继续保留原累计入库，purchase_return_amount 另列；material_cost 扣项目退料，other_cost 包含有符号计价差额；paid_amount 为净实付，refund_amount/refund_due_amount 另列。
+
+这些是实时管理报表，不是已结账的历史总账。迁移与完整验收见 [采购升级](PROCUREMENT-ERP-UPGRADE.md)。

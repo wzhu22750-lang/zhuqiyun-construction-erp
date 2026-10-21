@@ -28,24 +28,29 @@ public class Db {
         allow("suppliers", "tenant_id code name contact phone category status qualification qualification_expiry rating");
         allow("materials", "tenant_id code name specification unit category safety_stock reference_price");
         allow("warehouses", "tenant_id code name location");
-        allow("purchase_requests", "tenant_id code project_id applicant_id required_date note status total_amount created_at updated_at");
+        allow("purchase_requests", "tenant_id code project_id applicant_id required_date note status total_amount source_order_id created_at updated_at");
         allow("request_items", "tenant_id request_id material_id quantity unit_price amount");
         allow("approvals", "tenant_id request_id operator_id decision comment created_at");
         allow("quotes", "tenant_id request_id supplier_id delivery_days valid_until note total_amount selected selection_reason created_at");
         allow("quote_items", "tenant_id quote_id request_item_id unit_price amount");
-        allow("purchase_orders", "tenant_id code project_id request_id quote_id supplier_id total_amount status buyer_id created_at");
-        allow("order_items", "tenant_id order_id material_id request_item_id quantity received_quantity unit_price amount");
+        allow("purchase_orders", "tenant_id code project_id request_id quote_id supplier_id total_amount status buyer_id closed_amount close_reason closed_by closed_at replacement_request_id created_at");
+        allow("order_items", "tenant_id order_id material_id request_item_id quantity received_quantity unit_price amount closed_quantity closed_amount");
         allow("receipts", "tenant_id code order_id project_id warehouse_id reference note amount operator_id created_at");
         allow("receipt_items", "tenant_id receipt_id order_item_id material_id quantity unit_price amount");
         allow("inventory", "tenant_id warehouse_id material_id quantity average_price stock_value");
         allow("issues", "tenant_id code project_id warehouse_id reference note amount operator_id created_at");
-        allow("stock_movements", "tenant_id warehouse_id material_id project_id kind quantity unit_cost amount reference receipt_id issue_id operator_id created_at");
+        allow("stock_movements", "tenant_id warehouse_id material_id project_id kind quantity unit_cost amount reference receipt_id issue_id issue_return_id purchase_return_id operator_id created_at");
         allow("costs", "tenant_id project_id category amount description incurred_date operator_id created_at");
         allow("contracts", "tenant_id code name type project_id supplier_id order_id amount signed_date start_date end_date status payment_plan attachment_name attachment_key created_at");
         allow("payables", "tenant_id order_id supplier_id project_id amount paid_amount");
         allow("payments", "tenant_id payable_id amount reference note operator_id created_at");
         allow("payment_applications", "tenant_id payable_id amount status note applicant_id payment_id reviewer_id reviewed_at review_comment created_at");
         allow("payment_application_records", "tenant_id application_id operator_id decision comment created_at");
+        allow("issue_returns", "tenant_id code issue_id project_id warehouse_id reference reason amount operator_id created_at");
+        allow("issue_return_items", "tenant_id return_id source_movement_id quantity amount");
+        allow("purchase_returns", "tenant_id code receipt_id order_id project_id warehouse_id reference reason amount stock_amount variance_amount cost_id operator_id created_at");
+        allow("purchase_return_items", "tenant_id return_id receipt_item_id quantity amount stock_amount");
+        allow("supplier_refunds", "tenant_id payable_id amount reference note operator_id created_at");
         allow("audit_logs", "tenant_id operator_id action entity_type entity_id detail created_at");
     }
     private static void allow(String table, String fields) { FIELDS.put(table, Set.of(fields.split(" "))); }

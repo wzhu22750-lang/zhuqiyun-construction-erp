@@ -20,6 +20,8 @@ public class ProcurementController {
  @GetMapping("/orders/{id}") Object order(@PathVariable long id){return CommonResult.success(service.orderDetail(id));}
  @PostMapping("/orders/{id}/receive") Object receive(@PathVariable long id,@RequestBody Map<String,Object> b){return CommonResult.success(inventory.receive(id,b));}
  @PostMapping("/orders/{id}/cancel") Object cancel(@PathVariable long id,@RequestBody Map<String,Object> b){return CommonResult.success(service.cancel(id,b));}
+ @PostMapping("/orders/{id}/close") Object close(@PathVariable long id,@RequestBody Map<String,Object> b){return CommonResult.success(service.close(id,b));}
+ @PostMapping("/orders/{id}/reorder-request") Object reorder(@PathVariable long id,@RequestBody Map<String,Object> b){return CommonResult.success(service.reorder(id,b));}
  @GetMapping("/approvals") Object pending(){return CommonResult.success(service.pending());}
  @GetMapping("/approval-records") Object records(){return CommonResult.success(service.approvals());}
 }

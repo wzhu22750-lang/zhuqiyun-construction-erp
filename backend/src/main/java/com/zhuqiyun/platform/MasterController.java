@@ -27,7 +27,7 @@ public class MasterController {
         String scope=auth.projectFilter("p");
         var quotes=db.list("SELECT q.*,r.code request_code,p.name project_name FROM quotes q JOIN purchase_requests r ON r.id=q.request_id AND r.tenant_id=1 JOIN projects p ON p.id=r.project_id WHERE q.tenant_id=1 AND q.supplier_id=? AND "+scope+" ORDER BY q.id DESC",id);
         var orders=db.list("SELECT o.*,p.name project_name FROM purchase_orders o JOIN projects p ON p.id=o.project_id WHERE o.tenant_id=1 AND o.supplier_id=? AND "+scope+" ORDER BY o.id DESC",id);
-        var metrics=db.one("SELECT COALESCE(SUM(a.amount),0) payable_amount,COALESCE(SUM(a.paid_amount),0) paid_amount,COALESCE(SUM(a.amount-a.paid_amount),0) outstanding_amount FROM payables a JOIN projects p ON p.id=a.project_id WHERE a.tenant_id=1 AND a.supplier_id=? AND "+scope,id);
+        var metrics=db.one("SELECT COALESCE(SUM(a.amount),0) payable_amount,COALESCE(SUM(a.paid_amount),0) paid_amount,COALESCE(SUM(GREATEST(a.amount-a.paid_amount,0)),0) outstanding_amount,COALESCE(SUM(GREATEST(a.paid_amount-a.amount,0)),0) refund_due_amount FROM payables a JOIN projects p ON p.id=a.project_id WHERE a.tenant_id=1 AND a.supplier_id=? AND "+scope,id);
         BigDecimal total=orders.stream().filter(o -> !"CANCELLED".equals(o.get("status"))).map(o -> new BigDecimal(o.get("total_amount").toString())).reduce(BigDecimal.ZERO,BigDecimal::add);
         metrics.put("order_amount",total); metrics.put("order_count",orders.size()); metrics.put("quote_count",quotes.size());
         return CommonResult.success(Map.of("supplier",supplier,"quotes",quotes,"orders",orders,"metrics",metrics));

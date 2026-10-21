@@ -27,7 +27,7 @@ public class FinanceService {
  @Transactional public void deleteContract(long id){auth.require("contract:write");Map<String,Object> c=contract(id);if(c.get("order_id")!=null)check(dec(db.one("SELECT paid_amount FROM payables WHERE order_id=?",c.get("order_id")).get("paid_amount")).signum()==0,"已有付款记录的合同不能删除");db.jdbc().update("DELETE FROM contracts WHERE id=? AND tenant_id=1",id);auth.audit("DELETE_CONTRACT","contract",id,c.get("code").toString());}
  public List<Map<String,Object>> payables(){
   auth.require("finance:read");
-  List<Map<String,Object>> rows=db.list("SELECT a.*,a.amount-a.paid_amount outstanding_amount,p.name project_name,s.name supplier_name,o.code order_code,o.total_amount order_amount FROM payables a JOIN projects p ON p.id=a.project_id JOIN suppliers s ON s.id=a.supplier_id JOIN purchase_orders o ON o.id=a.order_id WHERE a.tenant_id=1 AND "+auth.projectFilter("p")+" ORDER BY a.id DESC");
+  List<Map<String,Object>> rows=db.list("SELECT a.*,GREATEST(a.amount-a.paid_amount,0) outstanding_amount,GREATEST(a.paid_amount-a.amount,0) refundable_amount,(SELECT COALESCE(SUM(r.amount),0) FROM supplier_refunds r WHERE r.payable_id=a.id) refunded_amount,p.name project_name,s.name supplier_name,o.code order_code,o.total_amount order_amount FROM payables a JOIN projects p ON p.id=a.project_id JOIN suppliers s ON s.id=a.supplier_id JOIN purchase_orders o ON o.id=a.order_id WHERE a.tenant_id=1 AND "+auth.projectFilter("p")+" ORDER BY a.id DESC");
   for(Map<String,Object> a:rows){BigDecimal reserved=reserved(((Number)a.get("id")).longValue(),0);a.put("reserved_amount",reserved);a.put("available_amount",available(a,0,false));}
   return rows;
  }
