@@ -1,4 +1,4 @@
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed, watch, onBeforeUnmount } from 'vue'
 import { get, post, put, remove } from '../api/http'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { useAuth } from '../stores/auth'
@@ -6,13 +6,18 @@ export function useResource<T>(path: string | (()=>string), initial: T) {
   const data = ref<T>(initial)
   const loading = ref(false)
   const error = ref('')
+  const resolved=computed(()=>typeof path==='function'?path():path)
   let requestId = 0
   async function load() {
+    if(!resolved.value){++requestId;data.value=initial as any;error.value='';loading.value=false;return}
+
     const current = ++requestId; loading.value = true; error.value = ''
-    try { const result = await get<T>(typeof path === 'function' ? path() : path); if (current===requestId) data.value=result as any }
+    try { const result = await get<T>(resolved.value); if (current===requestId) data.value=result as any }
     catch (e) { if(current===requestId) error.value=e instanceof Error ? e.message : '加载失败' }
     finally { if(current===requestId) loading.value=false }
   }
+  watch(resolved,load)
+  onBeforeUnmount(()=>{++requestId})
   onMounted(load)
   return {data,loading,error,load}
 }

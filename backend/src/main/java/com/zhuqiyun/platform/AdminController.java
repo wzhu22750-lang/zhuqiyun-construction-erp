@@ -10,7 +10,7 @@ import java.util.*;
 @RestController
 @RequestMapping("/api")
 public class AdminController {
-    public static final Set<String> PERMISSIONS=Set.of("*","project:read","project:write","master:read","master:write","request:read","request:write","request:approve","quote:write","order:read","order:write","order:receive","inventory:read","inventory:issue","cost:read","cost:write","contract:read","contract:write","finance:read","finance:write","finance:approve","finance:record","dashboard:read","system:manage");
+    public static final Set<String> PERMISSIONS=Set.of("*","project:read","project:write","master:read","master:write","request:read","request:write","request:approve","quote:write","quote:read","stocktake:read","stocktake:write","stocktake:approve","order:read","order:write","order:receive","inventory:read","inventory:company","inventory:issue","cost:read","cost:write","contract:read","contract:write","contract:plan","finance:read","finance:write","finance:approve","finance:record","dashboard:read","system:manage");
     public static final Set<String> MENUS=Set.of("dashboard","projects","suppliers","materials","warehouses","requests","orders","inventory","costs","contracts","finance","approvals","system","users","roles","company","dictionaries","audit","admin","payables","payments","payment-applications","stock-movements","audit-logs");
     private final Db db; private final Auth auth; private final PasswordEncoder encoder; private final ObjectMapper json;
     public AdminController(Db db,Auth auth,PasswordEncoder encoder,ObjectMapper json) { this.db=db; this.auth=auth; this.encoder=encoder; this.json=json; }

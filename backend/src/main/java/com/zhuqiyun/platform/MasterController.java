@@ -17,7 +17,7 @@ public class MasterController {
         "materials","code name specification unit category safety_stock reference_price",
         "warehouses","code name location");
     public MasterController(Db db,Auth auth) { this.db=db; this.auth=auth; }
-    private Object rows(String table) { auth.require("master:read"); return db.list("SELECT * FROM "+table+" WHERE tenant_id=1 ORDER BY id DESC"); }
+    private Object rows(String table) { auth.require("master:read"); return db.list("SELECT * FROM "+table+" WHERE tenant_id=1 ORDER BY id DESC LIMIT 200"); }
     @GetMapping("/suppliers") public CommonResult<?> suppliers() { return CommonResult.success(rows("suppliers")); }
     @GetMapping("/materials") public CommonResult<?> materials() { return CommonResult.success(rows("materials")); }
     @GetMapping("/warehouses") public CommonResult<?> warehouses() { return CommonResult.success(rows("warehouses")); }
@@ -25,12 +25,16 @@ public class MasterController {
         auth.require("master:read");
         var supplier=db.one("SELECT * FROM suppliers WHERE id=? AND tenant_id=1",id);
         String scope=auth.projectFilter("p");
-        var quotes=db.list("SELECT q.*,r.code request_code,p.name project_name FROM quotes q JOIN purchase_requests r ON r.id=q.request_id AND r.tenant_id=1 JOIN projects p ON p.id=r.project_id WHERE q.tenant_id=1 AND q.supplier_id=? AND "+scope+" ORDER BY q.id DESC",id);
-        var orders=db.list("SELECT o.*,p.name project_name FROM purchase_orders o JOIN projects p ON p.id=o.project_id WHERE o.tenant_id=1 AND o.supplier_id=? AND "+scope+" ORDER BY o.id DESC",id);
+        var quotes=db.list("SELECT q.*,r.code request_code,p.name project_name FROM quotes q JOIN purchase_requests r ON r.id=q.request_id AND r.tenant_id=1 JOIN projects p ON p.id=r.project_id WHERE q.tenant_id=1 AND q.supplier_id=? AND "+scope+" ORDER BY q.id DESC LIMIT 50",id);
+        var orders=db.list("SELECT o.*,o.total_amount-o.closed_amount-COALESCE((SELECT SUM(r.amount) FROM purchase_returns r WHERE r.order_id=o.id),0) effective_amount,p.name project_name FROM purchase_orders o JOIN projects p ON p.id=o.project_id WHERE o.tenant_id=1 AND o.supplier_id=? AND "+scope+" ORDER BY o.id DESC LIMIT 50",id);
         var metrics=db.one("SELECT COALESCE(SUM(a.amount),0) payable_amount,COALESCE(SUM(a.paid_amount),0) paid_amount,COALESCE(SUM(GREATEST(a.amount-a.paid_amount,0)),0) outstanding_amount,COALESCE(SUM(GREATEST(a.paid_amount-a.amount,0)),0) refund_due_amount FROM payables a JOIN projects p ON p.id=a.project_id WHERE a.tenant_id=1 AND a.supplier_id=? AND "+scope,id);
-        BigDecimal total=orders.stream().filter(o -> !"CANCELLED".equals(o.get("status"))).map(o -> new BigDecimal(o.get("total_amount").toString())).reduce(BigDecimal.ZERO,BigDecimal::add);
-        metrics.put("order_amount",total); metrics.put("order_count",orders.size()); metrics.put("quote_count",quotes.size());
-        return CommonResult.success(Map.of("supplier",supplier,"quotes",quotes,"orders",orders,"metrics",metrics));
+        var counts=db.one("SELECT COUNT(*) order_count,COALESCE(SUM(CASE WHEN o.status<>'CANCELLED' THEN o.total_amount-o.closed_amount-COALESCE((SELECT SUM(r.amount) FROM purchase_returns r WHERE r.order_id=o.id),0) ELSE 0 END),0) order_amount FROM purchase_orders o JOIN projects p ON p.id=o.project_id WHERE o.supplier_id=? AND o.tenant_id=1 AND "+scope,id);
+        metrics.putAll(counts);metrics.put("quote_count",db.one("SELECT COUNT(*) n FROM quotes q JOIN purchase_requests r ON r.id=q.request_id JOIN projects p ON p.id=r.project_id WHERE q.supplier_id=? AND q.tenant_id=1 AND "+scope,id).get("n"));
+        var access=DataPolicy.flags(auth);
+        if(!DataPolicy.yes(access,"quotes")){quotes=List.of();metrics.remove("quote_count");}
+        if(!DataPolicy.yes(access,"orders")){orders=List.of();metrics.remove("order_amount");metrics.remove("order_count");}
+        if(!DataPolicy.yes(access,"finance"))for(String key:List.of("payable_amount","paid_amount","outstanding_amount","refund_due_amount"))metrics.remove(key);
+        return CommonResult.success(Map.of("supplier",supplier,"quotes",quotes,"orders",orders,"metrics",metrics,"access",access));
     }
     @PostMapping("/suppliers") @Transactional public CommonResult<?> createSupplier(@RequestBody Map<String,Object> body) { return CommonResult.success(save("suppliers",null,body)); }
     @PutMapping("/suppliers/{id}") @Transactional public CommonResult<?> updateSupplier(@PathVariable long id,@RequestBody Map<String,Object> body) { return CommonResult.success(save("suppliers",id,body)); }
@@ -42,32 +46,38 @@ public class MasterController {
     @PutMapping("/warehouses/{id}") @Transactional public CommonResult<?> updateWarehouse(@PathVariable long id,@RequestBody Map<String,Object> body) { return CommonResult.success(save("warehouses",id,body)); }
     private Map<String,Object> save(String table,Long id,Map<String,Object> body) {
         auth.require("master:write");
-        Map<String,Object> values=Fields.only(body,ALLOWED.get(table));
         Map<String,Object> current=id==null?Map.of():db.one("SELECT * FROM "+table+" WHERE tenant_id=1 AND id=? FOR UPDATE",id);
+        Map<String,Object> values=validate(table,body,current,id==null);
+        Map<String,Object> merged=new LinkedHashMap<>(current);merged.putAll(values);
+        long savedId;
+        if(id==null) { values.put("tenant_id",1L); savedId=db.insert(table,values); }
+        else { savedId=id; if(!values.isEmpty()) db.update(table,id,values); }
+        auth.audit(id==null?"CREATE":"UPDATE",table,savedId,"维护基础档案 "+merged.get("code"));
+        return db.one("SELECT * FROM "+table+" WHERE tenant_id=1 AND id=?",savedId);
+    }
+    public Map<String,Object> validateNew(String table,Map<String,Object> body){auth.require("master:write");Fields.check(ALLOWED.containsKey(table),"不支持的基础档案");return validate(table,body,Map.of(),true);}
+    private Map<String,Object> validate(String table,Map<String,Object> body,Map<String,Object> current,boolean fresh){
+        Map<String,Object> values=Fields.only(body,ALLOWED.get(table));
         Map<String,Object> merged=new LinkedHashMap<>(current); merged.putAll(values);
         for(String field:List.of("code","name")) {
             String value=Fields.text(merged.get(field),field.equals("code")?50:table.equals("suppliers")?160:120,true);
-            if(values.containsKey(field)||id==null) values.put(field,value);
+            if(values.containsKey(field)||fresh) values.put(field,value);
         }
         Map<String,Integer> lengths=Map.of("contact",80,"phone",50,"category",60,"qualification",500,"specification",160,"unit",20,"location",160);
         for(var entry:lengths.entrySet()) if(values.containsKey(entry.getKey())) values.put(entry.getKey(),Fields.text(values.get(entry.getKey()),entry.getValue(),false));
         if(table.equals("suppliers")) {
-            if(id==null) { values.putIfAbsent("status","ACTIVE"); values.putIfAbsent("rating",new BigDecimal("4.5")); }
+            if(fresh) { values.putIfAbsent("status","ACTIVE"); values.putIfAbsent("rating",new BigDecimal("4.5")); }
             if(values.containsKey("status")) Fields.enumeration(values.get("status"),"ACTIVE","INACTIVE");
             if(values.containsKey("rating")) values.put("rating",Fields.decimal(values.get("rating"),1,new BigDecimal("5")));
             if(values.get("qualification_expiry")!=null) values.put("qualification_expiry",Fields.date(values.get("qualification_expiry")));
         }
         if(table.equals("materials")) {
             Fields.text(merged.get("unit"),20,true); Fields.text(merged.get("category"),60,true);
-            if(id==null) { values.putIfAbsent("safety_stock",BigDecimal.ZERO); values.putIfAbsent("reference_price",BigDecimal.ZERO); }
+            if(fresh) { values.putIfAbsent("safety_stock",BigDecimal.ZERO); values.putIfAbsent("reference_price",BigDecimal.ZERO); }
             if(values.containsKey("safety_stock")) values.put("safety_stock",Fields.decimal(values.get("safety_stock"),3,new BigDecimal("999999999999999.999")));
             if(values.containsKey("reference_price")) values.put("reference_price",Fields.decimal(values.get("reference_price"),4,new BigDecimal("99999999999999.9999")));
         }
-        long savedId;
-        if(id==null) { values.put("tenant_id",1L); savedId=db.insert(table,values); }
-        else { savedId=id; if(!values.isEmpty()) db.update(table,id,values); }
-        auth.audit(id==null?"CREATE":"UPDATE",table,savedId,"维护基础档案 "+merged.get("code"));
-        return db.one("SELECT * FROM "+table+" WHERE tenant_id=1 AND id=?",savedId);
+        return values;
     }
     private void remove(String table,long id,List<String> references,String column) {
         auth.require("master:write"); db.one("SELECT id FROM "+table+" WHERE id=? AND tenant_id=1 FOR UPDATE",id);

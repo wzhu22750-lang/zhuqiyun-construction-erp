@@ -1,0 +1,1 @@
+UPDATE roles SET permissions=REPLACE(permissions,'"inventory:read"','"inventory:read","inventory:company"') WHERE code IN ('warehouse','buyer','boss') AND permissions LIKE '%"inventory:read"%' AND permissions NOT LIKE '%"inventory:company"%';

@@ -39,10 +39,10 @@ def main():
     order = api.call('buyer','POST',f'/requests/{rid}/orders',{'quote_id':quote['id'],'reason':api.RUN})
     oid = order['id']
     race('warehouse',f'/orders/{oid}/receive',[{'warehouse_id':warehouse,'reference':api.RUN+'-GR-'+str(i),'items':[{'order_item_id':order['items'][0]['id'],'quantity':'6.000'}]} for i in range(2)])
-    stock = next(s for s in api.call('warehouse','GET','/inventory') if s['warehouse_id']==warehouse and s['material_id']==material)
+    stock = next(s for s in api.call('admin','GET','/inventory') if s['warehouse_id']==warehouse and s['material_id']==material)
     api.check('concurrent receipts cannot exceed remaining order',Decimal(stock['quantity'])==6 and Decimal(stock['stock_value'])==60)
     race('warehouse','/issues',[{'project_id':project,'warehouse_id':warehouse,'reference':api.RUN+'-IS-'+str(i),'items':[{'material_id':material,'quantity':'4.000'}]} for i in range(2)])
-    stock = next(s for s in api.call('warehouse','GET','/inventory') if s['warehouse_id']==warehouse and s['material_id']==material)
+    stock = next(s for s in api.call('admin','GET','/inventory') if s['warehouse_id']==warehouse and s['material_id']==material)
     api.check('concurrent issues cannot produce negative inventory',Decimal(stock['quantity'])==2 and Decimal(stock['stock_value'])==20)
     payable = next(p for p in api.call('finance','GET','/payables') if p['order_id']==oid)
     race('admin','/payments',[{'payable_id':payable['id'],'amount':'40.00','reference':api.RUN+'-PAY-'+str(i)} for i in range(2)])

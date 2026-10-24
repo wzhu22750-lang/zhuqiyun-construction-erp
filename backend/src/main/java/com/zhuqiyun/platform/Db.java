@@ -37,11 +37,11 @@ public class Db {
         allow("order_items", "tenant_id order_id material_id request_item_id quantity received_quantity unit_price amount closed_quantity closed_amount");
         allow("receipts", "tenant_id code order_id project_id warehouse_id reference note amount operator_id created_at");
         allow("receipt_items", "tenant_id receipt_id order_item_id material_id quantity unit_price amount");
-        allow("inventory", "tenant_id warehouse_id material_id quantity average_price stock_value");
+        allow("inventory", "tenant_id warehouse_id material_id quantity average_price stock_value revision");
         allow("issues", "tenant_id code project_id warehouse_id reference note amount operator_id created_at");
-        allow("stock_movements", "tenant_id warehouse_id material_id project_id kind quantity unit_cost amount reference receipt_id issue_id issue_return_id purchase_return_id operator_id created_at");
+        allow("stock_movements", "tenant_id warehouse_id material_id project_id kind quantity unit_cost amount reference receipt_id issue_id issue_return_id purchase_return_id stocktake_id stocktake_item_id source_order_item_id operator_id created_at");
         allow("costs", "tenant_id project_id category amount description incurred_date operator_id created_at");
-        allow("contracts", "tenant_id code name type project_id supplier_id order_id amount signed_date start_date end_date status payment_plan attachment_name attachment_key created_at");
+        allow("contracts", "tenant_id code name type project_id supplier_id order_id amount signed_date start_date end_date status payment_plan attachment_name attachment_key plan_version plan_migrated created_at");
         allow("payables", "tenant_id order_id supplier_id project_id amount paid_amount");
         allow("payments", "tenant_id payable_id amount reference note operator_id created_at");
         allow("payment_applications", "tenant_id payable_id amount status note applicant_id payment_id reviewer_id reviewed_at review_comment created_at");
@@ -51,6 +51,13 @@ public class Db {
         allow("purchase_returns", "tenant_id code receipt_id order_id project_id warehouse_id reference reason amount stock_amount variance_amount cost_id operator_id created_at");
         allow("purchase_return_items", "tenant_id return_id receipt_item_id quantity amount stock_amount");
         allow("supplier_refunds", "tenant_id payable_id amount reference note operator_id created_at");
+        allow("contract_payment_stages", "tenant_id contract_id stage_name due_date amount note sort_order created_at");
+        allow("contract_payment_allocations", "tenant_id contract_id stage_id payment_id refund_id amount reference operator_id created_at voided voided_by voided_at void_reason");
+        allow("contract_plan_history", "tenant_id contract_id before_json after_json operator_id created_at");
+        allow("stocktakes", "tenant_id code warehouse_id applicant_id status note correction_of reviewer_id reviewed_at review_comment submitted_at created_at updated_at version");
+        allow("stocktake_items", "tenant_id stocktake_id material_id snapshot_quantity snapshot_stock_value snapshot_average_price snapshot_revision counted_quantity difference_quantity gain_unit_price adjustment_amount reason");
+        allow("stocktake_records", "tenant_id stocktake_id operator_id decision comment created_at");
+        allow("import_batches", "tenant_id entity_type file_hash row_count operator_id created_at");
         allow("audit_logs", "tenant_id operator_id action entity_type entity_id detail created_at");
     }
     private static void allow(String table, String fields) { FIELDS.put(table, Set.of(fields.split(" "))); }
@@ -102,6 +109,7 @@ public class Db {
         LinkedHashMap<String,Object> values = checked(table, data);
         if (values.containsKey("tenant_id")) throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "不可修改公司范围");
         String set = String.join(",", values.keySet().stream().map(k -> "`" + k + "`=?").toList());
+        if(table.equals("inventory"))set+=",revision=revision+1";if(table.equals("stocktakes"))set+=",version=version+1";
         List<Object> args = new ArrayList<>(values.values()); args.add(id);
         String scope = FIELDS.get(table).contains("tenant_id") ? " AND tenant_id=1" : "";
         // MySQL may return zero for an unchanged value: check existence independently.

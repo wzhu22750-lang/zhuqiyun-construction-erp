@@ -57,7 +57,7 @@ GPL 允许商业用途。若后续实际复制或派生并分发受其覆盖的�
 
 本次实际解析与制品核查清单如下，详细版本及来源以 JSON 为准：
 
-- [后端实际依赖](docs/dependencies-backend.json)：77 项 Maven runtime（含 compile）加 1 项 Boot 打包组件。检查成品中 69 个嵌套 JAR，哈希与记录制品相符。
+- [后端实际依赖](docs/dependencies-backend.json)：89 项 Maven runtime（含 compile）加 1 项 Boot 打包组件。检查成品中 81 个嵌套 JAR，哈希与记录制品相符。
 - [前端全部 lock 条目](docs/dependencies-frontend.json)：162 项，含 dev、optional 与其他平台包，162/162 tarball integrity 已验证；不表示全部进入 dist。
 - [原文索引](docs/dependencies-licenses.json)：121 份按内容 SHA256 去重的许可、NOTICE 和版权材料。原文位于 [docs/licenses/dependencies/](docs/licenses/dependencies/)，原始字节和来源保留。
 - [采集证据](docs/dependencies-evidence.json)、[镜像声明与元数据](docs/dependencies-images.json) 记录范围、输入哈希及已知缺口；后者不是完整镜像 SBOM。
@@ -83,3 +83,10 @@ MySQL 8.0.43 作为独立容器经协议使用，不仅据此推定自有应用�
 Maven/Node 构建镜像与 Temurin JRE/nginx 运行基座分别存在工具、OpenJDK、OS 包及附带组件的许可。采集范围未穷尽镜像 OS 包、原生 Rust/二进制内部依赖、全部构建插件或测试依赖；最终 digest/架构的完整镜像清单、对应源码及分发措施仍须按交付件落实。保留基座已有通知，不因添加本通知而删除。
 
 最终镜像建议以原相对结构附带本文件、`docs/licenses/`、`docs/dependencies-*.json` 与 `docs/DEPENDENCIES.md`。这些材料用于通知与溯源，不能代替 LGPL/EPL/GPL 所需的源码提供、替换/重新链接或其他分发措施。研究对象的 LICENSE 留存不表示它们全部进入运行镜像。
+
+
+## 6. 本地试用增强新增 Excel 依赖
+
+本轮新增 `org.apache.poi:poi-ooxml:5.5.1`（含 poi、poi-ooxml-lite 及传递依赖），用于本地 xlsx 模板、逐行导入和授权导出；不引入远程办公服务或 iText。POI JAR 内 LICENSE / NOTICE 原文、全部新增运行依赖及成品哈希记录在最新 dependencies-backend.json / dependencies-licenses.json。`curvesapi:1.08` 的精确标签 a39c6d234bd1b70a324a8cf4f5a2b0e1f2780c7f BSD 原文及其 Apache Harmony Crossing.java 许可头亦单独归档。
+
+本轮只刷新后端实际依赖及打包核查。前端 package-lock 未变，其 SHA256 与原归档一致；完整 npm 平台包重新下载遇到超时，原前端许可档案保留，不声称本轮已重新下载全部 tarball。既有两个前端许可原文待办继续保留；运行功能验收不等同于分发合规完成。

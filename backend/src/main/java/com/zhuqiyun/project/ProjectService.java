@@ -22,19 +22,24 @@ public class ProjectService {
         auth.require("project:read");
         QueryWrapper<Project> query=new QueryWrapper<Project>().eq("tenant_id",1);
         if (auth.isManager()) query.eq("manager_id",auth.id());
-        query.orderByDesc("id");
-        return mapper.selectMaps(query);
+        query.orderByDesc("id").last("LIMIT 200");
+        var access=com.zhuqiyun.platform.DataPolicy.flags(auth);return mapper.selectMaps(query).stream().map(r->com.zhuqiyun.platform.DataPolicy.project(r,access)).toList();
     }
     public Map<String,Object> detail(long id) {
         auth.require("project:read"); auth.project(id);
         Map<String,Object> result=new LinkedHashMap<>();
         result.put("project",db.one("SELECT p.*,u.name manager_name FROM projects p JOIN users u ON u.id=p.manager_id AND u.tenant_id=1 WHERE p.id=? AND p.tenant_id=1",id));
+        var access=com.zhuqiyun.platform.DataPolicy.flags(auth);result.put("project",com.zhuqiyun.platform.DataPolicy.project((Map<String,Object>)result.get("project"),access));result.put("access",access);
         result.put("metrics",metrics(id));
-        result.put("costs",db.list("SELECT c.*,u.name operator_name FROM costs c LEFT JOIN users u ON u.id=c.operator_id AND u.tenant_id=1 WHERE c.tenant_id=1 AND c.project_id=? ORDER BY c.id DESC",id));
-        result.put("requests",db.list("SELECT r.*,u.name applicant_name FROM purchase_requests r JOIN users u ON u.id=r.applicant_id AND u.tenant_id=1 WHERE r.tenant_id=1 AND r.project_id=? ORDER BY r.id DESC",id));
-        result.put("orders",db.list("SELECT o.*,s.name supplier_name FROM purchase_orders o JOIN suppliers s ON s.id=o.supplier_id AND s.tenant_id=1 WHERE o.tenant_id=1 AND o.project_id=? ORDER BY o.id DESC",id));
-        result.put("contracts",db.list("SELECT * FROM contracts WHERE tenant_id=1 AND project_id=? ORDER BY id DESC",id));
-        result.put("progress",db.list("SELECT pp.*,u.name operator_name FROM project_progress pp JOIN users u ON u.id=pp.operator_id AND u.tenant_id=1 WHERE pp.tenant_id=1 AND pp.project_id=? ORDER BY pp.id DESC",id));
+        result.put("costs",db.list("SELECT c.*,u.name operator_name FROM costs c LEFT JOIN users u ON u.id=c.operator_id AND u.tenant_id=1 WHERE c.tenant_id=1 AND c.project_id=? ORDER BY c.id DESC LIMIT 50",id));
+        result.put("requests",db.list("SELECT r.*,u.name applicant_name FROM purchase_requests r JOIN users u ON u.id=r.applicant_id AND u.tenant_id=1 WHERE r.tenant_id=1 AND r.project_id=? ORDER BY r.id DESC LIMIT 50",id));
+        result.put("orders",db.list("SELECT o.*,s.name supplier_name FROM purchase_orders o JOIN suppliers s ON s.id=o.supplier_id AND s.tenant_id=1 WHERE o.tenant_id=1 AND o.project_id=? ORDER BY o.id DESC LIMIT 50",id));
+        result.put("contracts",db.list("SELECT * FROM contracts WHERE tenant_id=1 AND project_id=? ORDER BY id DESC LIMIT 50",id));
+        result.put("progress",db.list("SELECT pp.*,u.name operator_name FROM project_progress pp JOIN users u ON u.id=pp.operator_id AND u.tenant_id=1 WHERE pp.tenant_id=1 AND pp.project_id=? ORDER BY pp.id DESC LIMIT 50",id));
+        if(!com.zhuqiyun.platform.DataPolicy.yes(access,"costs"))result.put("costs",List.of());
+        if(!com.zhuqiyun.platform.DataPolicy.yes(access,"requests"))result.put("requests",List.of());
+        if(!com.zhuqiyun.platform.DataPolicy.yes(access,"orders"))result.put("orders",List.of());
+        if(!com.zhuqiyun.platform.DataPolicy.yes(access,"contracts"))result.put("contracts",List.of());
         return result;
     }
     /** Internal reusable aggregation; still enforces object scope. */
@@ -54,13 +59,20 @@ public class ProjectService {
         m.put("refund_amount",sum("SELECT COALESCE(SUM(r.amount),0) amount FROM supplier_refunds r JOIN payables p ON p.id=r.payable_id WHERE r.tenant_id=1 AND p.project_id=?",id));
         m.put("refund_due_amount",sum("SELECT COALESCE(SUM(GREATEST(paid_amount-amount,0)),0) amount FROM payables WHERE tenant_id=1 AND project_id=?",id));
         m.put("budget_usage",budget.signum()==0?BigDecimal.ZERO:actual.multiply(new BigDecimal("100")).divide(budget,2,RoundingMode.HALF_UP));
-        m.put("estimated_profit",number(project.get("contract_amount")).subtract(actual));
+        m.put("registered_cost_balance",number(project.get("contract_amount")).subtract(actual));
+        var access=com.zhuqiyun.platform.DataPolicy.flags(auth);
+        if(!com.zhuqiyun.platform.DataPolicy.yes(access,"requests"))m.remove("request_amount");
+        if(!com.zhuqiyun.platform.DataPolicy.yes(access,"orders"))m.remove("order_amount");
+        if(!com.zhuqiyun.platform.DataPolicy.yes(access,"inventory")){m.remove("receipt_amount");m.remove("purchase_return_amount");}
+        if(!com.zhuqiyun.platform.DataPolicy.yes(access,"costs"))for(String key:List.of("material_cost","other_cost","actual_cost","budget_usage","registered_cost_balance"))m.remove(key);
+        if(!com.zhuqiyun.platform.DataPolicy.yes(access,"contracts"))m.remove("registered_cost_balance");
+        if(!com.zhuqiyun.platform.DataPolicy.yes(access,"finance"))for(String key:List.of("paid_amount","refund_amount","refund_due_amount"))m.remove(key);
         return m;
     }
     public BigDecimal sum(String sql,Object... args) { return number(db.one(sql,args).get("amount")); }
     public static BigDecimal number(Object value) { return value==null?BigDecimal.ZERO:new BigDecimal(value.toString()); }
     private Map<String,Object> values(Map<String,Object> body,Map<String,Object> old) {
-        Map<String,Object> changes=Fields.only(body,EDITABLE);
+        Map<String,Object> changes=Fields.only(body,EDITABLE);if(changes.containsKey("contract_amount"))auth.require("contract:read");if(changes.containsKey("budget_amount"))auth.require("cost:read");
         Map<String,Object> merged=new LinkedHashMap<>(old); merged.putAll(changes);
         for (String field: List.of("code","name","owner","contractor")) {
             String v=Fields.text(merged.get(field),field.equals("code")?50:160,true);
@@ -81,13 +93,14 @@ public class ProjectService {
         for(String field:List.of("location","type")) if(changes.containsKey(field)) changes.put(field,Fields.text(changes.get(field),field.equals("location")?200:60,false));
         return changes;
     }
+    public Map<String,Object> validateNew(Map<String,Object> body){auth.require("project:write");return values(body,Map.of());}
     @Transactional public Map<String,Object> create(Map<String,Object> body) {
         auth.require("project:write");
         Map<String,Object> values=values(body,Map.of()); values.put("tenant_id",1L);
         long id=db.insert("projects",values);
         recordProgress(id,values.get("progress"),"创建项目");
         auth.audit("CREATE","project",id,"创建项目 "+values.get("code"));
-        return db.one("SELECT * FROM projects WHERE tenant_id=1 AND id=?",id);
+        return com.zhuqiyun.platform.DataPolicy.project(db.one("SELECT * FROM projects WHERE tenant_id=1 AND id=?",id),com.zhuqiyun.platform.DataPolicy.flags(auth));
     }
     @Transactional public Map<String,Object> update(long id,Map<String,Object> body) {
         auth.require("project:write");
@@ -96,7 +109,7 @@ public class ProjectService {
         if(!values.isEmpty()) db.update("projects",id,values);
         if(values.containsKey("progress") && number(old.get("progress")).compareTo(number(values.get("progress")))!=0) recordProgress(id,values.get("progress"),"更新项目进度");
         auth.audit("UPDATE","project",id,"更新项目");
-        return db.one("SELECT * FROM projects WHERE tenant_id=1 AND id=?",id);
+        return com.zhuqiyun.platform.DataPolicy.project(db.one("SELECT * FROM projects WHERE tenant_id=1 AND id=?",id),com.zhuqiyun.platform.DataPolicy.flags(auth));
     }
     @Transactional public Map<String,Object> progress(long id,Map<String,Object> body) {
         auth.require("project:write"); Fields.only(body,"progress note");
@@ -105,7 +118,7 @@ public class ProjectService {
         String note=Fields.text(body.get("note"),500,false);
         db.update("projects",id,Map.of("progress",progress)); recordProgress(id,progress,note);
         auth.audit("PROGRESS","project",id,"更新项目进度至 "+progress);
-        return db.one("SELECT * FROM projects WHERE tenant_id=1 AND id=?",id);
+        return com.zhuqiyun.platform.DataPolicy.project(db.one("SELECT * FROM projects WHERE tenant_id=1 AND id=?",id),com.zhuqiyun.platform.DataPolicy.flags(auth));
     }
     private void recordProgress(long id,Object progress,String note) { db.insert("project_progress",Map.of("tenant_id",1L,"project_id",id,"progress",progress,"note",note,"operator_id",auth.id())); }
     @Transactional public void delete(long id) {

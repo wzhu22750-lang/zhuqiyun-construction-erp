@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T01:30:25+08:00",
-  "generator": "scripts/license_inventory.py",
+  "generatedAt": "2026-10-22T00:02:24+08:00",
+  "generator": "scripts/license_inventory.py backend_records; frontend inventory reused only after unchanged lock SHA256 verification",
   "inputSha256": {
-    "backend/pom.xml": "5b1ae5299ed211a7371f54df7fa464a9b649e7e58ea306bdc3f23467487cda4f",
+    "backend/pom.xml": "7e1ec5b43bbea772d95c65f0a1eb87fe9ac45e5ffcbfbbfa244969f7be6b0024",
     "frontend/package.json": "03c48295795193a1479f418bee39e2bb60898cbedd06a9d91140c440eebc2373",
     "frontend/package-lock.json": "798a31ca6ac51f78ebe429c1acac6ad101bff6969e6c4a1c8df085d479e9fa1f",
     "vendor/ruoyi/pom.xml": "dea9593bff3b9f459f50e7f7a96883bda7783493c1b071e6445bdd6960a0c018",
     "vendor/ruoyi/yudao-dependencies/pom.xml": "f119b5741b0cc65487da01a618f44584424c719a96f42edb6cbcb1cb426a0214",
     "vendor/ruoyi/yudao-framework/yudao-common/pom.xml": "b8f175acfbfae4ec7e8fc951c643ef283b190c4552b99e3d0ef78670b3f633c6",
-    "backend/Dockerfile": "c99d631ed97e0f2bd4b837bcf8b55258986fafbd9ad926ee7c3e030827ba70da",
-    "frontend/Dockerfile": "0170aa94a4969af823577444f396aabebccd85e3ebf546d5860f87aea8111d62",
-    "compose.yml": "71bc2d6a3c3c3bb5f50c873f191444bbdca47ee94e8ba118a39f9bbc323d2e9d"
+    "backend/Dockerfile": "c404f939f03fa4c4c46b26498e52b00cb23496a0fdd8ea506eeccb403f1454d3",
+    "frontend/Dockerfile": "4fe5b7faa781f5072e242fe673f71b01ceecd58b9cac118477571b533bad0b6f",
+    "compose.yml": "11de4f9a87718702245c7f9874a2e959891ca5a1b6030217efe328e05f91323b"
   },
   "mavenCommand": [
     "/tmp/zqy-work/tools/apache-maven-3.9.9/bin/mvn",
@@ -29,17 +29,24 @@
     "-DoutputAbsoluteArtifactFilename=true",
     "-DoutputFile=/private/tmp/zqy-work/dependency-inventory-20261021/maven-runtime.txt"
   ],
-  "mavenListSha256": "4a503c86ab8815d640c3750d7e849f5a2074a7de6d39ff1bd8756ee55f54c7c5",
-  "backendCount": 78,
+  "mavenListSha256": "d60e2c062142ff7043830e9ca1d091fe9b243f141bca973ddf92241085b707a2",
+  "backendCount": 90,
   "frontendCount": 162,
   "npmIntegrityVerifiedCount": 162,
-  "licenseTextCount": 121,
+  "licenseTextCount": 136,
   "missingLicenseText": [
     "@napi-rs/lzma-linux-x64-gnu@1.5.1",
     "lodash-unified@1.0.3"
   ],
-  "unknownLicenseExpressions": [],
+  "unknownLicenseExpressions": [
+    "org.apache.xmlbeans:xmlbeans"
+  ],
   "packagedMismatches": [],
   "warnings": [],
-  "executionBoundary": "Dependency parsing, anonymous fetch, integrity and archive inspection only; no app tests, server start, image builds, container changes or legal compliance sign-off"
+  "executionBoundary": "Dependency parsing, anonymous fetch, integrity and archive inspection only; no app tests, server start, image builds, container changes or legal compliance sign-off",
+  "frontendEvidenceReused": {
+    "generatedAt": "2026-10-21T01:30:25+08:00",
+    "lockSha256": "798a31ca6ac51f78ebe429c1acac6ad101bff6969e6c4a1c8df085d479e9fa1f",
+    "reason": "No frontend dependencies changed. Full tarball refresh attempted twice; npm platform tarball timed out. Existing lock hashes and archived license bytes retained."
+  }
 }

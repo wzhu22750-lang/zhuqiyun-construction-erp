@@ -240,6 +240,18 @@ def backend_records(runtime_list, jar_path):
                     r.setdefault('legalWarnings', []).append('Source archive downloaded but license extraction incomplete: ' + type(exc).__name__)
                 else:
                     r['sourceArchive'] = {'url': source_url, 'status': 'not downloaded', 'errorType': type(exc).__name__}
+        if r['component']=='com.github.virtuald:curvesapi' and r['version']=='1.08':
+            # Exact 1.08 tag license plus the Apache Harmony source header retained in its sources JAR.
+            license_url='https://raw.githubusercontent.com/virtuald/curvesapi/a39c6d234bd1b70a324a8cf4f5a2b0e1f2780c7f/license.txt'
+            r['licenseExpression']='BSD-3-Clause AND Apache-2.0'
+            r['licenseEvidence']='Published POM BSD-3-Clause URL; exact 1.08 tag license.txt and Crossing.java Apache Harmony license header'
+            r['legalFiles'].append(archive_text(download(license_url),license_url))
+            source_url=central(r['groupId'],r['artifactId'],r['version'],'-sources.jar')
+            with zipfile.ZipFile(io.BytesIO(download(source_url))) as sources:
+                original=sources.read('com/graphbuilder/org/apache/harmony/awt/gl/Crossing.java')
+                header=original[:original.index(b'*/')+2]
+            r['legalFiles'].append(archive_text(header,source_url+'!/com/graphbuilder/org/apache/harmony/awt/gl/Crossing.java#leading-license-comment'))
+            r['legalFiles'].append(archive_text(download(CANONICAL['Apache-2.0']),CANONICAL['Apache-2.0']))
         # Explicit licensing edge cases keep both licensing alternatives and exact text.
         keys = []
         if r['licenseExpression'] == 'Apache-2.0' and not r['legalFiles']:

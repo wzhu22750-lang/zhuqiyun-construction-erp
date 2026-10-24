@@ -1,5 +1,7 @@
 # 实际依赖、许可证与分发边界
 
+> 本轮本地试用增强新增 Apache POI 5.5.1。后端最新解析为 89 项 runtime + 1 项 Boot 打包组件，81 个实际嵌套 JAR 均与记录制品哈希一致；机器清单以 `dependencies-backend.json` 为准。下方原始手工表格保留为基线记录，本轮新增项及许可原文见本节末尾。前端依赖未变化，原 lock SHA256 已复核，既有许可原文待办保留。
+
 本清单依据 2026-10-21T01:30:25+08:00 的项目输入快照生成。它记录实际 Maven 解析、成品 JAR 检查、前端 lock 全量条目与已取得的许可原文；不构成产品运行、Compose 验收或商用合规完成声明。最终部署及业务测试证据见 [演示与验收记录](DEMO.md)。
 
 ## 快照与机器清单
@@ -355,3 +357,20 @@ python3 scripts/license_inventory.py \
 | `vue-router` | `4.6.4` | MIT | 否 / 否 | `node_modules/vue-router` | [原文](licenses/dependencies/91a2845c4db44e7497b514b98634a674c737986ad0db81599307cf733bf850b2.txt) |
 | `vue-tsc` | `3.3.13` | MIT | 是 / 否 | `node_modules/vue-tsc` | [原文](licenses/dependencies/a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02.txt) |
 | `zrender` | `6.1.0` | BSD-3-Clause | 否 / 否 | `node_modules/zrender` | [原文](licenses/dependencies/a681e9d183c72b4af4856935893805eb48c08f0f5a3f260203db7444c20fb98a.txt) |
+
+## 本轮新增运行依赖
+
+| 组件 | 版本 | 已记录许可证 | 原文 |
+| --- | --- | --- | --- |
+| com.github.virtuald:curvesapi | 1.08 | BSD-3-Clause AND Apache-2.0 | [原文](licenses/dependencies/41d082bdc9a223799e90d6e0bf4da4cdc2da2babf361985ea7bfcdc587154f21.txt)、[原文](licenses/dependencies/6860b687cdee19b777f075dfe66a0234d9da6f8a362da8e1d05db124a919d2e1.txt)、[原文](licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt) |
+| com.zaxxer:SparseBitSet | 1.3 | Apache-2.0 | [原文](licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt) |
+| commons-codec:commons-codec | 1.18.0 | Apache-2.0 | [原文](licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt)、[原文](licenses/dependencies/b64933ee1d36d14659156223a2604edadb60bffdd465d5368ff422d7689db5fb.txt) |
+| commons-io:commons-io | 2.21.0 | Apache-2.0 | [原文](licenses/dependencies/c1d1a38c99c48ccad170890ade6066e2e240bb6ce59861d4eb7f672eddd2a4c6.txt)、[原文](licenses/dependencies/b54b0db6c617273efff79ba193bb01b05eadcddfff55c24063b38b2acef714c3.txt) |
+| org.apache.commons:commons-collections4 | 4.5.0 | Apache-2.0 | [原文](licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt)、[原文](licenses/dependencies/bdd8b7d5699e3720277bf2d2b521a2d7cf265815378b6c2e095cbc72d5b0e981.txt) |
+| org.apache.commons:commons-compress | 1.28.0 | Apache-2.0 | [原文](licenses/dependencies/51b88fd3e9e24edcdce1dd145a4fca2dcd12911407f00b06dfa6ff600f9733c1.txt)、[原文](licenses/dependencies/0d98967f0ab328af8d9d536aa9a5c684b5dd665657245f6ee6b5915affe811c0.txt) |
+| org.apache.commons:commons-lang3 | 3.17.0 | Apache-2.0 | [原文](licenses/dependencies/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt)、[原文](licenses/dependencies/73c3dd73ad54910699e4e364345798d083a9126b9799663d4bdce8d7468b7f66.txt) |
+| org.apache.commons:commons-math3 | 3.6.1 | Apache-2.0 | [原文](licenses/dependencies/64f23963615950bad9ddd31569a7f09afbbe11b81d94873ffd9b1cac6081a11d.txt)、[原文](licenses/dependencies/5495442a32bfc2b93b4a8f2c34c5c218d16cca434aa5684fb953d9419120e3fa.txt) |
+| org.apache.poi:poi | 5.5.1 | Apache-2.0 | [原文](licenses/dependencies/6e7c918e5a49f677c1b85a9eb2d035cd85c217fc42af6b4a336964a434001a9c.txt)、[原文](licenses/dependencies/8e41ec916a59981a28397e2b46d7fb851eea02f7d179d75f030eb248916a4a09.txt) |
+| org.apache.poi:poi-ooxml | 5.5.1 | Apache-2.0 | [原文](licenses/dependencies/6e7c918e5a49f677c1b85a9eb2d035cd85c217fc42af6b4a336964a434001a9c.txt)、[原文](licenses/dependencies/8e41ec916a59981a28397e2b46d7fb851eea02f7d179d75f030eb248916a4a09.txt) |
+| org.apache.poi:poi-ooxml-lite | 5.5.1 | Apache-2.0 | [原文](licenses/dependencies/6e7c918e5a49f677c1b85a9eb2d035cd85c217fc42af6b4a336964a434001a9c.txt)、[原文](licenses/dependencies/8e41ec916a59981a28397e2b46d7fb851eea02f7d179d75f030eb248916a4a09.txt) |
+| org.apache.xmlbeans:xmlbeans | 5.3.0 | NOASSERTION | [原文](licenses/dependencies/85e8c4e923b3a90af6abcd3979b5edf53a49a3870371c7be20f9eec465af89d4.txt)、[原文](licenses/dependencies/8c9e43041b8313ef1cc50c814624c9a6ab6f5140c08edfffdb403447763ee959.txt) |

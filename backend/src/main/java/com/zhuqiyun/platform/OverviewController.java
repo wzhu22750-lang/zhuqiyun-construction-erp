@@ -9,18 +9,19 @@ import java.util.*;
 @RestController
 @RequestMapping("/api")
 public class OverviewController {
-    private final Db db; private final Auth auth;
-    public OverviewController(Db db,Auth auth) { this.db=db; this.auth=auth; }
+    private final Db db; private final Auth auth;private final WorkbenchService workbench;
+    public OverviewController(Db db,Auth auth,WorkbenchService workbench) { this.db=db; this.auth=auth;this.workbench=workbench; }
     private boolean has(Map<String,Object> user,String permission) { var permissions=(List<?>)user.get("permissions"); return permissions.contains("*")||permissions.contains(permission); }
     @GetMapping("/bootstrap") public CommonResult<?> bootstrap() {
         Map<String,Object> user=auth.user();
         Map<String,Object> data=new LinkedHashMap<>();
         data.put("user",user); data.put("company",db.one("SELECT id,name,system_name,theme_color FROM company WHERE id=1"));
-        data.put("projects",has(user,"project:read")?db.list("SELECT p.*,u.name manager_name FROM projects p JOIN users u ON u.id=p.manager_id AND u.tenant_id=1 WHERE "+auth.projectFilter("p")+" ORDER BY p.id DESC"):List.of());
+        data.put("projects",has(user,"project:read")?db.list("SELECT p.*,u.name manager_name FROM projects p JOIN users u ON u.id=p.manager_id AND u.tenant_id=1 WHERE "+auth.projectFilter("p")+" ORDER BY p.id DESC LIMIT 100"):List.of());
+        if(data.get("projects") instanceof List<?> projects){var access=DataPolicy.flags(auth);data.put("projects",projects.stream().map(p->DataPolicy.project((Map<String,Object>)p,access)).toList());}
         boolean master=has(user,"master:read");
-        data.put("materials",master?db.list("SELECT * FROM materials WHERE tenant_id=1 ORDER BY id"):List.of());
-        data.put("suppliers",master?db.list("SELECT * FROM suppliers WHERE tenant_id=1 ORDER BY id"):List.of());
-        data.put("warehouses",master?db.list("SELECT * FROM warehouses WHERE tenant_id=1 ORDER BY id"):List.of());
+        data.put("materials",master?db.list("SELECT * FROM materials WHERE tenant_id=1 ORDER BY id LIMIT 100"):List.of());
+        data.put("suppliers",master?db.list("SELECT * FROM suppliers WHERE tenant_id=1 ORDER BY id LIMIT 100"):List.of());
+        data.put("warehouses",master?db.list("SELECT * FROM warehouses WHERE tenant_id=1 ORDER BY id LIMIT 100"):List.of());
         data.put("users",has(user,"project:write")||has(user,"system:manage")?db.list("SELECT u.id,u.username,u.name,u.role_id,r.code role FROM users u JOIN roles r ON r.id=u.role_id WHERE u.tenant_id=1 AND u.enabled=TRUE ORDER BY u.id"):List.of());
         Map<String,List<Map<String,Object>>> dictionaries=new LinkedHashMap<>();
         for(var row:db.list("SELECT id,category,label,value,sort_order FROM dictionaries WHERE tenant_id=1 ORDER BY category,sort_order,id")) dictionaries.computeIfAbsent(row.get("category").toString(),k->new ArrayList<>()).add(row);
@@ -60,6 +61,14 @@ public class OverviewController {
         data.put("order_status",db.list("SELECT o.status name,COUNT(*) value FROM purchase_orders o JOIN projects p ON p.id=o.project_id WHERE o.tenant_id=1 AND "+scope+" GROUP BY o.status"));
         data.put("todos",db.list("SELECT r.id,r.code,r.status,r.total_amount,p.name project_name,r.required_date FROM purchase_requests r JOIN projects p ON p.id=r.project_id WHERE r.tenant_id=1 AND r.status IN ('SUBMITTED','PENDING') AND "+scope+" ORDER BY r.required_date,r.id LIMIT 20"));
         data.put("recent_activity",db.list("SELECT a.*,u.name operator_name FROM audit_logs a LEFT JOIN users u ON u.id=a.operator_id AND u.tenant_id=1 WHERE a.tenant_id=1"+(auth.isManager()?" AND a.operator_id="+auth.id():"")+" ORDER BY a.id DESC LIMIT 12"));
+        var access=DataPolicy.flags(auth);data.put("access",access);data.put("workbench",workbench.view());
+        if(!DataPolicy.yes(access,"projects")){metrics.remove("active_projects");data.put("project_progress",List.of());}
+        if(!DataPolicy.yes(access,"contracts")){metrics.remove("contract_amount");metrics.remove("completed_value");}
+        if(!DataPolicy.yes(access,"costs")){metrics.remove("actual_cost");metrics.remove("budget_amount");data.put("budget_vs_cost",List.of());data.put("cost_composition",List.of());}
+        if(!DataPolicy.yes(access,"orders")){metrics.remove("purchase_amount");data.put("monthly_purchases",List.of());data.put("order_status",List.of());}
+        if(!DataPolicy.yes(access,"requests")){metrics.remove("pending_requests");data.put("todos",List.of());}
+        if(!DataPolicy.yes(access,"finance")){metrics.remove("outstanding_amount");metrics.remove("refund_due_amount");}
+        if(!auth.can("system:manage"))data.put("recent_activity",List.of());
         return CommonResult.success(data);
     }
     private BigDecimal amount(String sql) { return new BigDecimal(db.one(sql).get("amount").toString()); }

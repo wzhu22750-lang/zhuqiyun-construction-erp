@@ -67,11 +67,11 @@ public class DemoSeed implements ApplicationRunner {
         String[] roleNames={"系统管理员","企业负责人","项目经理","采购专员","仓库管理员","财务专员"};
         Map<String,List<String>> permissions=new LinkedHashMap<>();
         permissions.put("admin",List.of("*"));
-        permissions.put("boss",List.of("dashboard:read","project:read","project:write","master:read","request:read","request:approve","order:read","inventory:read","cost:read","contract:read","contract:write","finance:read","finance:approve"));
+        permissions.put("boss",List.of("dashboard:read","project:read","project:write","master:read","request:read","request:approve","quote:read","order:read","inventory:read","inventory:company","stocktake:read","stocktake:approve","cost:read","contract:read","contract:write","contract:plan","finance:read","finance:approve"));
         permissions.put("manager",List.of("dashboard:read","project:read","project:write","master:read","request:read","request:write","order:read","inventory:read","cost:read","cost:write","contract:read"));
-        permissions.put("buyer",List.of("dashboard:read","project:read","master:read","master:write","request:read","quote:write","order:read","order:write","inventory:read","contract:read","contract:write"));
-        permissions.put("warehouse",List.of("dashboard:read","project:read","master:read","request:read","order:read","order:receive","inventory:read","inventory:issue"));
-        permissions.put("finance",List.of("dashboard:read","project:read","master:read","request:read","order:read","cost:read","cost:write","contract:read","contract:write","finance:read","finance:write"));
+        permissions.put("buyer",List.of("dashboard:read","project:read","master:read","master:write","request:read","quote:write","quote:read","order:read","order:write","inventory:read","inventory:company","contract:read","contract:write"));
+        permissions.put("warehouse",List.of("dashboard:read","project:read","master:read","request:read","order:read","order:receive","inventory:read","inventory:company","inventory:issue","stocktake:read","stocktake:write"));
+        permissions.put("finance",List.of("dashboard:read","project:read","master:read","request:read","order:read","cost:read","cost:write","contract:read","contract:write","contract:plan","finance:read","finance:write"));
         Map<String,List<String>> menus=Map.of(
             "admin",List.of("dashboard","projects","requests","approvals","orders","inventory","costs","contracts","finance","suppliers","materials","warehouses","system"),
             "boss",List.of("dashboard","projects","requests","approvals","orders","inventory","costs","contracts","finance","suppliers"),

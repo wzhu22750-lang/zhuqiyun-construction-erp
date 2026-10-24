@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {ref,watch} from 'vue'
+import {ref,watch,computed} from 'vue'
 import {useRoute,useRouter} from 'vue-router'
 import * as icons from '@element-plus/icons-vue'
 import {firstAllowed} from '../router'
@@ -7,6 +7,7 @@ import {useAuth} from '../stores/auth'
 import {useMediaQuery} from '../composables/useMediaQuery'
 import WorkspaceNav from '../components/WorkspaceNav.vue'
 const auth=useAuth(),route=useRoute(),router=useRouter(),collapsed=ref(false),mobileOpen=ref(false),isMobile=useMediaQuery()
+const returnPath=computed(()=>{const path=String(route.query.return_to||'');return /^\/(projects|requests|orders|finance|inventory|contracts)(\/\d+)?(?:\?[^#]*)?$/.test(path)?path:''})
 const roles:Record<string,string>={admin:'系统管理员',boss:'企业负责人',manager:'项目经理',buyer:'采购专员',warehouse:'仓库管理员',finance:'财务专员'}
 watch(()=>route.fullPath,()=>{mobileOpen.value=false})
 watch(isMobile,mobile=>{if(!mobile)mobileOpen.value=false})
@@ -36,7 +37,7 @@ function toggleNavigation(){if(isMobile.value)mobileOpen.value=!mobileOpen.value
           <el-dropdown trigger="click" @command="logout"><button type="button" class="user-menu" :aria-label="`用户菜单：${auth.user?.name||''}`"><span class="avatar">{{auth.user?.name?.slice(0,1)}}</span><div><b>{{auth.user?.name}}</b><small>{{roles[auth.user?.role||'']||auth.user?.role}}</small></div><el-icon><icons.ArrowDown/></el-icon></button><template #dropdown><el-dropdown-menu><el-dropdown-item command="logout">退出登录</el-dropdown-item></el-dropdown-menu></template></el-dropdown>
         </div>
       </header>
-      <main class="page-content"><router-view :key="route.path"/></main>
+      <main class="page-content"><el-button v-if="returnPath" class="mb" plain @click="$router.push(returnPath)">← 返回关联单据</el-button><router-view :key="route.path"/></main>
       <footer class="app-footer">{{auth.company.system_name}} · 建筑企业一体化管理 <span>项目有序 · 经营有数</span></footer>
     </div>
   </div>

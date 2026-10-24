@@ -1,0 +1,1 @@
+UPDATE roles SET permissions=REPLACE(permissions,'"contract:write"','"contract:write","contract:plan"') WHERE permissions LIKE '%"contract:write"%' AND permissions LIKE '%"finance:read"%' AND permissions NOT LIKE '%"contract:plan"%';

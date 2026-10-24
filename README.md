@@ -2,9 +2,11 @@
 
 公开源码：[wzhu22750-lang/zhuqiyun-construction-erp](https://github.com/wzhu22750-lang/zhuqiyun-construction-erp)。
 
-面向中小型建筑企业的可运行 ERP Demo：工程项目 → 材料需求 → 审批 → 供应商比价 → 采购订单 → 部分验收入库 → 项目领料 → 成本与应付付款。所有业务数据来自 Spring Boot API 和 MySQL，界面没有静态业务数据替代接口。
+面向小型建筑企业、可在本地 Docker Compose 试用的单公司 ERP：工程项目 → 材料需求 → 审批 → 供应商比价 → 采购订单 → 部分验收入库 → 项目领料 → 成本与应付付款。所有业务数据来自 Spring Boot API 和 MySQL，界面没有静态业务数据替代接口。
 
 这是基于 RuoYi-Vue-Pro 公共框架派生的模块化单体。保留完整 `yudao-common` 和上游 BOM，实际使用 `CommonResult` / `ServiceException`；用户权限、建筑领域、审批和 Vue 界面为本项目实现。**未整包集成上游 system、BPM 或 ERP 模块**。选择理由、固定提交和许可证见 [研究记录](docs/research.md)。
+
+本轮已增加角色工作台、按权限的全链路追溯、可编辑合同付款计划、独立审核库存盘点、基础档案 Excel 导入、授权导出及 A4 打印。Excel 支持四类档案导入与 20 类业务导出，操作入口和填写规则见 [Excel 使用说明](docs/EXCEL.md)。业务口径、权限、V6–V13 迁移及复验方法见 [试用增强交付](docs/TRIAL-UPGRADE.md)，实测结果见 [本轮验收](docs/TRIAL-ACCEPTANCE.md)。
 
 ## 快速启动
 
@@ -17,7 +19,7 @@ cp .env.example .env
 
 默认访问 `http://127.0.0.1:8080`，后端 `http://127.0.0.1:18080/api`，MySQL 绑定本机 `13306`。端口已占用时在 `.env` 中调整 `UI_PORT`、`API_PORT`、`DB_PORT`，不要停止其他项目的服务。
 
-本次实际验收实例使用以下端口，当前可访问 `http://127.0.0.1:18081`：
+原验收实例仍保留在 `http://127.0.0.1:18081`。本轮独立试用增强实例为 **http://127.0.0.1:18091**（API 18092 / MySQL 13317，Compose 项目 zqy-trial），不共用原实例数据。原实例命令：
 
 ```sh
 UI_PORT=18081 API_PORT=18082 DB_PORT=13307 COMPOSE_PROJECT_NAME=zqy-acceptance \
@@ -33,7 +35,7 @@ UI_PORT=18081 API_PORT=18082 DB_PORT=13307 COMPOSE_PROJECT_NAME=zqy-acceptance \
 ./scripts/start-compose.sh up -d
 ```
 
-容器运行与应用就绪有短暂间隔；后端日志出现 `Started ConstructionApplication` 后登录。初始化由 Flyway V1–V5 和事务性 `DemoSeed` 自动完成，无需手工导入 SQL。公司表非空时跳过种子，重启不会覆盖业务数据。数据库与合同附件分别保存在命名卷中。不要用 `down -v` 作为日常停止方式。
+容器运行与应用就绪有短暂间隔；后端日志出现 `Started ConstructionApplication` 后登录。初始化由 Flyway V1–V13 和事务性 `DemoSeed` 自动完成，无需手工导入 SQL。公司表非空时跳过种子，重启不会覆盖业务数据。数据库与合同附件分别保存在命名卷中。不要用 `down -v` 作为日常停止方式。
 
 ## 手机浏览器
 
@@ -90,11 +92,14 @@ mvn -B -f vendor/ruoyi/pom.xml -DskipTests install
 mvn -B -f backend/pom.xml test package
 npm ci --prefix frontend
 npm run build --prefix frontend
-API_BASE=http://127.0.0.1:18082/api python3 scripts/test_http.py
-API_BASE=http://127.0.0.1:18082/api python3 scripts/test_concurrency.py
+API_BASE=http://127.0.0.1:18092/api python3 scripts/test_http.py
+API_BASE=http://127.0.0.1:18092/api python3 scripts/test_concurrency.py
+API_BASE=http://127.0.0.1:18092/api python3 scripts/test_procurement_adjustments.py
+API_BASE=http://127.0.0.1:18092/api python3 scripts/test_trial.py
+API_BASE=http://127.0.0.1:18092/api python3 scripts/test_excel.py
 ```
 
-HTTP/并发脚本会持久化独立测试单据，请在演示或专用测试数据库运行。只读对账脚本是 [check_invariants.sql](scripts/check_invariants.sql)，32 项 `violations` 均应为 0。普通后端构建执行 35 项测试，另 1 项真实 MySQL 测试需显式配置临时测试库，默认跳过；实际执行证据与命令见 [验收记录](docs/DEMO.md)。
+上述 HTTP/并发命令使用独立试用实例 zqy-trial，会持久化带 QA 标识的测试单据，请在演示或专用测试数据库运行。只读对账脚本是 [check_invariants.sql](scripts/check_invariants.sql)，43 项 `violations` 均应为 0。普通后端构建共 75 项测试，其中 74 项通过、1 项真实 MySQL 测试需显式配置临时测试库，默认跳过；本轮原四组 HTTP 回归 94 项与 Excel 专项 13 项，合计 107 项通过。最新执行结果、关联跳转与重启持久化证据见 [本轮验收](docs/TRIAL-ACCEPTANCE.md)，原始演示步骤见 [DEMO.md](docs/DEMO.md)。
 
 ## 源码与交付文档
 
@@ -107,7 +112,7 @@ HTTP/并发脚本会持久化独立测试单据，请在演示或专用测试数
 
 ## 功能边界
 
-当前是可持续二次开发的单公司 Demo，**不是已完成生产上线验收的商用 SaaS**。`tenant_id=1` 为扩展点，未实现跨租户隔离、开户和计费。每个账号一个角色；项目经理受项目负责人范围约束，其他默认角色按公司访问。菜单/权限可配置，尚无复杂组织部门和多级数据范围。
+当前是面向小型企业本地试用的单公司业务系统，**不是已完成生产上线验收的商用 SaaS**。`tenant_id=1` 为扩展点，未实现跨租户隔离、开户和计费。每个账号一个角色；项目经理受项目负责人范围约束，其他默认角色按公司访问。菜单/权限可配置，尚无复杂组织部门和多级数据范围。
 
 审批为采购专用状态机；询价后整单授予一个供应商，一条申请对应一张订单，取消或关闭后可按未履行数量生成一次补采草稿，重新走审批。验收与入库为一次原子动作，已支持原仓项目退料、采购退货、计价差额和实际退款登记；未实现独立质检、税票红冲、拆单采购及跨仓调拨。付款申请已实现独立单级审批：财务提交、负责人审批、财务执行；申请人不可自审，审批人不可自行执行。待审批和已批准申请占用余额，驳回或撤回后释放。直接记账需要独立的 `finance:record` 权限，默认仅管理员具备。尚无多级审批和银行支付。合同付款统计来自关联采购订单；工程回款和分包付款没有独立核算，付款计划为结构化业务记录，未实现自动分期执行。
 

@@ -37,6 +37,7 @@ public class Auth {
         if (!permissions.contains("*") && !permissions.contains(permission))
             throw new ResponseStatusException(HttpStatus.FORBIDDEN, "无权限：" + permission);
     }
+    public boolean can(String permission) { var p=(List<?>)user().get("permissions"); return p.contains("*")||p.contains(permission); }
     public boolean isManager() { return "manager".equals(user().get("role")); }
     public void project(long projectId) {
         Map<String,Object> project = db.one("SELECT id,manager_id FROM projects WHERE id=? AND tenant_id=1", projectId);

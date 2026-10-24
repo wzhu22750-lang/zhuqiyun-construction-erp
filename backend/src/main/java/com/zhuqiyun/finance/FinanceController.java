@@ -17,6 +17,7 @@ public class FinanceController {
  @GetMapping("/costs") Object costs(){return CommonResult.success(service.costs());}
  @PostMapping("/costs") Object cost(@RequestBody Map<String,Object> b){return CommonResult.success(service.cost(b));}
  @GetMapping("/contracts") Object contracts(){return CommonResult.success(service.contracts());}
+ @GetMapping("/contracts/{id}") Object contractDetail(@PathVariable long id){return CommonResult.success(service.contract(id));}
  @PostMapping("/contracts") Object contract(@RequestBody Map<String,Object> b){return CommonResult.success(service.saveContract(null,b));}
  @PutMapping("/contracts/{id}") Object edit(@PathVariable long id,@RequestBody Map<String,Object> b){return CommonResult.success(service.saveContract(id,b));}
  @DeleteMapping("/contracts/{id}") Object delete(@PathVariable long id){service.deleteContract(id);return CommonResult.success(true);}

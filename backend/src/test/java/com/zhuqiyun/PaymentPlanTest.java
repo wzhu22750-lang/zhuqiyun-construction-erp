@@ -1,0 +1,34 @@
+package com.zhuqiyun;
+import com.zhuqiyun.platform.*;
+import com.zhuqiyun.finance.PaymentPlanService;
+import org.junit.jupiter.api.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
+import java.time.LocalDate;
+import java.math.BigDecimal;
+import java.util.*;
+import static org.junit.jupiter.api.Assertions.*;
+import static com.zhuqiyun.domain.Rules.*;
+@SpringBootTest(properties={"spring.datasource.url=jdbc:h2:mem:plans;MODE=MySQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1;NON_KEYWORDS=VALUE","spring.datasource.driver-class-name=org.h2.Driver","spring.datasource.username=sa","spring.datasource.password=","spring.flyway.enabled=false","spring.sql.init.mode=always","spring.sql.init.schema-locations=classpath:db/migration/V1__schema.sql,classpath:db/migration/V4__payment_application_approval.sql,classpath:db/migration/V5__procurement_adjustments.sql,classpath:db/migration/V6__scoped_read_permissions.sql,classpath:db/migration/V7__contract_payment_stages.sql,classpath:db/migration/V8__inventory_stocktakes.sql,classpath:db/migration/V9__explicit_issue_sources.sql,classpath:db/migration/V10__payment_plan_authority.sql,classpath:db/migration/V11__company_inventory_authority.sql,classpath:db/migration/V12__stocktake_versions.sql,classpath:db/migration/V13__import_batches.sql","app.seed=true"})
+@Transactional
+class PaymentPlanTest {
+ @Autowired Db db;@Autowired PaymentPlanService service;
+ void as(String role){long id=((Number)db.one("SELECT id FROM users WHERE username=?",role).get("id")).longValue();SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(id,null,List.of()));}
+ @BeforeEach void setup(){as("finance");}@AfterEach void clear(){SecurityContextHolder.clearContext();}
+ long create(String raw){return db.insert("contracts",row("code",code("PLAN"),"name","计划验收","type","MAIN","project_id",1,"amount",new BigDecimal("100"),"signed_date",LocalDate.now(),"start_date",LocalDate.now(),"end_date",LocalDate.now().plusDays(30),"status","ACTIVE","payment_plan",raw));}
+ Map<String,Object> stage(String name,String amount,String due){return row("stage_name",name,"amount",amount,"due_date",due,"note","验收阶段");}
+ long version(long id){return ((Number)service.view(id).get("version")).longValue();}
+ void save(long id,List<Map<String,Object>> stages){service.save(id,row("expected_version",version(id),"stages",stages,"replace_legacy",true));}
+ void amount(String expected,Object value){assertEquals(0,new BigDecimal(expected).compareTo(dec(value)));}
+ void status(int expected,org.junit.jupiter.api.function.Executable action){assertEquals(expected,assertThrows(ResponseStatusException.class,action).getStatusCode().value());}
+ @Test void legacyValidPlanIsReadWithoutWritingAndIncompleteRawIsRetained(){long id=create("[{\"stage\":\"到货款\",\"amount\":\"20.00\"}]");var view=service.view(id);amount("20",view.get("planned_total"));assertEquals(0,db.list("SELECT id FROM contract_payment_stages WHERE contract_id=?",id).size());long invalid=create("[{\"stage\":\"验收付款\",\"percentage\":100}]");var old=service.view(invalid);assertNotNull(old.get("legacy_warning"));assertNull(old.get("planned_total"));assertTrue(old.get("legacy_raw").toString().contains("percentage"));status(409,()->service.save(invalid,row("expected_version",0,"stages",List.of(stage("新约定","25",null)))));save(invalid,List.of(stage("新约定","25",null)));assertTrue(db.one("SELECT before_json FROM contract_plan_history WHERE contract_id=?",invalid).get("before_json").toString().contains("percentage"));}
+ @Test void datesPrecisionNegativeAndTotalsAreValidatedServerSide(){long id=create("[]");status(400,()->save(id,List.of(stage("错日期","10","2026-99-01"))));status(400,()->save(id,List.of(stage("精度","10.001",null))));status(400,()->save(id,List.of(stage("缺金额",null,null))));status(400,()->save(id,List.of(stage("负数","-1",null))));status(409,()->save(id,List.of(stage("超额","100.01",null))));save(id,List.of(stage("部分分配","25",LocalDate.now().plusDays(3).toString())));amount("75",service.view(id).get("unassigned_amount"));}
+ @Test void staleVersionsAndCrossContractStageIdsAreRejected(){long a=create("[]"),b=create("[]");save(a,List.of(stage("一","10",null)));status(409,()->service.save(a,row("expected_version",0,"stages",List.of())));var row=stage("外部阶段","10",null);row.put("id",((List<Map<String,Object>>)service.view(a).get("stages")).get(0).get("id"));status(404,()->save(b,List.of(row)));}
+ @Test void stagesCanBeReorderedAndUnlinkedRowsDeleted(){long id=create("[]");save(id,List.of(stage("一","20",null),stage("二","30",null)));var stages=(List<Map<String,Object>>)service.view(id).get("stages");save(id,List.of(stages.get(1),stages.get(0)));var reordered=(List<Map<String,Object>>)service.view(id).get("stages");assertEquals("二",reordered.get(0).get("stage_name"));save(id,List.of(reordered.get(0)));assertEquals(1,((List<?>)service.view(id).get("stages")).size());}
+ @Test void contractReadAloneDoesNotExposeActualPaymentsOrAllowPlanMutation(){long id=create("[]");save(id,List.of(stage("阶段","50",null)));as("buyer");var view=service.view(id);assertFalse(view.containsKey("payments"));assertFalse(view.containsKey("allocations"));assertFalse(((Map<?,?>)((List<?>)view.get("stages")).get(0)).containsKey("linked_net_paid"));status(403,()->save(id,List.of(stage("阶段","60",null))));}
+ @Test void actualPaymentsNeedExplicitAllocationAndHistoryIsNeverDeleted(){long id=((Number)db.one("SELECT c.id FROM contracts c JOIN payables p ON p.order_id=c.order_id JOIN payments t ON t.payable_id=p.id WHERE c.project_id=1 ORDER BY c.id LIMIT 1").get("id")).longValue();save(id,List.of(stage("明确阶段","100",LocalDate.now().toString())));var view=service.view(id);Map<String,Object> s=((List<Map<String,Object>>)view.get("stages")).get(0),payment=((List<Map<String,Object>>)view.get("payments")).get(0);amount("0",s.get("linked_net_paid"));var body=row("stage_id",s.get("id"),"source_type","PAYMENT","source_id",payment.get("id"),"amount","40","reference",code("LINK"));service.allocate(id,body);amount("40",((List<Map<String,Object>>)service.view(id).get("stages")).get(0).get("linked_net_paid"));status(409,()->service.allocate(id,body));status(409,()->save(id,List.of()));var allocation=((List<Map<String,Object>>)service.view(id).get("allocations")).get(0);service.voidAllocation(id,((Number)allocation.get("id")).longValue(),row("reason","人工纠正关联"));amount("0",((List<Map<String,Object>>)service.view(id).get("stages")).get(0).get("linked_net_paid"));assertEquals(1,((List<?>)service.view(id).get("allocations")).size());}
+}

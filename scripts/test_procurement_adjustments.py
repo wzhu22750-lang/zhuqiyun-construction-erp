@@ -52,7 +52,7 @@ def main():
     def receive(o,w,qty):
         return call('warehouse',f"/orders/{o['id']}/receive",{'warehouse_id':w,'reference':ref('GR'),'items':[{'order_item_id':o['items'][0]['id'],'quantity':qty}]})
     def stock(w):
-        return next(i for i in call('warehouse','/inventory',method='GET') if i['warehouse_id']==w and i['material_id']==material)
+        return next(i for i in call('admin','/inventory',method='GET') if i['warehouse_id']==w and i['material_id']==material)
     def payable(o):
         return next(p for p in call('finance','/payables',method='GET') if p['order_id']==o['id'])
     def receipt_line(o,r):
@@ -69,6 +69,7 @@ def main():
     issue=call('warehouse','/issues',{'project_id':project,'warehouse_id':w,'reference':ref('MI'),'items':[{'material_id':material,'quantity':'2.000'}]})
     source=next(i for i in call('warehouse','/issues',method='GET') if i['id']==issue['id'])['items'][0]['id']
     back=call('warehouse',f"/issues/{issue['id']}/returns",return_body(source,'1.000'))
+    back=next(r for r in call('admin','/issue-returns',method='GET') if r['id']==back['id'])
     api.check('project return restores original cost without cash',D(back['amount'])==10 and D(stock(w)['stock_value'])==50 and D(payable(o)['amount'])==60 and D(payable(o)['paid_amount'])==0)
     call('warehouse',f"/issues/{issue['id']}/returns",return_body(source,'2.000'),expected=409)
     api.check('project return cannot exceed unreturned issue quantity')
@@ -91,7 +92,9 @@ def main():
     call('finance','/supplier-refunds',{'payable_id':p['id'],'amount':'20.00','reference':ref('LAST')})
     p=payable(o)
     api.check('net cash reconciles while original payment stays immutable',D(p['paid_amount'])==30 and D(p['refunded_amount'])==30 and D(next(t for t in call('finance','/payments',method='GET') if t['id']==original_payment['id'])['amount'])==60)
-    detail=call('buyer',f"/orders/{o['id']}",method='GET')
+    private=call('buyer',f"/orders/{o['id']}",method='GET')
+    api.check('buyer cannot read financial detail',not private.get('payments') and not private.get('refunds') and 'payable' not in private)
+    detail=call('admin',f"/orders/{o['id']}",method='GET')
     api.check('order trace includes return refund and replacement',len(detail['returns'])==1 and len(detail['refunds'])==2 and detail['replacement_request_id']==draft['id'] and any(e['action']=='RETURN_PURCHASE' for e in detail['events']))
     call('buyer',f"/receipts/{r['id']}/returns",return_body(source_receipt,'1'),expected=403)
     call('warehouse','/supplier-refunds',{'payable_id':p['id'],'amount':'1','reference':ref('DENIED')},expected=403)
@@ -106,9 +109,12 @@ def main():
     w3=warehouse();oa=order('10');ob=order('20');ra=receive(oa,w3,'10');rb=receive(ob,w3,'10')
     low=call('warehouse',f"/receipts/{ra['id']}/returns",return_body(receipt_line(oa,ra),'2'))
     high=call('warehouse',f"/receipts/{rb['id']}/returns",return_body(receipt_line(ob,rb),'2'))
+    low=next(r for r in call('admin','/purchase-returns',method='GET') if r['id']==low['id'])
+    high=next(r for r in call('admin','/purchase-returns',method='GET') if r['id']==high['id'])
     api.check('moving-average variance is signed and does not corrupt stock',D(low['variance_amount'])==10 and D(high['variance_amount'])==-10 and D(stock(w3)['quantity'])==16 and D(stock(w3)['stock_value'])==240)
 
     extra=call('warehouse',f"/receipts/{rb['id']}/returns",return_body(receipt_line(ob,rb),'1'))
+    extra=next(r for r in call('admin','/purchase-returns',method='GET') if r['id']==extra['id'])
     dashboard=call('boss','/dashboard',method='GET')
     api.check('negative pricing variance remains visible in ERP reporting',D(extra['variance_amount'])==-5 and any(D(c['value'])<0 for c in dashboard['cost_composition']))
 

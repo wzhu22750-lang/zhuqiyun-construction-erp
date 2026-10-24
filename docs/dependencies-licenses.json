@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T01:30:25+08:00",
-  "generator": "scripts/license_inventory.py",
+  "generatedAt": "2026-10-22T00:02:24+08:00",
+  "generator": "scripts/license_inventory.py backend_records; frontend inventory reused only after unchanged lock SHA256 verification",
   "inputSha256": {
-    "backend/pom.xml": "5b1ae5299ed211a7371f54df7fa464a9b649e7e58ea306bdc3f23467487cda4f",
+    "backend/pom.xml": "7e1ec5b43bbea772d95c65f0a1eb87fe9ac45e5ffcbfbbfa244969f7be6b0024",
     "frontend/package.json": "03c48295795193a1479f418bee39e2bb60898cbedd06a9d91140c440eebc2373",
     "frontend/package-lock.json": "798a31ca6ac51f78ebe429c1acac6ad101bff6969e6c4a1c8df085d479e9fa1f",
     "vendor/ruoyi/pom.xml": "dea9593bff3b9f459f50e7f7a96883bda7783493c1b071e6445bdd6960a0c018",
     "vendor/ruoyi/yudao-dependencies/pom.xml": "f119b5741b0cc65487da01a618f44584424c719a96f42edb6cbcb1cb426a0214",
     "vendor/ruoyi/yudao-framework/yudao-common/pom.xml": "b8f175acfbfae4ec7e8fc951c643ef283b190c4552b99e3d0ef78670b3f633c6",
-    "backend/Dockerfile": "c99d631ed97e0f2bd4b837bcf8b55258986fafbd9ad926ee7c3e030827ba70da",
-    "frontend/Dockerfile": "0170aa94a4969af823577444f396aabebccd85e3ebf546d5860f87aea8111d62",
-    "compose.yml": "71bc2d6a3c3c3bb5f50c873f191444bbdca47ee94e8ba118a39f9bbc323d2e9d"
+    "backend/Dockerfile": "c404f939f03fa4c4c46b26498e52b00cb23496a0fdd8ea506eeccb403f1454d3",
+    "frontend/Dockerfile": "4fe5b7faa781f5072e242fe673f71b01ceecd58b9cac118477571b533bad0b6f",
+    "compose.yml": "11de4f9a87718702245c7f9874a2e959891ca5a1b6030217efe328e05f91323b"
   },
   "scope": "Exact license/NOTICE bytes extracted from published archives and identified primary license sources; identical bytes deduplicated",
   "texts": [
@@ -20,8 +20,8 @@
       "sha256": "0317acaa42a5e48bec061cf009cb5c8b4b8ff845f3c6ba548f67c5c22c29fc96",
       "bytes": 167,
       "origins": [
-        "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.55/tomcat-embed-websocket-10.1.55.jar!/META-INF/NOTICE",
-        "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.55/tomcat-embed-el-10.1.55.jar!/META-INF/NOTICE"
+        "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.55/tomcat-embed-el-10.1.55.jar!/META-INF/NOTICE",
+        "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.55/tomcat-embed-websocket-10.1.55.jar!/META-INF/NOTICE"
       ]
     },
     {
@@ -54,6 +54,14 @@
       "bytes": 14198,
       "origins": [
         "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/0d98967f0ab328af8d9d536aa9a5c684b5dd665657245f6ee6b5915affe811c0.txt",
+      "sha256": "0d98967f0ab328af8d9d536aa9a5c684b5dd665657245f6ee6b5915affe811c0",
+      "bytes": 178,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar!/META-INF/NOTICE.txt"
       ]
     },
     {
@@ -220,8 +228,8 @@
       "sha256": "29cb77b4d7beecc89e3137293fc39d975b8ef2ae8987f2f03e20bfb47b63f9ad",
       "bytes": 1297,
       "origins": [
-        "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct/1.7.0.Beta2/mapstruct-1.7.0.Beta2.jar!/META-INF/LICENSE.txt",
-        "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-processor/1.7.0.Beta2/mapstruct-processor-1.7.0.Beta2.jar!/META-INF/LICENSE.txt"
+        "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct-processor/1.7.0.Beta2/mapstruct-processor-1.7.0.Beta2.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/mapstruct/mapstruct/1.7.0.Beta2/mapstruct-1.7.0.Beta2.jar!/META-INF/LICENSE.txt"
       ]
     },
     {
@@ -298,6 +306,14 @@
       ]
     },
     {
+      "path": "docs/licenses/dependencies/41d082bdc9a223799e90d6e0bf4da4cdc2da2babf361985ea7bfcdc587154f21.txt",
+      "sha256": "41d082bdc9a223799e90d6e0bf4da4cdc2da2babf361985ea7bfcdc587154f21",
+      "bytes": 1498,
+      "origins": [
+        "https://raw.githubusercontent.com/virtuald/curvesapi/a39c6d234bd1b70a324a8cf4f5a2b0e1f2780c7f/license.txt"
+      ]
+    },
+    {
       "path": "docs/licenses/dependencies/46231df5a7733c3f52f11b71f3df61813007745b62b09031acfb45fb42d75082.txt",
       "sha256": "46231df5a7733c3f52f11b71f3df61813007745b62b09031acfb45fb42d75082",
       "bytes": 1078,
@@ -327,8 +343,24 @@
       "sha256": "4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc",
       "bytes": 1178,
       "origins": [
-        "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar!/META-INF/LICENSE.txt",
-        "https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.18/jul-to-slf4j-2.0.18.jar!/META-INF/LICENSE.txt"
+        "https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.18/jul-to-slf4j-2.0.18.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar!/META-INF/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/51b88fd3e9e24edcdce1dd145a4fca2dcd12911407f00b06dfa6ff600f9733c1.txt",
+      "sha256": "51b88fd3e9e24edcdce1dd145a4fca2dcd12911407f00b06dfa6ff600f9733c1",
+      "bytes": 11358,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar!/META-INF/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/5495442a32bfc2b93b4a8f2c34c5c218d16cca434aa5684fb953d9419120e3fa.txt",
+      "sha256": "5495442a32bfc2b93b4a8f2c34c5c218d16cca434aa5684fb953d9419120e3fa",
+      "bytes": 324,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar!/META-INF/NOTICE.txt"
       ]
     },
     {
@@ -396,8 +428,8 @@
       "sha256": "62fb8a3a9621dc2388174caaabe9c2317b694bb9a1d46c98bcf5655b68f51be3",
       "bytes": 11359,
       "origins": [
-        "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.15.12/micrometer-observation-1.15.12.jar!/META-INF/LICENSE",
-        "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.15.12/micrometer-commons-1.15.12.jar!/META-INF/LICENSE"
+        "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.15.12/micrometer-commons-1.15.12.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.15.12/micrometer-observation-1.15.12.jar!/META-INF/LICENSE"
       ]
     },
     {
@@ -406,6 +438,14 @@
       "bytes": 11990,
       "origins": [
         "https://registry.npmjs.org/echarts/-/echarts-6.1.0.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/64f23963615950bad9ddd31569a7f09afbbe11b81d94873ffd9b1cac6081a11d.txt",
+      "sha256": "64f23963615950bad9ddd31569a7f09afbbe11b81d94873ffd9b1cac6081a11d",
+      "bytes": 24038,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar!/META-INF/LICENSE.txt"
       ]
     },
     {
@@ -441,6 +481,14 @@
       ]
     },
     {
+      "path": "docs/licenses/dependencies/6860b687cdee19b777f075dfe66a0234d9da6f8a362da8e1d05db124a919d2e1.txt",
+      "sha256": "6860b687cdee19b777f075dfe66a0234d9da6f8a362da8e1d05db124a919d2e1",
+      "bytes": 812,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/com/github/virtuald/curvesapi/1.08/curvesapi-1.08-sources.jar!/com/graphbuilder/org/apache/harmony/awt/gl/Crossing.java#leading-license-comment"
+      ]
+    },
+    {
       "path": "docs/licenses/dependencies/6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd.txt",
       "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd",
       "bytes": 1526,
@@ -465,6 +513,16 @@
       ]
     },
     {
+      "path": "docs/licenses/dependencies/6e7c918e5a49f677c1b85a9eb2d035cd85c217fc42af6b4a336964a434001a9c.txt",
+      "sha256": "6e7c918e5a49f677c1b85a9eb2d035cd85c217fc42af6b4a336964a434001a9c",
+      "bytes": 14416,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/poi/poi-ooxml-lite/5.5.1/poi-ooxml-lite-5.5.1.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/org/apache/poi/poi-ooxml/5.5.1/poi-ooxml-5.5.1.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/org/apache/poi/poi/5.5.1/poi-5.5.1.jar!/META-INF/LICENSE"
+      ]
+    },
+    {
       "path": "docs/licenses/dependencies/71f83c4c0621102a56d9853812777b85751bce7e9726f686f5b056c1f8a4b0e6.txt",
       "sha256": "71f83c4c0621102a56d9853812777b85751bce7e9726f686f5b056c1f8a4b0e6",
       "bytes": 1167,
@@ -477,21 +535,21 @@
       "sha256": "7200000367e0e8b47822d563a5ddd2dd3a97cc05b32bd7dbcc7b4eeb92b76628",
       "bytes": 11359,
       "origins": [
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.5.15/spring-boot-autoconfigure-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-jarmode-tools/3.5.15/spring-boot-jarmode-tools-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.5.15/spring-boot-starter-jdbc-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.5.15/spring-boot-starter-json-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.5.15/spring-boot-starter-logging-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.5.15/spring-boot-starter-security-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.5.15/spring-boot-starter-tomcat-3.5.15.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.5.15/spring-boot-starter-validation-3.5.15.jar!/META-INF/LICENSE.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.5.15/spring-boot-starter-web-3.5.15.jar!/META-INF/LICENSE.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.5.15/spring-boot-starter-3.5.15.jar!/META-INF/LICENSE.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.5.15/spring-boot-3.5.15.jar!/META-INF/LICENSE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.5.15/spring-boot-starter-logging-3.5.15.jar!/META-INF/LICENSE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.5.15/spring-boot-starter-json-3.5.15.jar!/META-INF/LICENSE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.5.15/spring-boot-starter-tomcat-3.5.15.jar!/META-INF/LICENSE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.5.15/spring-boot-starter-security-3.5.15.jar!/META-INF/LICENSE.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.5.11/spring-security-config-6.5.11.jar!/META-INF/LICENSE.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.5.11/spring-security-core-6.5.11.jar!/META-INF/LICENSE.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.5.11/spring-security-crypto-6.5.11.jar!/META-INF/LICENSE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.5.11/spring-security-web-6.5.11.jar!/META-INF/LICENSE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.5.15/spring-boot-starter-validation-3.5.15.jar!/META-INF/LICENSE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.5.15/spring-boot-starter-jdbc-3.5.15.jar!/META-INF/LICENSE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.5.15/spring-boot-autoconfigure-3.5.15.jar!/META-INF/LICENSE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-jarmode-tools/3.5.15/spring-boot-jarmode-tools-3.5.15.jar!/META-INF/LICENSE.txt"
+        "https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.5.11/spring-security-web-6.5.11.jar!/META-INF/LICENSE.txt"
       ]
     },
     {
@@ -510,6 +568,14 @@
         "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.21.4/jackson-datatype-jdk8-2.21.4.jar!/META-INF/NOTICE",
         "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.4/jackson-datatype-jsr310-2.21.4.jar!/META-INF/NOTICE",
         "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.21.4/jackson-module-parameter-names-2.21.4.jar!/META-INF/NOTICE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/73c3dd73ad54910699e4e364345798d083a9126b9799663d4bdce8d7468b7f66.txt",
+      "sha256": "73c3dd73ad54910699e4e364345798d083a9126b9799663d4bdce8d7468b7f66",
+      "bytes": 174,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar!/META-INF/NOTICE.txt"
       ]
     },
     {
@@ -586,11 +652,37 @@
       ]
     },
     {
+      "path": "docs/licenses/dependencies/85e8c4e923b3a90af6abcd3979b5edf53a49a3870371c7be20f9eec465af89d4.txt",
+      "sha256": "85e8c4e923b3a90af6abcd3979b5edf53a49a3870371c7be20f9eec465af89d4",
+      "bytes": 15242,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/xmlbeans/xmlbeans/5.3.0/xmlbeans-5.3.0.jar!/META-INF/LICENSE.txt"
+      ]
+    },
+    {
       "path": "docs/licenses/dependencies/8a6dcbabe7179f9c8489c08a7d874d0f1e093ae7449e03756ccf87cb9d0e296e.txt",
       "sha256": "8a6dcbabe7179f9c8489c08a7d874d0f1e093ae7449e03756ccf87cb9d0e296e",
       "bytes": 1126,
       "origins": [
         "https://registry.npmjs.org/estree-walker/-/estree-walker-2.0.2.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/8c9e43041b8313ef1cc50c814624c9a6ab6f5140c08edfffdb403447763ee959.txt",
+      "sha256": "8c9e43041b8313ef1cc50c814624c9a6ab6f5140c08edfffdb403447763ee959",
+      "bytes": 1592,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/xmlbeans/xmlbeans/5.3.0/xmlbeans-5.3.0.jar!/META-INF/NOTICE.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/8e41ec916a59981a28397e2b46d7fb851eea02f7d179d75f030eb248916a4a09.txt",
+      "sha256": "8e41ec916a59981a28397e2b46d7fb851eea02f7d179d75f030eb248916a4a09",
+      "bytes": 1571,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/poi/poi-ooxml-lite/5.5.1/poi-ooxml-lite-5.5.1.jar!/META-INF/NOTICE",
+        "https://repo.maven.apache.org/maven2/org/apache/poi/poi-ooxml/5.5.1/poi-ooxml-5.5.1.jar!/META-INF/NOTICE",
+        "https://repo.maven.apache.org/maven2/org/apache/poi/poi/5.5.1/poi-5.5.1.jar!/META-INF/NOTICE"
       ]
     },
     {
@@ -639,16 +731,16 @@
       "sha256": "9b57549a55aa67c9e0cd3f5dc96cd5177c5f9b2036aabdfbbd2aee18e0586fea",
       "bytes": 15563,
       "origins": [
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.2.19/spring-web-6.2.19.jar!/META-INF/license.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.2.19/spring-beans-6.2.19.jar!/META-INF/license.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.2.19/spring-webmvc-6.2.19.jar!/META-INF/license.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.2.19/spring-context-6.2.19.jar!/META-INF/license.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.2.19/spring-expression-6.2.19.jar!/META-INF/license.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.2.19/spring-aop-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.2.19/spring-beans-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.2.19/spring-context-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.2.19/spring-core-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.2.19/spring-expression-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.2.19/spring-jcl-6.2.19.jar!/META-INF/license.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.2.19/spring-jdbc-6.2.19.jar!/META-INF/license.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.2.19/spring-tx-6.2.19.jar!/META-INF/license.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.2.19/spring-core-6.2.19.jar!/META-INF/license.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.2.19/spring-jcl-6.2.19.jar!/META-INF/license.txt"
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.2.19/spring-web-6.2.19.jar!/META-INF/license.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.2.19/spring-webmvc-6.2.19.jar!/META-INF/license.txt"
       ]
     },
     {
@@ -692,17 +784,17 @@
       "sha256": "a5a90a06c60915cfa5b8b5c40b57e8412b8c98c77cc22a6903a77d908ecf5de1",
       "bytes": 211,
       "origins": [
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.5.15/spring-boot-autoconfigure-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-jarmode-tools/3.5.15/spring-boot-jarmode-tools-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.5.15/spring-boot-starter-jdbc-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.5.15/spring-boot-starter-json-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.5.15/spring-boot-starter-logging-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.5.15/spring-boot-starter-security-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.5.15/spring-boot-starter-tomcat-3.5.15.jar!/META-INF/NOTICE.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.5.15/spring-boot-starter-validation-3.5.15.jar!/META-INF/NOTICE.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.5.15/spring-boot-starter-web-3.5.15.jar!/META-INF/NOTICE.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.5.15/spring-boot-starter-3.5.15.jar!/META-INF/NOTICE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.5.15/spring-boot-3.5.15.jar!/META-INF/NOTICE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.5.15/spring-boot-starter-logging-3.5.15.jar!/META-INF/NOTICE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.5.15/spring-boot-starter-json-3.5.15.jar!/META-INF/NOTICE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.5.15/spring-boot-starter-tomcat-3.5.15.jar!/META-INF/NOTICE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.5.15/spring-boot-starter-security-3.5.15.jar!/META-INF/NOTICE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.5.15/spring-boot-starter-validation-3.5.15.jar!/META-INF/NOTICE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.5.15/spring-boot-starter-jdbc-3.5.15.jar!/META-INF/NOTICE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.5.15/spring-boot-autoconfigure-3.5.15.jar!/META-INF/NOTICE.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-jarmode-tools/3.5.15/spring-boot-jarmode-tools-3.5.15.jar!/META-INF/NOTICE.txt"
+        "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.5.15/spring-boot-3.5.15.jar!/META-INF/NOTICE.txt"
       ]
     },
     {
@@ -786,20 +878,36 @@
       ]
     },
     {
+      "path": "docs/licenses/dependencies/b54b0db6c617273efff79ba193bb01b05eadcddfff55c24063b38b2acef714c3.txt",
+      "sha256": "b54b0db6c617273efff79ba193bb01b05eadcddfff55c24063b38b2acef714c3",
+      "bytes": 172,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar!/META-INF/NOTICE.txt"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/b64933ee1d36d14659156223a2604edadb60bffdd465d5368ff422d7689db5fb.txt",
+      "sha256": "b64933ee1d36d14659156223a2604edadb60bffdd465d5368ff422d7689db5fb",
+      "bytes": 175,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.18.0/commons-codec-1.18.0.jar!/META-INF/NOTICE.txt"
+      ]
+    },
+    {
       "path": "docs/licenses/dependencies/b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a.txt",
       "sha256": "b6585e3017d5f718716a54430b3ac8e0a968be53c179752e9dc717185093330a",
       "bytes": 477,
       "origins": [
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.2.19/spring-web-6.2.19.jar!/META-INF/notice.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.2.19/spring-beans-6.2.19.jar!/META-INF/notice.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.2.19/spring-webmvc-6.2.19.jar!/META-INF/notice.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.2.19/spring-context-6.2.19.jar!/META-INF/notice.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.2.19/spring-expression-6.2.19.jar!/META-INF/notice.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.2.19/spring-aop-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.2.19/spring-beans-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.2.19/spring-context-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.2.19/spring-core-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.2.19/spring-expression-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.2.19/spring-jcl-6.2.19.jar!/META-INF/notice.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.2.19/spring-jdbc-6.2.19.jar!/META-INF/notice.txt",
         "https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.2.19/spring-tx-6.2.19.jar!/META-INF/notice.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.2.19/spring-core-6.2.19.jar!/META-INF/notice.txt",
-        "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.2.19/spring-jcl-6.2.19.jar!/META-INF/notice.txt"
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.2.19/spring-web-6.2.19.jar!/META-INF/notice.txt",
+        "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.2.19/spring-webmvc-6.2.19.jar!/META-INF/notice.txt"
       ]
     },
     {
@@ -816,6 +924,14 @@
       "bytes": 140,
       "origins": [
         "https://repo.maven.apache.org/maven2/org/mariadb/jdbc/mariadb-java-client/3.5.8/mariadb-java-client-3.5.8-sources.jar!/org/mariadb/jdbc/Driver.java#leading-license-comment"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/bdd8b7d5699e3720277bf2d2b521a2d7cf265815378b6c2e095cbc72d5b0e981.txt",
+      "sha256": "bdd8b7d5699e3720277bf2d2b521a2d7cf265815378b6c2e095cbc72d5b0e981",
+      "bytes": 181,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.5.0/commons-collections4-4.5.0.jar!/META-INF/NOTICE.txt"
       ]
     },
     {
@@ -848,6 +964,14 @@
       "bytes": 1136,
       "origins": [
         "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.16.1.tgz!/package/LICENSE"
+      ]
+    },
+    {
+      "path": "docs/licenses/dependencies/c1d1a38c99c48ccad170890ade6066e2e240bb6ce59861d4eb7f672eddd2a4c6.txt",
+      "sha256": "c1d1a38c99c48ccad170890ade6066e2e240bb6ce59861d4eb7f672eddd2a4c6",
+      "bytes": 11360,
+      "origins": [
+        "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar!/META-INF/LICENSE.txt"
       ]
     },
     {
@@ -899,14 +1023,17 @@
       "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
       "bytes": 11358,
       "origins": [
-        "https://www.apache.org/licenses/LICENSE-2.0.txt",
         "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar!/META-INF/LICENSE",
-        "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar!/META-INF/LICENSE",
-        "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar!/META-INF/LICENSE",
-        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.4/jackson-databind-2.21.4.jar!/META-INF/LICENSE",
         "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.4/jackson-core-2.21.4.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.4/jackson-databind-2.21.4.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.18.0/commons-codec-1.18.0.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.5.0/commons-collections4-4.5.0.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar!/META-INF/LICENSE.txt",
+        "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar!/META-INF/LICENSE",
+        "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.55/tomcat-embed-el-10.1.55.jar!/META-INF/LICENSE",
         "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.55/tomcat-embed-websocket-10.1.55.jar!/META-INF/LICENSE",
-        "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.55/tomcat-embed-el-10.1.55.jar!/META-INF/LICENSE"
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
       ]
     },
     {
@@ -972,8 +1099,8 @@
       "sha256": "df207ca1a2ea3794caf112d7c1f024c87b4ddfe91d3f243977ad1d3cd085d538",
       "bytes": 1734,
       "origins": [
-        "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.15.12/micrometer-observation-1.15.12.jar!/META-INF/NOTICE",
-        "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.15.12/micrometer-commons-1.15.12.jar!/META-INF/NOTICE"
+        "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.15.12/micrometer-commons-1.15.12.jar!/META-INF/NOTICE",
+        "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.15.12/micrometer-observation-1.15.12.jar!/META-INF/NOTICE"
       ]
     },
     {

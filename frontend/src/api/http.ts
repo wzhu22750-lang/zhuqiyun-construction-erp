@@ -16,8 +16,10 @@ http.interceptors.response.use(response => {
     return Promise.reject(error)
   }
   return response
-}, error => {
-  const message = error.response?.data?.msg || (error.code === 'ECONNABORTED' ? '请求超时，请重试' : error.response ? `请求失败（${error.response.status}）` : '无法连接服务，请检查后端是否已启动')
+}, async error => {
+  let body=error.response?.data
+  if(body instanceof Blob&&body.type.includes('json'))try{body=JSON.parse(await body.text())}catch{}
+  const message = body?.msg || (error.code === 'ECONNABORTED' ? '请求超时，请重试' : error.response ? `请求失败（${error.response.status}）` : '无法连接服务，请检查后端是否已启动')
   if (error.response?.status === 401) {
     localStorage.removeItem(TOKEN_KEY)
     window.dispatchEvent(new Event('zqy:unauthorized'))
@@ -27,6 +29,7 @@ http.interceptors.response.use(response => {
 })
 export async function api<T>(path: string, config: AxiosRequestConfig = {}): Promise<T> {
   const response = await http.request<Envelope<T>>({ url: path, ...config })
+  if(config.method&&config.method.toUpperCase()!=='GET'&&!path.startsWith('/auth'))window.dispatchEvent(new Event('zqy:changed'))
   return response.data.data
 }
 export const get = <T>(path: string) => api<T>(path)
@@ -40,3 +43,8 @@ export async function downloadAttachment(id: string | number, name: string) {
   const anchor = document.createElement('a'); anchor.href = url; anchor.download = name || '合同附件'; anchor.click()
   setTimeout(() => URL.revokeObjectURL(url), 1000)
 }
+export async function binary(path:string):Promise<Blob>{
+ try{const response=await http.get(path,{responseType:'blob'});if(response.data.type.includes('json')){const body=JSON.parse(await response.data.text());throw new Error(body.msg||'文件生成失败')}return response.data}
+ catch(e){if(axios.isAxiosError(e)&&e.response?.data instanceof Blob){try{const body=JSON.parse(await e.response.data.text());throw new Error(body.msg||'文件生成失败')}catch(error){throw error}}throw e}
+}
+export async function downloadFile(path:string,name:string){const blob=await binary(path);const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}

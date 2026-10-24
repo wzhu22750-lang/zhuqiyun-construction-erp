@@ -90,3 +90,9 @@ Compose：MySQL 健康后启动后端，前端 nginx 代理后端。后端 Docke
 库存流水 RECEIPT、ISSUE_RETURN 为正数量及正价值流入，ISSUE、PURCHASE_RETURN 为负数量及正金额表示流出。采购退货按原入库冲减应付，库存按当前加权价值流出；库存流出减应付冲减的差额以有符号 RETURN_VARIANCE 费用单列并关联退货头，避免改变旧入库或混入领料成本。
 
 退款只冲减净实付，原付款/付款申请维持原始历史。退货后净实付可暂高于净应付，表示待收供应商退款；不能把该状态当作非法付款或负应付未付。每次付款、退款及预留仍由服务端限额校验。部署后 32 项 SQL 检查覆盖这些口径，实际结果见采购升级文档。
+
+## 本地试用增强（V6–V13）
+
+现有 overview 首页由 WorkbenchService 计算角色任务；DataPolicy 定义关联读取与金额裁剪契约，RecordQueryService 统一列表与导出的 SQL 范围、筛选与分页。TraceService 使用真实外键与 UNION 时间线，在 SQL 中分页后读取本页明细。PaymentPlanService 管理合同阶段、历史与人工实际关联；StocktakeService 管理版本化快照、独立审核和项目无关库存调整。exchange 包提供 Apache POI xlsx 模板、原子导入、授权导出及转义 A4 HTML；没有新增网络服务。
+
+锁顺序沿用订单/应付在仓库之前；盘点只锁仓库、盘点头及其材料库存，所有原库存变动也统一增加 revision。写入和审计在同一事务。独立 Compose、迁移与验收详见 [试用增强](TRIAL-UPGRADE.md)。
